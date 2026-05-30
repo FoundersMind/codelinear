@@ -1372,7 +1372,6 @@
   bindHoverLift(".n7-insights__card");
   bindHoverLift(".n7-cases__card--active, .n7-cases__panel");
 
-  bindLinkArrow(".n7-solution-card__link", ".n7-solution-card__link-arrow");
   bindLinkArrow(".n7-core-banking__link", ".n7-core-banking__link-arrow");
   bindLinkArrow(".n7-site-footer__link", ".n7-site-footer__link-arrow");
 

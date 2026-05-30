@@ -101,15 +101,14 @@
   }
 
   .n7-solution-card__desc {
-    margin-bottom: clamp(14px, 3vw, var(--n7-solutions-desc-gap));
+    margin-bottom: 0;
     max-width: 100%;
     font-size: clamp(14px, 3.6vw, var(--n7-solutions-desc-size));
     line-height: var(--n7-solutions-desc-line);
   }
 
   .n7-solution-card__link {
-    margin-top: clamp(16px, 4vw, 26px);
-    font-size: clamp(12px, 3vw, var(--n7-solutions-link-size));
+    margin-top: var(--n7-solutions-link-gap);
   }
 }
 

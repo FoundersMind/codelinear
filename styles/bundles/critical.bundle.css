@@ -252,8 +252,9 @@
   --n7-solutions-desc-line: 1.5;
   --n7-solutions-desc-color: rgba(233, 244, 249, 0.68);
   --n7-solutions-desc-gap: 18px;
+  --n7-solutions-link-gap: 26px;
   --n7-solutions-link-size: 14px;
-  --n7-solutions-link-width: 102px;
+  --n7-solutions-link-width: 102.57px;
   --n7-solutions-link-height: 21px;
   --n7-solutions-link-arrow-gap: 5px;
   --n7-solutions-link-arrow-width: 13.57px;

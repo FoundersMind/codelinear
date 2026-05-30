@@ -137,7 +137,7 @@
 }
 
 .n7-solution-card__desc {
-  margin: 0 0 var(--n7-solutions-desc-gap);
+  margin: 0;
   width: 100%;
   max-width: var(--n7-solutions-card-width);
   font-family: var(--n7-font-archivo);
@@ -149,51 +149,19 @@
 
 .n7-solution-card__link {
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
-  gap: var(--n7-solutions-link-arrow-gap);
+  line-height: 0;
   width: var(--n7-solutions-link-width);
   height: var(--n7-solutions-link-height);
-  margin-top: 26px;
-  font-family: var(--n7-font-Chivo Mono Medium);
-  font-size: var(--n7-solutions-link-size);
-  
-  line-height: 1;
-  letter-spacing: 0.06em;
-
+  margin-top: var(--n7-solutions-link-gap);
   text-decoration: none;
-  white-space: nowrap;
-  color: #00B4FD;
   transition: opacity 0.2s ease;
 }
 
-.n7-solution-card__link-text {
-  flex-shrink: 0;
-  white-space: nowrap;
-  line-height: 1;
-}
-
-.n7-solution-card__link-word {
-  position: relative;
-  display: inline-block;
-}
-
-.n7-solution-card__link-word::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: calc(-1 * var(--n7-solutions-link-underline-gap));
-  width: var(--n7-solutions-link-underline-width);
-  height: 1px;
-  background-color: currentColor;
-}
-
-.n7-solution-card__link-arrow {
-  width: var(--n7-solutions-link-arrow-width);
-  height: var(--n7-solutions-link-arrow-height);
-  flex-shrink: 0;
+.n7-solution-card__link img {
   display: block;
+  width: var(--n7-solutions-link-width);
+  height: var(--n7-solutions-link-height);
 }
 
 .n7-solution-card__link:hover {
@@ -304,15 +272,14 @@
   }
 
   .n7-solution-card__desc {
-    margin-bottom: clamp(14px, 3vw, var(--n7-solutions-desc-gap));
+    margin-bottom: 0;
     max-width: 100%;
     font-size: clamp(14px, 3.6vw, var(--n7-solutions-desc-size));
     line-height: var(--n7-solutions-desc-line);
   }
 
   .n7-solution-card__link {
-    margin-top: clamp(16px, 4vw, 26px);
-    font-size: clamp(12px, 3vw, var(--n7-solutions-link-size));
+    margin-top: var(--n7-solutions-link-gap);
   }
 }
 
