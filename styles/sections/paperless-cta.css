@@ -137,6 +137,62 @@
   background: var(--n7-hero-btn-gradient);
 }
 
+/* Laptop — card/buttons scale; fixed 208+210px buttons overflow the row */
+@media (min-width: 992px) and (max-width: 1439px) {
+  .n7-paperless-cta__stage {
+    container-type: inline-size;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    column-gap: clamp(
+      16px,
+      calc(var(--n7-paperless-cta-content-actions-gap) / var(--n7-page-width) * 100cqw),
+      var(--n7-paperless-cta-content-actions-gap)
+    );
+    padding-left: clamp(32px, calc(var(--n7-paperless-cta-content-x) / var(--n7-page-width) * 100cqw), var(--n7-paperless-cta-content-x));
+    padding-right: clamp(32px, calc(var(--n7-paperless-cta-content-x) / var(--n7-page-width) * 100cqw), var(--n7-paperless-cta-content-x));
+  }
+
+  .n7-paperless-cta__content {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: min(
+      var(--n7-paperless-cta-content-width),
+      calc(var(--n7-paperless-cta-content-width) / var(--n7-page-width) * 100cqw)
+    );
+  }
+
+  .n7-paperless-cta__actions {
+    flex: 0 0 auto;
+    width: min(
+      var(--n7-paperless-cta-actions-width),
+      calc(var(--n7-paperless-cta-actions-width) / var(--n7-page-width) * 100cqw)
+    );
+    max-width: 100%;
+    height: min(
+      var(--n7-paperless-cta-actions-height),
+      calc(var(--n7-paperless-cta-actions-height) / var(--n7-page-width) * 100cqw)
+    );
+    gap: calc(var(--n7-paperless-btn-gap) / var(--n7-paperless-cta-actions-width) * 100%);
+  }
+
+  .n7-paperless-cta__btn-contact.n7-btn--outline,
+  .n7-paperless-cta__btn-demo.n7-btn--primary {
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    font-size: calc(var(--n7-cta-btn-font-size) / var(--n7-page-width) * 100cqw);
+    border-radius: calc(var(--n7-hero-btn-radius) / var(--n7-page-width) * 100cqw);
+  }
+
+  .n7-paperless-cta__btn-contact.n7-btn--outline {
+    flex: 208 1 0;
+  }
+
+  .n7-paperless-cta__btn-demo.n7-btn--primary {
+    flex: 210 1 0;
+  }
+}
+
 /* Figma 1440 — exact absolute layout */
 @media (min-width: 1440px) {
   .n7-paperless-cta,

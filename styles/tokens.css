@@ -436,7 +436,7 @@
   --n7-paperless-mark-size: 572.63px;
   --n7-paperless-mark-line: 1.2;
   --n7-paperless-mark-tracking: 0;
-  --n7-paperless-mark-opacity: 50%;
+  --n7-paperless-mark-opacity: 0.5;
   --n7-paperless-mark-stroke-width: 1.59px;
   --n7-paperless-mark-stroke: var(--n7-cyan-01B4FD);
 
@@ -596,7 +596,7 @@
   --n7-insights-card-kicker-size: 12px;
   --n7-insights-card-title-size: 27px;
   --n7-insights-card-meta-size: 14px;
-  --n7-insights-card-meta-opacity: 0.65;
+  --n7-insights-card-meta-color: #64A8C4;
   --n7-insights-card-btn-x: 351.88px;
   --n7-insights-card-btn-y: 244px;
   --n7-insights-card-btn-width: 287px;

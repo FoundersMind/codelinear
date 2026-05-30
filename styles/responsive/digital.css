@@ -229,7 +229,7 @@
     height: auto;
     max-height: 65%;
     transform: translateX(-50%);
-    opacity: 0.16;
+    opacity: var(--n7-paperless-mark-opacity);
     overflow: hidden;
     border-radius: inherit;
   }
@@ -273,16 +273,34 @@
 
   .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__actions {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
     gap: clamp(12px, 3vw, var(--n7-paperless-btn-gap));
+    width: 100%;
     max-width: 100%;
   }
 
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact,
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo {
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact.n7-btn--outline,
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo.n7-btn--primary {
     flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
     font-size: var(--n7-hero-btn-font-size);
     border-radius: var(--n7-hero-btn-radius);
+    box-sizing: border-box;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact.n7-btn--outline {
+    height: var(--n7-contact-us-height);
+    min-height: var(--n7-contact-us-height);
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo.n7-btn--primary {
+    height: var(--n7-request-demo-height);
+    min-height: var(--n7-request-demo-height);
   }
 }
 
@@ -352,16 +370,6 @@
   .n7-digital__request {
     margin-inline: auto;
   }
-
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact,
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo {
-    margin-inline: auto;
-  }
 }
 
 @media (max-width: 479px) {
@@ -375,7 +383,7 @@
   }
 
   .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__marks {
-    opacity: 0.1;
+    opacity: var(--n7-paperless-mark-opacity);
   }
 
   .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__title {

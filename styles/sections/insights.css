@@ -291,8 +291,7 @@
   font-family: var(--n7-font-archivo);
   font-size: var(--n7-insights-card-meta-size);
   line-height: 1.3;
-  color: var(--n7-ice-E9F4F9);
-  opacity: var(--n7-insights-card-meta-opacity);
+  color: var(--n7-insights-card-meta-color);
 }
 
 .n7-insights__card--featured .n7-insights__card-btn.n7-btn--outline {

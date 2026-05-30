@@ -36,25 +36,26 @@
     overflow: hidden;
   }
 
-  /* CB7 watermark — background only */
+  /* CB7 watermark — background only, keep aspect ratio (avoid stroke smear) */
   section.n7-paperless--after-dashboard .n7-paperless__marks {
     position: absolute;
     top: auto;
-    left: 50%;
-    right: auto;
-    bottom: -8%;
-    width: 110%;
-    height: auto;
-    max-height: 70%;
-    transform: translateX(-50%);
-    opacity: 0.18;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 58%;
+    max-height: 58%;
+    transform: none;
+    opacity: var(--n7-paperless-mark-opacity);
     overflow: hidden;
     pointer-events: none;
   }
 
   section.n7-paperless--after-dashboard .n7-paperless__marks-svg {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   section.n7-paperless--after-dashboard .n7-paperless__content {
@@ -95,10 +96,9 @@
     bottom: auto;
     z-index: 1;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
     gap: clamp(12px, 3vw, var(--n7-paperless-btn-gap));
     width: 100%;
     max-width: 100%;
@@ -106,16 +106,26 @@
     min-height: 0;
   }
 
-  section.n7-paperless--after-dashboard .n7-paperless__btn-contact {
+  section.n7-paperless--after-dashboard .n7-paperless__btn-contact.n7-btn--outline,
+  section.n7-paperless--after-dashboard .n7-paperless__btn-demo.n7-btn--primary {
     flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
     font-size: var(--n7-hero-btn-font-size);
     border-radius: var(--n7-hero-btn-radius);
+    box-sizing: border-box;
   }
 
-  section.n7-paperless--after-dashboard .n7-paperless__btn-demo {
-    flex: 0 0 auto;
-    font-size: var(--n7-hero-btn-font-size);
-    border-radius: var(--n7-hero-btn-radius);
+  section.n7-paperless--after-dashboard .n7-paperless__btn-contact.n7-btn--outline {
+    height: var(--n7-contact-us-height);
+    min-height: var(--n7-contact-us-height);
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__btn-demo.n7-btn--primary {
+    height: var(--n7-request-demo-height);
+    min-height: var(--n7-request-demo-height);
   }
 }
 
@@ -133,17 +143,6 @@
   section.n7-paperless--after-dashboard .n7-paperless__title {
     font-size: clamp(20px, 5.8vw, 26px);
   }
-
-  section.n7-paperless--after-dashboard .n7-paperless__actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  section.n7-paperless--after-dashboard .n7-paperless__btn-contact,
-  section.n7-paperless--after-dashboard .n7-paperless__btn-demo {
-    margin-inline: auto;
-  }
 }
 
 @media (max-width: 479px) {
@@ -153,8 +152,8 @@
   }
 
   section.n7-paperless--after-dashboard .n7-paperless__marks {
-    opacity: 0.12;
-    bottom: -12%;
+    height: 52%;
+    max-height: 52%;
   }
 
   section.n7-paperless--after-dashboard .n7-paperless__title {

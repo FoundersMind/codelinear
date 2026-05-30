@@ -1192,6 +1192,7 @@ section.n7-paperless--after-dashboard {
   inset: 0;
   overflow: hidden;
   border-radius: inherit;
+  opacity: var(--n7-paperless-mark-opacity);
 }
 
 .n7-paperless--in-digital .n7-paperless__marks-inner {
@@ -1200,7 +1201,6 @@ section.n7-paperless--after-dashboard {
   left: calc(var(--n7-paperless-marks-inner-x) / var(--n7-paperless-card-width) * 100%);
   width: calc(var(--n7-paperless-marks-inner-width) / var(--n7-paperless-card-width) * 100%);
   height: calc(var(--n7-paperless-marks-inner-height) / var(--n7-paperless-card-height) * 100%);
-  opacity: var(--n7-paperless-mark-opacity);
   container-type: inline-size;
 }
 
@@ -1398,6 +1398,44 @@ section.n7-paperless--after-dashboard {
     height: auto;
     border-radius: calc(var(--n7-paperless-card-radius) / var(--n7-paperless-card-width) * 100cqw);
   }
+
+  /* Buttons stay Figma px at 1440; scale with card on laptop */
+  .n7-paperless--in-digital .n7-paperless__btn-contact.n7-btn--outline,
+  .n7-paperless--in-digital .n7-paperless__btn-demo.n7-btn--primary {
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    font-size: calc(var(--n7-cta-btn-font-size) / var(--n7-paperless-card-width) * 100cqw);
+    border-radius: calc(var(--n7-hero-btn-radius) / var(--n7-paperless-card-width) * 100cqw);
+  }
+
+  .n7-paperless--in-digital .n7-paperless__btn-contact.n7-btn--outline {
+    flex: 208 1 0;
+  }
+
+  .n7-paperless--in-digital .n7-paperless__btn-demo.n7-btn--primary {
+    flex: 210 1 0;
+  }
+}
+
+/* After-dashboard — proportional buttons on laptop only (mobile uses responsive/paperless.css) */
+@media (min-width: 992px) and (max-width: 1439px) {
+  .n7-paperless--after-dashboard .n7-paperless__btn-contact.n7-btn--outline,
+  .n7-paperless--after-dashboard .n7-paperless__btn-demo.n7-btn--primary {
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    font-size: calc(var(--n7-cta-btn-font-size) / var(--n7-paperless-card-width) * 100cqw);
+    border-radius: calc(var(--n7-hero-btn-radius) / var(--n7-paperless-card-width) * 100cqw);
+  }
+
+  .n7-paperless--after-dashboard .n7-paperless__btn-contact.n7-btn--outline {
+    flex: 208 1 0;
+  }
+
+  .n7-paperless--after-dashboard .n7-paperless__btn-demo.n7-btn--primary {
+    flex: 210 1 0;
+  }
 }
 
 /* ===== responsive/paperless.css ===== */
@@ -1439,25 +1477,26 @@ section.n7-paperless--after-dashboard {
     overflow: hidden;
   }
 
-  /* CB7 watermark — background only */
+  /* CB7 watermark — background only, keep aspect ratio (avoid stroke smear) */
   section.n7-paperless--after-dashboard .n7-paperless__marks {
     position: absolute;
     top: auto;
-    left: 50%;
-    right: auto;
-    bottom: -8%;
-    width: 110%;
-    height: auto;
-    max-height: 70%;
-    transform: translateX(-50%);
-    opacity: 0.18;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 58%;
+    max-height: 58%;
+    transform: none;
+    opacity: var(--n7-paperless-mark-opacity);
     overflow: hidden;
     pointer-events: none;
   }
 
   section.n7-paperless--after-dashboard .n7-paperless__marks-svg {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   section.n7-paperless--after-dashboard .n7-paperless__content {
@@ -1498,10 +1537,9 @@ section.n7-paperless--after-dashboard {
     bottom: auto;
     z-index: 1;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
     gap: clamp(12px, 3vw, var(--n7-paperless-btn-gap));
     width: 100%;
     max-width: 100%;
@@ -1509,16 +1547,26 @@ section.n7-paperless--after-dashboard {
     min-height: 0;
   }
 
-  section.n7-paperless--after-dashboard .n7-paperless__btn-contact {
+  section.n7-paperless--after-dashboard .n7-paperless__btn-contact.n7-btn--outline,
+  section.n7-paperless--after-dashboard .n7-paperless__btn-demo.n7-btn--primary {
     flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
     font-size: var(--n7-hero-btn-font-size);
     border-radius: var(--n7-hero-btn-radius);
+    box-sizing: border-box;
   }
 
-  section.n7-paperless--after-dashboard .n7-paperless__btn-demo {
-    flex: 0 0 auto;
-    font-size: var(--n7-hero-btn-font-size);
-    border-radius: var(--n7-hero-btn-radius);
+  section.n7-paperless--after-dashboard .n7-paperless__btn-contact.n7-btn--outline {
+    height: var(--n7-contact-us-height);
+    min-height: var(--n7-contact-us-height);
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__btn-demo.n7-btn--primary {
+    height: var(--n7-request-demo-height);
+    min-height: var(--n7-request-demo-height);
   }
 }
 
@@ -1536,17 +1584,6 @@ section.n7-paperless--after-dashboard {
   section.n7-paperless--after-dashboard .n7-paperless__title {
     font-size: clamp(20px, 5.8vw, 26px);
   }
-
-  section.n7-paperless--after-dashboard .n7-paperless__actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  section.n7-paperless--after-dashboard .n7-paperless__btn-contact,
-  section.n7-paperless--after-dashboard .n7-paperless__btn-demo {
-    margin-inline: auto;
-  }
 }
 
 @media (max-width: 479px) {
@@ -1556,8 +1593,8 @@ section.n7-paperless--after-dashboard {
   }
 
   section.n7-paperless--after-dashboard .n7-paperless__marks {
-    opacity: 0.12;
-    bottom: -12%;
+    height: 52%;
+    max-height: 52%;
   }
 
   section.n7-paperless--after-dashboard .n7-paperless__title {
@@ -2407,7 +2444,7 @@ section.n7-paperless--after-dashboard {
     height: auto;
     max-height: 65%;
     transform: translateX(-50%);
-    opacity: 0.16;
+    opacity: var(--n7-paperless-mark-opacity);
     overflow: hidden;
     border-radius: inherit;
   }
@@ -2451,16 +2488,34 @@ section.n7-paperless--after-dashboard {
 
   .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__actions {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
     gap: clamp(12px, 3vw, var(--n7-paperless-btn-gap));
+    width: 100%;
     max-width: 100%;
   }
 
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact,
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo {
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact.n7-btn--outline,
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo.n7-btn--primary {
     flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-inline: 0;
     font-size: var(--n7-hero-btn-font-size);
     border-radius: var(--n7-hero-btn-radius);
+    box-sizing: border-box;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact.n7-btn--outline {
+    height: var(--n7-contact-us-height);
+    min-height: var(--n7-contact-us-height);
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo.n7-btn--primary {
+    height: var(--n7-request-demo-height);
+    min-height: var(--n7-request-demo-height);
   }
 }
 
@@ -2530,16 +2585,6 @@ section.n7-paperless--after-dashboard {
   .n7-digital__request {
     margin-inline: auto;
   }
-
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact,
-  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo {
-    margin-inline: auto;
-  }
 }
 
 @media (max-width: 479px) {
@@ -2553,7 +2598,7 @@ section.n7-paperless--after-dashboard {
   }
 
   .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__marks {
-    opacity: 0.1;
+    opacity: var(--n7-paperless-mark-opacity);
   }
 
   .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__title {
@@ -2855,8 +2900,7 @@ section.n7-paperless--after-dashboard {
   font-family: var(--n7-font-archivo);
   font-size: var(--n7-insights-card-meta-size);
   line-height: 1.3;
-  color: var(--n7-ice-E9F4F9);
-  opacity: var(--n7-insights-card-meta-opacity);
+  color: var(--n7-insights-card-meta-color);
 }
 
 .n7-insights__card--featured .n7-insights__card-btn.n7-btn--outline {
@@ -4707,6 +4751,62 @@ section.n7-paperless--after-dashboard {
   transform: translateY(-1px);
   color: #ffffff;
   background: var(--n7-hero-btn-gradient);
+}
+
+/* Laptop — card/buttons scale; fixed 208+210px buttons overflow the row */
+@media (min-width: 992px) and (max-width: 1439px) {
+  .n7-paperless-cta__stage {
+    container-type: inline-size;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    column-gap: clamp(
+      16px,
+      calc(var(--n7-paperless-cta-content-actions-gap) / var(--n7-page-width) * 100cqw),
+      var(--n7-paperless-cta-content-actions-gap)
+    );
+    padding-left: clamp(32px, calc(var(--n7-paperless-cta-content-x) / var(--n7-page-width) * 100cqw), var(--n7-paperless-cta-content-x));
+    padding-right: clamp(32px, calc(var(--n7-paperless-cta-content-x) / var(--n7-page-width) * 100cqw), var(--n7-paperless-cta-content-x));
+  }
+
+  .n7-paperless-cta__content {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: min(
+      var(--n7-paperless-cta-content-width),
+      calc(var(--n7-paperless-cta-content-width) / var(--n7-page-width) * 100cqw)
+    );
+  }
+
+  .n7-paperless-cta__actions {
+    flex: 0 0 auto;
+    width: min(
+      var(--n7-paperless-cta-actions-width),
+      calc(var(--n7-paperless-cta-actions-width) / var(--n7-page-width) * 100cqw)
+    );
+    max-width: 100%;
+    height: min(
+      var(--n7-paperless-cta-actions-height),
+      calc(var(--n7-paperless-cta-actions-height) / var(--n7-page-width) * 100cqw)
+    );
+    gap: calc(var(--n7-paperless-btn-gap) / var(--n7-paperless-cta-actions-width) * 100%);
+  }
+
+  .n7-paperless-cta__btn-contact.n7-btn--outline,
+  .n7-paperless-cta__btn-demo.n7-btn--primary {
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    font-size: calc(var(--n7-cta-btn-font-size) / var(--n7-page-width) * 100cqw);
+    border-radius: calc(var(--n7-hero-btn-radius) / var(--n7-page-width) * 100cqw);
+  }
+
+  .n7-paperless-cta__btn-contact.n7-btn--outline {
+    flex: 208 1 0;
+  }
+
+  .n7-paperless-cta__btn-demo.n7-btn--primary {
+    flex: 210 1 0;
+  }
 }
 
 /* Figma 1440 — exact absolute layout */

@@ -79,6 +79,7 @@ section.n7-paperless--after-dashboard {
   inset: 0;
   overflow: hidden;
   border-radius: inherit;
+  opacity: var(--n7-paperless-mark-opacity);
 }
 
 .n7-paperless--in-digital .n7-paperless__marks-inner {
@@ -87,7 +88,6 @@ section.n7-paperless--after-dashboard {
   left: calc(var(--n7-paperless-marks-inner-x) / var(--n7-paperless-card-width) * 100%);
   width: calc(var(--n7-paperless-marks-inner-width) / var(--n7-paperless-card-width) * 100%);
   height: calc(var(--n7-paperless-marks-inner-height) / var(--n7-paperless-card-height) * 100%);
-  opacity: var(--n7-paperless-mark-opacity);
   container-type: inline-size;
 }
 
@@ -284,6 +284,44 @@ section.n7-paperless--after-dashboard {
     aspect-ratio: calc(var(--n7-paperless-card-width) / var(--n7-paperless-card-height));
     height: auto;
     border-radius: calc(var(--n7-paperless-card-radius) / var(--n7-paperless-card-width) * 100cqw);
+  }
+
+  /* Buttons stay Figma px at 1440; scale with card on laptop */
+  .n7-paperless--in-digital .n7-paperless__btn-contact.n7-btn--outline,
+  .n7-paperless--in-digital .n7-paperless__btn-demo.n7-btn--primary {
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    font-size: calc(var(--n7-cta-btn-font-size) / var(--n7-paperless-card-width) * 100cqw);
+    border-radius: calc(var(--n7-hero-btn-radius) / var(--n7-paperless-card-width) * 100cqw);
+  }
+
+  .n7-paperless--in-digital .n7-paperless__btn-contact.n7-btn--outline {
+    flex: 208 1 0;
+  }
+
+  .n7-paperless--in-digital .n7-paperless__btn-demo.n7-btn--primary {
+    flex: 210 1 0;
+  }
+}
+
+/* After-dashboard — proportional buttons on laptop only (mobile uses responsive/paperless.css) */
+@media (min-width: 992px) and (max-width: 1439px) {
+  .n7-paperless--after-dashboard .n7-paperless__btn-contact.n7-btn--outline,
+  .n7-paperless--after-dashboard .n7-paperless__btn-demo.n7-btn--primary {
+    min-width: 0;
+    height: 100%;
+    min-height: 0;
+    font-size: calc(var(--n7-cta-btn-font-size) / var(--n7-paperless-card-width) * 100cqw);
+    border-radius: calc(var(--n7-hero-btn-radius) / var(--n7-paperless-card-width) * 100cqw);
+  }
+
+  .n7-paperless--after-dashboard .n7-paperless__btn-contact.n7-btn--outline {
+    flex: 208 1 0;
+  }
+
+  .n7-paperless--after-dashboard .n7-paperless__btn-demo.n7-btn--primary {
+    flex: 210 1 0;
   }
 }
 
