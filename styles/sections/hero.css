@@ -1,0 +1,197 @@
+.n7-hero {
+  position: relative;
+  padding: 0;
+  overflow: visible;
+  /* Figma Frame fill: #000D12 (solid) */
+  background: var(--n7-bg);
+}
+
+.n7-hero__inner {
+  position: relative;
+  height: var(--n7-hero-stage-height);
+  padding: 0;
+  overflow: visible;
+}
+
+.n7-hero__content {
+  position: absolute;
+  left: var(--n7-hero-content-x);
+  top: var(--n7-hero-content-y);
+  width: var(--n7-hero-content-width);
+  height: var(--n7-hero-content-height);
+  max-width: none;
+  text-align: left;
+}
+
+.n7-hero__title {
+  margin: 0 0 16px;
+  font-family: var(--n7-font-archivo);
+  font-weight: 500; /* Archivo Medium */
+  font-size: var(--n7-hero-title-size);
+  line-height: 1.2;
+  letter-spacing: var(--n7-hero-title-tracking);
+  color: var(--n7-hero-title-color);
+}
+
+.n7-hero__sub {
+  margin: 0 0 var(--n7-hero-gap-text-to-cta);
+  width: var(--n7-hero-sub-width);
+  font-family: var(--n7-font-archivo);
+  font-weight: 400;
+  font-size: var(--n7-hero-sub-size);
+  line-height: var(--n7-hero-sub-line);
+  color: var(--n7-hero-sub-color);
+  opacity: var(--n7-hero-sub-opacity);
+}
+
+.n7-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--n7-hero-gap-cta);
+}
+
+/* Media column */
+.n7-hero__media {
+  position: absolute;
+  left: var(--n7-hero-media-x);
+  top: var(--n7-hero-media-y);
+  width: var(--n7-hero-media-width);
+  height: var(--n7-hero-media-height);
+  display: block;
+  overflow: visible;
+}
+
+/* Figma Ellipse — centered on photo (not page X/Y; that shifted glow right) */
+.n7-hero__glow-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--n7-hero-glow-circle-size);
+  height: var(--n7-hero-glow-circle-size);
+  border-radius: 50%;
+  overflow: visible; /* let blur feather — gradients fade before edge */
+  opacity: var(--n7-hero-glow-circle-opacity);
+  transform: translate(
+      calc(-50% + var(--n7-hero-glow-offset-x)),
+      calc(-50% + var(--n7-hero-glow-offset-y))
+    )
+    rotate(var(--n7-hero-glow-rotation));
+  pointer-events: none;
+  z-index: var(--n7-z-hero-glow);
+}
+
+.n7-hero__media-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  /* Peak at photo edge; all stops fade to transparent before the circle edge
+     so the Gaussian blur reads as a soft halo (not a hard-clipped disc) */
+  background:
+    radial-gradient(
+      ellipse var(--n7-hero-glow-ring-rx) var(--n7-hero-glow-ring-ry) at 50% 50%,
+      transparent 0%,
+      transparent var(--n7-hero-glow-ring-inner),
+      rgba(0, 180, 253, 1) var(--n7-hero-glow-ring-peak),
+      rgba(0, 58, 206, 0.7) 86%,
+      transparent var(--n7-hero-glow-ring-outer)
+    ),
+    radial-gradient(
+      50% 26% at 50% 30%,
+      rgba(0, 180, 253, 1) 0%,
+      rgba(0, 58, 206, 0.6) 36%,
+      transparent 64%
+    ),
+    radial-gradient(
+      26% 50% at 30% 50%,
+      rgba(0, 58, 206, 1) 0%,
+      rgba(0, 180, 253, 0.6) 36%,
+      transparent 64%
+    ),
+    radial-gradient(
+      50% 26% at 50% 70%,
+      rgba(0, 180, 253, 1) 0%,
+      rgba(146, 128, 253, 0.55) 36%,
+      transparent 64%
+    ),
+    radial-gradient(20% 38% at 72% 50%, rgba(0, 58, 206, 0.1) 0%, transparent 50%),
+    var(--n7-hero-glow-fill);
+  filter: blur(var(--n7-hero-glow-layer-blur));
+  -webkit-filter: blur(var(--n7-hero-glow-layer-blur));
+  will-change: filter;
+}
+
+/* Photo + glass cards — overflow visible so cards extend past image */
+.n7-hero__media-stage {
+  position: relative;
+  z-index: 1;
+  width: var(--n7-hero-photo-width);
+  height: var(--n7-hero-photo-height);
+  overflow: visible;
+}
+
+.n7-hero__photo-wrap {
+  position: relative;
+  z-index: var(--n7-z-hero-photo);
+  width: var(--n7-hero-photo-width);
+  height: var(--n7-hero-photo-height);
+  flex-shrink: 0;
+  overflow: visible;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+}
+
+.n7-hero__photo {
+  position: relative;
+  z-index: var(--n7-z-hero-photo);
+  display: block;
+  width: var(--n7-hero-photo-width);
+  height: var(--n7-hero-photo-height);
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--n7-hero-photo-radius);
+}
+
+/* Activity card → styles/components/activity-card.css */
+/* Balance card → styles/components/balance-card.css */
+
+/* Trusted-by block (Desktop-1: x=80, y=655.06) */
+.n7-trusted {
+  position: absolute;
+  left: var(--n7-trusted-x);
+  top: var(--n7-trusted-y);
+  width: var(--n7-trusted-width);
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: start;
+  row-gap: var(--n7-trusted-label-gap);
+  margin: 0;
+  padding: 0;
+}
+
+.n7-trusted__label {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-family: var(--n7-font-archivo);
+  font-weight: 500;
+  font-size: var(--n7-trusted-label-size);
+  line-height: 1.3;
+  color: var(--n7-ice-E9F4F9);
+  opacity: 0.7;
+  text-transform: lowercase;
+}
+
+.n7-trusted__logos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: var(--n7-trusted-logo-gap);
+  width: 100%;
+}
+
+.n7-trusted__logo {
+  display: block;
+  height: var(--n7-trusted-logo-height);
+  width: auto;
+  flex-shrink: 0;
+}

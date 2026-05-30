@@ -1,0 +1,203 @@
+/*
+ * Motion layer — compositor-friendly hints when GSAP is active.
+ * Initial hide only while scripts load; cleared by motion.js or .n7-motion-static.
+ */
+
+/* Navbar + left copy visible immediately; right media + trusted animate in */
+html:not(.n7-motion-ready):not(.n7-motion-static) .n7-hero__media-stage,
+html:not(.n7-motion-ready):not(.n7-motion-static) .n7-trusted {
+  visibility: hidden;
+}
+
+html.n7-motion-ready .n7-hero__media-stage,
+html.n7-motion-ready .n7-trusted,
+html.n7-motion-static .n7-hero__media-stage,
+html.n7-motion-static .n7-trusted {
+  visibility: visible;
+}
+
+html.n7-motion-enabled .n7-hero__photo-wrap {
+  transform-origin: 50% 72%;
+}
+
+html.n7-motion-enabled .n7-activity-card {
+  transform-origin: left center;
+}
+
+html.n7-motion-enabled .n7-balance-card {
+  transform-origin: right center;
+}
+
+/* GSAP owns transform on these; avoid fighting CSS transitions */
+html.n7-motion-enabled .n7-cases__track {
+  transition: none;
+}
+
+/* Page CTAs only — not navbar Request Demo (keeps navbar.css hover opacity) */
+html.n7-motion-enabled .n7-btn:not(.n7-btn--nav-cta),
+html.n7-motion-enabled .n7-btn:not(.n7-btn--nav-cta):hover {
+  transition: background 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  transform: none;
+}
+
+/* Navbar text/buttons: no GSAP opacity/transform; original link + CTA styling */
+html.n7-motion-enabled .n7-nav__link,
+html.n7-motion-enabled .n7-nav__link:hover,
+html.n7-motion-enabled .n7-nav__cta .n7-btn,
+html.n7-motion-enabled .n7-nav__cta .n7-btn:hover,
+html.n7-motion-enabled .n7-brand,
+html.n7-motion-enabled .n7-brand__text {
+  transform: none;
+}
+
+html.n7-motion-enabled .n7-nav__link {
+  transition: opacity 0.2s ease;
+}
+
+html.n7-motion-enabled .n7-nav__link:hover {
+  opacity: 0.75;
+}
+
+/* Request demo / Contact us — never dimmed or delayed by scroll-hide */
+html.n7-motion-enabled .n7-hero__actions .n7-btn,
+html.n7-motion-enabled .n7-solutions__cta,
+html.n7-motion-enabled .n7-core-banking__cta,
+html.n7-motion-enabled .n7-paperless__btn-contact,
+html.n7-motion-enabled .n7-paperless__btn-demo,
+html.n7-motion-enabled .n7-digital__request,
+html.n7-motion-enabled .n7-paperless-cta__btn-contact,
+html.n7-motion-enabled .n7-paperless-cta__btn-demo {
+  opacity: 1;
+}
+
+html.n7-motion-enabled .n7-solution-card__link:hover,
+html.n7-motion-enabled .n7-core-banking__link:hover,
+html.n7-motion-enabled .n7-paperless-cta__btn-contact:hover,
+html.n7-motion-enabled .n7-paperless-cta__btn-demo:hover {
+  transform: none;
+}
+
+/* Compositor hint only on carousel track (slides use xPercent) */
+html.n7-motion-enabled .n7-cases__track {
+  will-change: transform;
+}
+
+@media (max-width: 991px) {
+  html.n7-motion-enabled .n7-activity-card,
+  html.n7-motion-enabled .n7-balance-card {
+    will-change: transform;
+  }
+}
+
+/* Glow pulse starts after entrance — avoid will-change during load */
+
+/* Digital — smooth entrance origins; GSAP clears transform after each tween */
+html.n7-motion-enabled .n7-digital__phone-wrap {
+  transform-origin: 50% 85%;
+}
+
+html.n7-motion-enabled .n7-digital__aside-title,
+html.n7-motion-enabled .n7-digital__aside-text,
+html.n7-motion-enabled .n7-digital__check-item {
+  transform-origin: left center;
+}
+
+html.n7-motion-enabled .n7-digital__pair--2 .n7-digital__phone-wrap {
+  transform-origin: 50% 85%;
+}
+
+html.n7-motion-enabled .n7-digital__pair--2 .n7-digital__aside-title,
+html.n7-motion-enabled .n7-digital__pair--2 .n7-digital__aside-text,
+html.n7-motion-enabled .n7-digital__pair--2 .n7-digital__check-item {
+  transform-origin: right center;
+}
+
+html.n7-motion-enabled .n7-core-banking__layout {
+  perspective: 1600px;
+  perspective-origin: 50% 58%;
+}
+
+html.n7-motion-enabled .n7-core-banking__marks {
+  transform-origin: 50% 88%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+html.n7-motion-enabled .n7-insights__glow-orbit {
+  transform-origin: 50% 50%;
+}
+
+html.n7-motion-enabled .n7-digital__marks,
+html.n7-motion-enabled .n7-digital__vector,
+html.n7-motion-enabled .n7-digital__seven {
+  transform-origin: 50% 50%;
+}
+
+html.n7-motion-enabled .n7-paperless--in-digital .n7-paperless__canvas {
+  perspective: 1400px;
+  perspective-origin: 50% 58%;
+}
+
+html.n7-motion-enabled .n7-paperless--in-digital .n7-paperless__marks-inner {
+  transform-origin: 50% 72%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+html.n7-motion-enabled .n7-paperless--in-digital .n7-paperless__sub,
+html.n7-motion-enabled .n7-paperless--in-digital .n7-paperless__actions {
+  transform-origin: left center;
+}
+
+html.n7-motion-enabled .n7-insights__card--featured .n7-insights__sitare {
+  transform-origin: right center;
+}
+
+html.n7-motion-enabled .n7-insights__card--compact {
+  transform-origin: 50% 85%;
+}
+
+html.n7-motion-enabled .n7-insights__card--featured .n7-insights__card-kicker,
+html.n7-motion-enabled .n7-insights__card--featured .n7-insights__card-meta {
+  transform-origin: left center;
+}
+
+html.n7-motion-enabled .n7-cases__viewport {
+  transform-origin: 50% 85%;
+}
+
+html.n7-motion-enabled .n7-cases__card-copy {
+  transform-origin: left center;
+}
+
+html.n7-motion-enabled .n7-paperless-cta__sub {
+  transform-origin: left center;
+}
+
+html.n7-motion-enabled .n7-paperless-cta__actions {
+  transform-origin: right center;
+}
+
+html.n7-motion-enabled .n7-site-footer__glow-orbit {
+  transform-origin: 50% 50%;
+}
+
+html.n7-motion-enabled .n7-site-footer__logo {
+  transform-origin: left top;
+}
+
+html.n7-motion-enabled .n7-site-footer__grid,
+html.n7-motion-enabled .n7-site-footer__copy {
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.n7-motion-enabled .n7-cases__track {
+    transition: transform var(--n7-cases-slide-duration) ease;
+  }
+
+  html.n7-motion-enabled .n7-btn:not(.n7-btn--nav-cta),
+  html.n7-motion-enabled .n7-btn:not(.n7-btn--nav-cta):hover {
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  }
+}

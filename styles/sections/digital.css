@@ -1,0 +1,588 @@
+/*
+ * Digital banking out-of-the-box — Figma 1440×2647 @ y=116.
+ * Light section. Built part-by-part; Part 1 below.
+ * Left intro + .n7-digital__pairs share --n7-digital-left-y (100px); pair innards positioned inside each box.
+ * Tablet/mobile (≤991px): styles/responsive/digital.css
+ */
+.n7-digital {
+  position: relative;
+  width: 100%;
+  background: var(--n7-digital-bg);
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.n7-digital__stage {
+  position: relative;
+  width: 100%;
+  max-width: var(--n7-page-width);
+  min-height: var(--n7-digital-stage-height);
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+/* N7 #1 — section watermark only (N7.svg). Paperless card N7 #2 is in paperless.css. */
+.n7-digital__marks {
+  position: absolute;
+  left: var(--n7-digital-mark-x);
+  top: var(--n7-digital-mark-y);
+  width: var(--n7-digital-mark-width);
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+}
+
+/* Decorative swirl vector — opacity & sky gradient stroke baked into the SVG */
+.n7-digital__vector {
+  position: absolute;
+  left: var(--n7-digital-vector-x);
+  top: var(--n7-digital-vector-y);
+  width: var(--n7-digital-vector-width);
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Decorative "7" watermark — 20% opacity baked into 7.svg */
+.n7-digital__seven {
+  position: absolute;
+  left: var(--n7-digital-seven-x);
+  top: var(--n7-digital-seven-y);
+  width: var(--n7-digital-seven-width);
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+}
+
+/* Part-1 intro + pairs + in-frame paperless sit above watermarks */
+.n7-digital__intro,
+.n7-digital__pairs,
+.n7-digital__stage > .n7-paperless--in-digital {
+  z-index: 1;
+}
+
+/* Paperless card — Figma Y 2104.43 from .n7-digital__stage top (not document flow) */
+.n7-digital__stage > .n7-paperless--in-digital {
+  position: absolute;
+  top: var(--n7-paperless-card-y);
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  min-height: 0;
+  overflow: visible;
+}
+
+/* Imaginary container — 3 pair rows; height ties to paperless @ 2104.43 + 110px below stack */
+.n7-digital__pairs {
+  position: absolute;
+  left: var(--n7-digital-block-x);
+  top: var(--n7-digital-block-y);
+  display: flex;
+  flex-direction: column;
+  gap: var(--n7-digital-part-gap);
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each pair box — min height from Figma stack (phone frame may be shorter inside) */
+.n7-digital__pair {
+  position: relative;
+  flex: 0 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--n7-digital-phone-gap);
+  padding: 0;
+  margin: 0;
+}
+
+.n7-digital__pair--1 {
+  margin-left: var(--n7-digital-p1-pair-offset-x);
+}
+
+.n7-digital__pair--2 {
+  margin-left: var(--n7-digital-p2-pair-offset-x);
+}
+
+.n7-digital__pair--3 {
+  margin-left: var(--n7-digital-p3-pair-offset-x);
+}
+
+/* ---- Part 1: left intro block (81,100 · 438.99×308) ---- */
+.n7-digital__intro {
+  position: absolute;
+  left: var(--n7-digital-left-x);
+  top: var(--n7-digital-left-y);
+  width: var(--n7-digital-left-width);
+  min-height: var(--n7-digital-left-height);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.n7-digital__title {
+  margin: 0;
+  font-family: var(--n7-font-archivo);
+  font-weight: 400;
+  font-size: var(--n7-digital-title-size);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--n7-digital-title-color);
+  opacity: var(--n7-digital-title-opacity);
+}
+
+.n7-digital__sub {
+  margin: 16px 0 0;
+  max-width: var(--n7-digital-sub-width);
+  font-family: var(--n7-font-archivo);
+  font-weight: 400;
+  font-size: var(--n7-digital-sub-size);
+  line-height: 1.3;
+  color: #000d12;
+  opacity: 0.7;
+}
+
+.n7-digital__cta {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Size from .n7-btn--primary (--n7-request-demo-width / height) */
+.n7-digital__request {
+  flex-shrink: 0;
+}
+
+.n7-digital__learn {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.n7-digital__learn img {
+  display: block;
+  height: auto;
+}
+
+.n7-digital__learn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Phone frame — Figma 268.31×542.9; scale by height so full phone shows,
+   overflow hidden only trims horizontal shadow padding from SVG export */
+.n7-digital__phone-wrap {
+  width: var(--n7-digital-phone-frame-width);
+  height: var(--n7-digital-phone-frame-height);
+  overflow: hidden;
+  flex-shrink: 0;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  transform-origin: 50% 85%;
+}
+
+.n7-digital__phone {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.n7-digital__aside {
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.n7-digital__pair--1 .n7-digital__aside {
+  position: absolute;
+  left: var(--n7-digital-p1-aside-x);
+  top: var(--n7-digital-p1-aside-y);
+  width: var(--n7-digital-p1-aside-width);
+}
+
+.n7-digital__pair--2 .n7-digital__aside {
+  position: absolute;
+  left: 0;
+  top: var(--n7-digital-p2-aside-y);
+  width: var(--n7-digital-p2-copy-width);
+}
+
+.n7-digital__pair--2 .n7-digital__phone-wrap {
+  margin-left: calc(var(--n7-digital-p2-copy-width) + var(--n7-digital-phone-gap));
+}
+
+.n7-digital__pair--3 .n7-digital__aside {
+  position: absolute;
+  left: var(--n7-digital-p3-aside-x);
+  top: var(--n7-digital-p3-aside-y);
+  width: var(--n7-digital-p3-copy-width);
+}
+
+.n7-digital__aside-title {
+  margin: 0;
+  font-family: var(--n7-font-archivo);
+  font-weight: 600;
+  font-size: var(--n7-digital-aside-title-size);
+  line-height: 1.3;
+  color: var(--n7-digital-title-color);
+}
+
+.n7-digital__aside-text {
+  margin: var(--n7-digital-aside-heading-gap) 0 0;
+  font-family: var(--n7-font-archivo);
+  font-weight: 400;
+  font-size: var(--n7-digital-aside-text-size);
+  line-height: 1.3;
+  color: var(--n7-digital-body-color);
+  opacity: 0.7;
+}
+
+.n7-digital__checklist {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.n7-digital__check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--n7-font-archivo);
+  font-weight: 400;
+  font-size: var(--n7-digital-aside-text-size);
+  line-height: 1.3;
+  color: var(--n7-digital-title-color);
+}
+
+.n7-digital__check-icon {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+}
+
+/* Below 1440 — fluid layout (no Figma absolute stage height; avoids overlap with marquee/pairs) */
+@media (max-width: 1439px) {
+  .n7-digital__stage {
+    min-height: auto;
+    height: auto;
+    padding-top: min(
+      var(--n7-digital-left-y),
+      calc(var(--n7-digital-left-y) / var(--n7-page-width) * 100vw)
+    );
+    padding-left: max(24px, calc(var(--n7-container-pad) / var(--n7-page-width) * 100vw));
+    padding-right: max(24px, calc(var(--n7-container-pad) / var(--n7-page-width) * 100vw));
+    padding-bottom: clamp(56px, 6vw, 96px);
+  }
+
+  /* Flow layouts below — drop Figma absolute offsets so content does not touch edges */
+  .n7-digital__intro,
+  .n7-digital__pairs {
+    top: auto;
+    left: auto;
+  }
+
+  /* Figma stack min-heights are for 1440px absolute canvas only */
+  .n7-digital__pairs {
+    min-height: 0;
+    height: auto;
+  }
+
+  .n7-digital__pair {
+    min-height: 0;
+    height: auto;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .n7-digital__title {
+    font-size: min(
+      var(--n7-digital-title-size),
+      calc(var(--n7-digital-title-size) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  .n7-digital__marks {
+    left: min(
+      var(--n7-digital-mark-x),
+      calc(var(--n7-digital-mark-x) / var(--n7-page-width) * 100vw)
+    );
+    top: min(
+      var(--n7-digital-mark-y),
+      calc(var(--n7-digital-mark-y) / var(--n7-page-width) * 100vw)
+    );
+    width: min(
+      var(--n7-digital-mark-width),
+      calc(var(--n7-digital-mark-width) / var(--n7-page-width) * 100vw),
+      55vw
+    );
+  }
+
+  .n7-digital__vector {
+    left: 0;
+    top: min(
+      var(--n7-digital-vector-y),
+      calc(var(--n7-digital-vector-y) / var(--n7-page-width) * 100vw)
+    );
+    width: min(
+      var(--n7-digital-vector-width),
+      calc(var(--n7-digital-vector-width) / var(--n7-page-width) * 100vw),
+      42vw
+    );
+  }
+
+  .n7-digital__seven {
+    display: none;
+  }
+
+  .n7-digital__intro {
+    width: min(
+      var(--n7-digital-left-width),
+      calc(100% - 32px),
+      calc(var(--n7-digital-left-width) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  .n7-digital__sub {
+    max-width: 100%;
+    font-size: min(
+      var(--n7-digital-sub-size),
+      calc(var(--n7-digital-sub-size) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  .n7-digital__pairs {
+    width: min(
+      calc(var(--n7-digital-p1-aside-x) + var(--n7-digital-p1-aside-width)),
+      calc(
+        (var(--n7-digital-p1-aside-x) + var(--n7-digital-p1-aside-width)) /
+          var(--n7-page-width) * 100vw
+      ),
+      calc(100% - 32px)
+    );
+    max-width: 100%;
+    gap: min(
+      var(--n7-digital-part-gap),
+      calc(var(--n7-digital-part-gap) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  .n7-digital__pair {
+    width: 100%;
+  }
+
+  .n7-digital__pair--1,
+  .n7-digital__pair--3 {
+    margin-left: min(
+      var(--n7-digital-p1-pair-offset-x),
+      calc(var(--n7-digital-p1-pair-offset-x) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  .n7-digital__pair--2 {
+    margin-left: min(
+      var(--n7-digital-p2-pair-offset-x),
+      calc(var(--n7-digital-p2-pair-offset-x) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  .n7-digital__phone-wrap {
+    width: min(
+      var(--n7-digital-phone-frame-width),
+      calc(var(--n7-digital-phone-frame-width) / var(--n7-page-width) * 100vw),
+      42%
+    );
+    height: min(
+      var(--n7-digital-phone-frame-height),
+      calc(var(--n7-digital-phone-frame-height) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  /* Pair 1 & 3 — phone + aside (~650px @ 1440) */
+  .n7-digital__pair--1 .n7-digital__aside,
+  .n7-digital__pair--3 .n7-digital__aside {
+    left: 53.58%;
+    top: 16.5%;
+    width: min(46.5%, calc(var(--n7-digital-p1-aside-width) / var(--n7-page-width) * 100vw));
+  }
+
+  .n7-digital__pair--2 .n7-digital__aside {
+    left: 0;
+    top: 20.36%;
+    width: min(44%, calc(var(--n7-digital-p2-copy-width) / var(--n7-page-width) * 100vw));
+  }
+
+  .n7-digital__pair--2 .n7-digital__phone-wrap {
+    margin-left: 56.2%;
+  }
+
+}
+
+/* Wide laptop — intro | pairs side by side */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .n7-digital__stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(
+        0,
+        min(
+          calc(var(--n7-digital-p1-aside-x) + var(--n7-digital-p1-aside-width)),
+          calc(
+            (var(--n7-digital-p1-aside-x) + var(--n7-digital-p1-aside-width)) /
+              var(--n7-page-width) * 100vw
+          )
+        )
+      );
+    grid-template-areas:
+      "intro pairs"
+      "paperless paperless";
+    column-gap: clamp(24px, 3vw, 48px);
+    row-gap: min(
+      var(--n7-digital-part-gap),
+      calc(var(--n7-digital-part-gap) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  .n7-digital__intro {
+    position: relative;
+    left: auto;
+    top: auto;
+    grid-area: intro;
+    width: 100%;
+    max-width: min(
+      var(--n7-digital-left-width),
+      calc(var(--n7-digital-left-width) / var(--n7-page-width) * 100vw)
+    );
+    align-self: start;
+  }
+
+  .n7-digital__pairs {
+    position: relative;
+    left: auto;
+    top: auto;
+    grid-area: pairs;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    justify-self: end;
+    margin: 0;
+    align-self: start;
+  }
+
+  .n7-digital__pair {
+    min-height: 0;
+    height: auto;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital {
+    grid-area: paperless;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Narrow laptop — stack intro, pairs, paperless */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .n7-digital__stage {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: min(
+      var(--n7-digital-part-gap),
+      calc(var(--n7-digital-part-gap) / var(--n7-page-width) * 100vw)
+    );
+  }
+
+  .n7-digital__intro,
+  .n7-digital__pairs {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    max-width: min(650px, 100%);
+    margin: 0 auto;
+  }
+
+  .n7-digital__intro {
+    max-width: min(
+      var(--n7-digital-left-width),
+      calc(var(--n7-digital-left-width) / var(--n7-page-width) * 100vw)
+    );
+    align-self: flex-start;
+  }
+
+  .n7-digital__pairs {
+    min-height: 0;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
+/* 1440px Figma canvas — absolute stage only at full design width */
+@media (min-width: 1440px) {
+  .n7-digital__stage {
+    min-height: var(--n7-digital-stage-height);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .n7-digital__intro {
+    position: absolute;
+    left: var(--n7-digital-left-x);
+    top: var(--n7-digital-left-y);
+  }
+
+  .n7-digital__pairs {
+    position: absolute;
+    left: var(--n7-digital-block-x);
+    top: var(--n7-digital-block-y);
+    min-height: var(--n7-digital-pairs-stack-height);
+  }
+
+  .n7-digital__pair {
+    min-height: var(--n7-digital-pair-box-height);
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital {
+    position: absolute;
+    top: var(--n7-paperless-card-y);
+    left: 0;
+    margin-top: 0;
+  }
+}
+

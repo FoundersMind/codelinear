@@ -1,0 +1,143 @@
+.n7-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--n7-z-nav);
+  width: 100%;
+  padding-top: var(--n7-nav-y);
+}
+
+/*
+ * At 1440px: margin auto + width 715.46 = left offset 362.27 (Figma X)
+ * Below 1440: stays centered in fluid canvas
+ */
+.n7-nav {
+  display: flex;
+  width: fit-content;
+  max-width: calc(100% - 32px); /* don’t cap at 715px — that was crushing the 10px right gap */
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: var(--n7-nav-height);
+  padding-top: var(--n7-nav-pad-y);
+  padding-bottom: var(--n7-nav-pad-y);
+  padding-left: var(--n7-nav-pad-left);
+  padding-right: 0; /* right gap = .n7-nav__cta margin-right (10px) */
+  gap: var(--n7-nav-gap);
+  box-sizing: border-box;
+  background: var(--n7-nav-bg);
+  border: var(--n7-nav-border-width) solid var(--n7-nav-border-color);
+  border-radius: var(--n7-nav-radius);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.n7-brand {
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.n7-brand__text {
+  font-family: var(--n7-font-archivo);
+  font-weight: var(--n7-nav-brand-weight);
+  font-size: var(--n7-nav-brand-size);
+  line-height: var(--n7-nav-brand-line);
+  letter-spacing: 0;
+  color: var(--n7-ice-E9F4F9);
+}
+
+/* Figma Frame 19: links + Request Demo, gap 80px */
+.n7-nav__group {
+  display: flex;
+  align-items: center;
+  gap: var(--n7-nav-group-gap);
+  flex-shrink: 0;
+}
+
+/* Figma Frame 11: gap 20px between Solutions | Resources | About Us */
+.n7-nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--n7-nav-links-gap);
+  flex-shrink: 0;
+}
+
+/* Figma Frame 8/9: gap 4px between label and chevron */
+.n7-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--n7-nav-label-chevron-gap);
+  height: auto;
+  font-family: var(--n7-font-chivo-mono);
+  font-weight: var(--n7-nav-link-weight); /* Chivo Mono Regular */
+  font-size: var(--n7-nav-link-size); /* 12px */
+  line-height: var(--n7-nav-link-line); /* 130% */
+  letter-spacing: var(--n7-nav-link-tracking);
+  text-transform: uppercase;
+  color: var(--n7-text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.n7-nav__link:hover {
+  opacity: 0.75;
+}
+
+.n7-nav__label {
+  display: inline-block;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: var(--n7-nav-link-line);
+}
+
+.n7-nav__chevron {
+  display: block;
+  flex-shrink: 0;
+  width: var(--n7-nav-chevron-size);
+  height: var(--n7-nav-chevron-size);
+  opacity: 0.85;
+}
+
+/* 10px from Request Demo border → navbar inner edge (Figma) */
+.n7-nav__cta {
+  flex-shrink: 0;
+  margin-right: var(--n7-nav-pad-right);
+}
+
+/* Request Demo — 161×26, pad-x 37.5, radius 6 */
+.n7-nav__cta .n7-btn--nav-cta {
+  box-sizing: border-box;
+  width: var(--n7-nav-cta-width);
+  height: var(--n7-nav-cta-height);
+  padding: 0 var(--n7-nav-cta-pad-x);
+  border-radius: var(--n7-nav-cta-radius);
+  border: var(--n7-nav-cta-border-width) solid var(--n7-nav-cta-border-color);
+  font-family: var(--n7-font-chivo-mono);
+  font-weight: var(--n7-font-medium);
+  font-size: var(--n7-nav-link-size);
+  line-height: var(--n7-nav-link-line);
+  letter-spacing: var(--n7-nav-link-tracking);
+}
+
+.n7-nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.n7-nav__toggle-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--n7-text);
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}

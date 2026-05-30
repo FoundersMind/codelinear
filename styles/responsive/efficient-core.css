@@ -1,0 +1,184 @@
+/*
+ * Efficient Core — tablet & mobile (≥992px unchanged in efficient-core.css)
+ * Stacked: copy + checklist → dashboard image.
+ */
+
+@media (max-width: 991px) {
+  .n7-efficient-core {
+    min-height: 0;
+    padding: clamp(40px, 9vw, 56px) 0 clamp(48px, 10vw, 64px);
+    overflow-x: clip;
+  }
+
+  .n7-efficient-core .container {
+    padding-left: clamp(20px, 5vw, 32px);
+    padding-right: clamp(20px, 5vw, 32px);
+  }
+
+  .n7-efficient-core__layout {
+    position: relative;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(28px, 6vw, 40px);
+  }
+
+  /* Read copy first, then image (DOM has media first) */
+  .n7-efficient-core__content {
+    order: -1;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+  }
+
+  .n7-efficient-core__title {
+    margin: 0;
+    font-size: clamp(22px, 5.5vw, var(--n7-efficient-core-title-size));
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+
+  .n7-efficient-core__checklist {
+    margin-top: clamp(20px, 5vw, var(--n7-efficient-core-title-gap));
+    width: 100%;
+    min-height: 0;
+  }
+
+  .n7-efficient-core__subtitle {
+    margin-bottom: clamp(16px, 4vw, var(--n7-efficient-core-subtitle-gap));
+    font-size: clamp(14px, 3.5vw, var(--n7-efficient-core-subtitle-size));
+  }
+
+  .n7-efficient-core__lists {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0;
+    column-gap: 0;
+  }
+
+  .n7-efficient-core__list--left,
+  .n7-efficient-core__list--right {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .n7-efficient-core__list--right {
+    margin-top: clamp(8px, 2vw, 16px);
+    padding-top: clamp(8px, 2vw, 16px);
+    border-top: 1px solid rgba(233, 244, 249, 0.12);
+  }
+
+  .n7-efficient-core__list {
+    row-gap: clamp(10px, 2.5vw, 14px);
+  }
+
+  .n7-efficient-core__list--left .n7-efficient-core__item,
+  .n7-efficient-core__list--right .n7-efficient-core__item {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .n7-efficient-core__check {
+    flex: 0 0 var(--n7-efficient-core-check-width);
+    margin-top: 2px;
+  }
+
+  .n7-efficient-core__text {
+    flex: 1;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    font-size: clamp(14px, 3.5vw, var(--n7-efficient-core-list-size));
+    line-height: 1.4;
+    opacity: var(--n7-efficient-core-list-opacity);
+  }
+
+  .n7-efficient-core__media {
+    order: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: min(var(--n7-efficient-core-media-width), 100%);
+    height: auto;
+    margin: 0 auto;
+    overflow: visible;
+    pointer-events: auto;
+  }
+
+  .n7-efficient-core__media img {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    transform: none;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+/* Tablet — two-column checklist when wide enough */
+@media (min-width: 600px) and (max-width: 991px) {
+  .n7-efficient-core__lists {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(20px, 4vw, var(--n7-efficient-core-list-col-gap));
+    align-items: start;
+  }
+
+  .n7-efficient-core__list--right {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .n7-efficient-core {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  .n7-efficient-core__layout {
+    gap: 24px;
+  }
+
+  .n7-efficient-core__title {
+    font-size: clamp(20px, 5.8vw, 24px);
+  }
+
+  .n7-efficient-core__media {
+    max-width: min(360px, 100%);
+  }
+}
+
+@media (max-width: 479px) {
+  .n7-efficient-core .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .n7-efficient-core__check {
+    transform: scale(0.9);
+    transform-origin: top left;
+    margin-right: 4px;
+  }
+
+  .n7-efficient-core__text {
+    font-size: 14px;
+  }
+}

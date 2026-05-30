@@ -1,0 +1,179 @@
+/*
+ * Site footer — tablet & mobile only (≥992px + 1440px block in site-footer.css)
+ * Stacked: logo → link columns → copyright.
+ */
+
+@media (max-width: 991px) {
+  .n7-site-footer {
+    overflow-x: clip;
+  }
+
+  .n7-site-footer__glow-orbit {
+    left: 50%;
+    top: auto;
+    bottom: 0;
+    width: min(100%, 120vw);
+    max-width: none;
+    height: min(320px, 70vw);
+    transform: translateX(-50%);
+    opacity: 0.05;
+  }
+
+  .n7-site-footer__stage {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: stretch;
+    row-gap: clamp(28px, 6vw, 40px);
+    column-gap: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    height: auto;
+    padding: clamp(40px, 9vw, 56px) clamp(20px, 5vw, 32px) clamp(32px, 7vw, 48px);
+  }
+
+  .n7-site-footer__brand {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    width: 100%;
+    max-width: min(var(--n7-footer-logo-width), 72vw, 320px);
+    margin: 0 auto;
+  }
+
+  .n7-site-footer__grid {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: clamp(28px, 5vw, 36px);
+    column-gap: 0;
+    width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
+  .n7-site-footer__col {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .n7-site-footer__col--nav,
+  .n7-site-footer__col--solutions {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .n7-site-footer__heading {
+    margin-bottom: clamp(10px, 2.5vw, var(--n7-footer-heading-gap));
+    font-size: clamp(15px, 3.8vw, var(--n7-footer-heading-size));
+  }
+
+  .n7-site-footer__address {
+    font-size: clamp(13px, 3.2vw, var(--n7-footer-body-size));
+    line-height: 1.45;
+  }
+
+  .n7-site-footer__links {
+    gap: clamp(8px, 2vw, var(--n7-footer-links-list-gap));
+  }
+
+  .n7-site-footer__link {
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    font-size: clamp(14px, 3.5vw, var(--n7-footer-link-size));
+    line-height: 1.35;
+  }
+
+  /* Drop Figma fixed label boxes — they clip/wrap badly on phones */
+  .n7-site-footer__col--nav .n7-site-footer__link-label,
+  .n7-site-footer__col--solutions .n7-site-footer__link-item--wrap .n7-site-footer__link-label {
+    width: auto;
+    max-width: none;
+    height: auto;
+    min-height: 0;
+    line-height: 1.35;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .n7-site-footer__col--nav .n7-site-footer__link-arrow,
+  .n7-site-footer__col--solutions .n7-site-footer__link-item--wrap .n7-site-footer__link-arrow {
+    flex-shrink: 0;
+    width: var(--n7-footer-arrow-width);
+    height: var(--n7-footer-arrow-height);
+    margin-top: 0;
+  }
+
+  .n7-site-footer__copy {
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    margin: clamp(8px, 2vw, 16px) 0 0;
+    padding: 0;
+    font-size: clamp(11px, 2.8vw, var(--n7-footer-copy-size));
+    line-height: 1.45;
+    text-align: center;
+  }
+}
+
+/* Tablet — two columns for office addresses */
+@media (min-width: 600px) and (max-width: 991px) {
+  .n7-site-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(24px, 5vw, 40px);
+    row-gap: clamp(28px, 5vw, 36px);
+  }
+
+  /* Solutions block spans full width below office addresses */
+  .n7-site-footer__col--solutions {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  .n7-site-footer__stage {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  .n7-site-footer__brand {
+    max-width: min(280px, 78vw);
+  }
+
+  .n7-site-footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .n7-site-footer__col--solutions {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .n7-site-footer__stage {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .n7-site-footer__copy {
+    font-size: 11px;
+    text-align: left;
+  }
+}

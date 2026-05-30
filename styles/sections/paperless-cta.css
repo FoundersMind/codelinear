@@ -1,0 +1,195 @@
+/*
+ * Paperless CTA — Figma 1440×316.
+ * Copy left + buttons right (same row); tablet/mobile: styles/responsive/paperless-cta.css
+ */
+.n7-paperless-cta {
+  position: relative;
+  background: var(--n7-paperless-cta-bg);
+  overflow: hidden;
+}
+
+.n7-paperless-cta__stage {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  /* Figma: 214px from content box (607.83) end → Contact us (902) */
+  column-gap: min(
+    var(--n7-paperless-cta-content-actions-gap),
+    calc(var(--n7-paperless-cta-content-actions-gap) / var(--n7-page-width) * 100vw)
+  );
+  width: 100%;
+  max-width: var(--n7-page-width);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: clamp(32px, calc(var(--n7-paperless-cta-content-y) / var(--n7-page-width) * 100vw), var(--n7-paperless-cta-content-y))
+    clamp(20px, calc(var(--n7-paperless-cta-content-x) / var(--n7-page-width) * 100vw), var(--n7-paperless-cta-content-x));
+  min-height: clamp(
+    200px,
+    calc(var(--n7-paperless-cta-height) / var(--n7-page-width) * 100vw),
+    var(--n7-paperless-cta-height)
+  );
+  height: auto;
+}
+
+.n7-paperless-cta__content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  width: min(
+    var(--n7-paperless-cta-content-width),
+    calc(var(--n7-paperless-cta-content-width) / var(--n7-page-width) * 100vw)
+  );
+  min-width: 0;
+  z-index: 1;
+}
+
+.n7-paperless-cta__title {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 0 0 clamp(
+    20px,
+    calc(var(--n7-paperless-cta-title-sub-gap) / var(--n7-page-width) * 100vw),
+    var(--n7-paperless-cta-title-sub-gap)
+  );
+  font-family: var(--n7-font-archivo);
+  font-weight: 500;
+  font-size: clamp(
+    24px,
+    calc(var(--n7-paperless-cta-title-size) / var(--n7-page-width) * 100vw),
+    var(--n7-paperless-cta-title-size)
+  );
+  line-height: var(--n7-paperless-title-line);
+  letter-spacing: var(--n7-paperless-title-tracking);
+  color: var(--n7-ice-E9F4F9);
+}
+
+.n7-paperless-cta__sub {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: min(100%, var(--n7-paperless-cta-sub-width));
+  height: auto;
+  margin: 0;
+  font-family: var(--n7-font-archivo);
+  font-weight: 400;
+  font-size: clamp(
+    14px,
+    calc(var(--n7-paperless-sub-size) / var(--n7-page-width) * 100vw),
+    var(--n7-paperless-sub-size)
+  );
+  line-height: var(--n7-paperless-sub-line);
+  letter-spacing: var(--n7-paperless-sub-tracking);
+  color: color-mix(in srgb, var(--n7-ice-E9F4F9) var(--n7-paperless-sub-opacity), transparent);
+}
+
+.n7-paperless-cta__actions {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  width: auto;
+  max-width: var(--n7-paperless-cta-actions-width);
+  height: clamp(
+    44px,
+    calc(var(--n7-paperless-cta-actions-height) / var(--n7-page-width) * 100vw),
+    var(--n7-paperless-cta-actions-height)
+  );
+  gap: clamp(
+    12px,
+    calc(var(--n7-paperless-btn-gap) / var(--n7-page-width) * 100vw),
+    var(--n7-paperless-btn-gap)
+  );
+}
+
+.n7-paperless-cta__btn-contact.n7-btn--outline {
+  flex: 0 0 auto;
+  color: var(--n7-ice-E9F4F9);
+  border-color: var(--n7-hero-btn-outline-border);
+  transform: none;
+}
+
+.n7-paperless-cta__btn-contact.n7-btn--outline:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  color: var(--n7-ice-E9F4F9);
+  background: transparent;
+  border-color: var(--n7-hero-btn-outline-border);
+}
+
+.n7-paperless-cta__btn-demo.n7-btn--primary {
+  flex: 0 0 auto;
+  transform: none;
+}
+
+.n7-paperless-cta__btn-demo.n7-btn--primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  color: #ffffff;
+  background: var(--n7-hero-btn-gradient);
+}
+
+/* Figma 1440 — exact absolute layout */
+@media (min-width: 1440px) {
+  .n7-paperless-cta,
+  .n7-paperless-cta__stage {
+    min-height: var(--n7-paperless-cta-height);
+    height: var(--n7-paperless-cta-height);
+  }
+
+  .n7-paperless-cta__stage {
+    display: block;
+    padding: 0;
+    column-gap: 0;
+  }
+
+  .n7-paperless-cta__content {
+    position: absolute;
+    left: var(--n7-paperless-cta-content-x);
+    top: var(--n7-paperless-cta-content-y);
+    width: var(--n7-paperless-cta-content-width);
+    height: var(--n7-paperless-cta-content-height);
+    flex: none;
+    max-width: none;
+  }
+
+  .n7-paperless-cta__title {
+    width: var(--n7-paperless-cta-title-width);
+    height: var(--n7-paperless-cta-title-height);
+    margin-bottom: var(--n7-paperless-cta-title-sub-gap);
+    font-size: var(--n7-paperless-cta-title-size);
+  }
+
+  .n7-paperless-cta__sub {
+    width: var(--n7-paperless-cta-sub-width);
+    height: var(--n7-paperless-cta-sub-height);
+    font-size: var(--n7-paperless-sub-size);
+  }
+
+  .n7-paperless-cta__actions {
+    position: absolute;
+    top: var(--n7-paperless-cta-actions-y);
+    left: var(--n7-paperless-cta-actions-x);
+    width: var(--n7-paperless-cta-actions-width);
+    height: var(--n7-paperless-cta-actions-height);
+    max-width: none;
+    gap: var(--n7-paperless-btn-gap);
+  }
+
+  .n7-paperless-cta__btn-contact.n7-btn--outline {
+    font-size: var(--n7-hero-btn-font-size);
+  }
+
+  .n7-paperless-cta__btn-demo.n7-btn--primary {
+    font-size: var(--n7-hero-btn-font-size);
+  }
+}
+

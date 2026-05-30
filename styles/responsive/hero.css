@@ -1,0 +1,523 @@
+/*
+ * Hero + Trusted By — tablet & mobile only (≥992px unchanged in hero.css)
+ * Glass cards scale with the photo (same proportions / gaps as 1440 layout).
+ */
+
+/* ─── Tablet + mobile (≤991px) ─── */
+@media (max-width: 991px) {
+  .n7-hero {
+    overflow-x: clip;
+  }
+
+  .n7-hero .n7-hero__inner.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: 0;
+    padding-top: clamp(96px, 18vw, 120px);
+    padding-bottom: clamp(40px, 8vw, 56px);
+    padding-left: clamp(20px, 5vw, 32px);
+    padding-right: clamp(20px, 5vw, 32px);
+    gap: 0;
+  }
+
+  .n7-hero__content {
+    position: static;
+    order: 1;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .n7-hero__title {
+    font-size: clamp(36px, 7.2vw, 52px);
+    letter-spacing: clamp(-0.4px, -0.012em, var(--n7-hero-title-tracking));
+    margin-bottom: clamp(12px, 3vw, 16px);
+  }
+
+  .n7-hero__sub {
+    width: 100%;
+    max-width: min(356px, 92vw);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: clamp(28px, 6vw, var(--n7-hero-gap-text-to-cta));
+    font-size: clamp(15px, 2.2vw, var(--n7-hero-sub-size));
+  }
+
+  .n7-hero__actions {
+    justify-content: center;
+    gap: clamp(12px, 3vw, var(--n7-hero-gap-cta));
+  }
+
+  .n7-hero__media {
+    position: static;
+    order: 2;
+    width: 100%;
+    max-width: min(400px, calc(100vw - 32px));
+    height: auto;
+    margin: clamp(28px, 6vw, 40px) auto clamp(20px, 5vw, 32px);
+    /* Space for cards that extend past photo (same bleed as laptop) */
+    padding-inline: clamp(20px, 8vw, 48px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .n7-hero__media-stage {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: visible;
+  }
+
+  /* Single coordinate system for both cards (matches laptop) */
+  .n7-hero__photo-wrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 362.64 / 300.71;
+    overflow: visible;
+    border-radius: clamp(20px, 5vw, var(--n7-hero-photo-radius));
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+    container-type: size;
+    container-name: n7-hero-photo;
+    --n7-hcw: calc(100cqw / var(--n7-hero-photo-width));
+    --n7-hch: calc(100cqh / var(--n7-hero-photo-height));
+    --n7-card-k: 0.78;
+  }
+
+  .n7-hero__photo {
+    width: 100%;
+    height: 100%;
+    border-radius: clamp(20px, 5vw, var(--n7-hero-photo-radius));
+  }
+
+  .n7-hero__glow-orbit {
+    width: calc(var(--n7-hero-glow-circle-size) * 100cqw / var(--n7-hero-photo-width));
+    height: calc(var(--n7-hero-glow-circle-size) * 100cqh / var(--n7-hero-photo-height));
+  }
+
+  .n7-hero__media-glow {
+    filter: blur(calc(var(--n7-hero-glow-layer-blur) * 100cqw / var(--n7-hero-photo-width)));
+    -webkit-filter: blur(calc(var(--n7-hero-glow-layer-blur) * 100cqw / var(--n7-hero-photo-width)));
+  }
+
+  /*
+   * Glass cards — same Figma anchors as laptop, scaled by photo + --n7-card-k
+   * Activity: left -128, top 150 | Balance: right -56, top 8%
+   */
+  .n7-hero .n7-activity-card {
+    left: calc(
+      var(--n7-activity-card-x) * var(--n7-hcw) * var(--n7-card-k) + 24px
+    );
+    right: auto;
+    top: calc(var(--n7-activity-card-y) * var(--n7-hch) * var(--n7-card-k));
+    bottom: auto;
+    width: calc(var(--n7-activity-card-width) * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(
+      (var(--n7-activity-card-height) + 4px) * var(--n7-hch) * var(--n7-card-k)
+    );
+    min-height: 0;
+    max-height: calc(
+      (var(--n7-activity-card-height) + 4px) * var(--n7-hch) * var(--n7-card-k)
+    );
+    z-index: var(--n7-z-activity-card);
+    padding: calc(var(--n7-balance-shell-pad-y) * var(--n7-hcw) * var(--n7-card-k))
+      calc(var(--n7-balance-shell-pad-x) * var(--n7-hcw) * var(--n7-card-k));
+    border-radius: calc(var(--n7-activity-card-radius) * var(--n7-hcw) * var(--n7-card-k));
+    backdrop-filter: blur(calc(var(--n7-balance-glass-blur) * var(--n7-hcw) * var(--n7-card-k)));
+    -webkit-backdrop-filter: blur(calc(var(--n7-balance-glass-blur) * var(--n7-hcw) * var(--n7-card-k)));
+    box-shadow: 0 calc(8px * var(--n7-hcw) * var(--n7-card-k))
+      calc(32px * var(--n7-hcw) * var(--n7-card-k)) rgba(0, 0, 0, 0.12);
+  }
+
+  .n7-hero .n7-activity-card__panel {
+    height: 100%;
+    overflow: hidden;
+    padding: calc(6px * var(--n7-hch) * var(--n7-card-k))
+      calc(8px * var(--n7-hcw) * var(--n7-card-k));
+    gap: calc(4px * var(--n7-hcw) * var(--n7-card-k));
+    border-radius: calc(
+      (var(--n7-activity-card-radius) - var(--n7-balance-shell-pad-y)) * var(--n7-hcw) *
+        var(--n7-card-k)
+    );
+  }
+
+  .n7-hero .n7-activity-card__title {
+    font-size: calc(var(--n7-activity-title-size) * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  /* Four period pills — one row, Figma 45.15×15.53 scaled, equal columns */
+  .n7-hero .n7-activity-card__tabs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    width: 100%;
+    column-gap: calc(2px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-activity-card__tab {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    height: calc(15.53px * var(--n7-hch) * var(--n7-card-k));
+    min-height: calc(15.53px * var(--n7-hch) * var(--n7-card-k));
+    max-height: calc(15.53px * var(--n7-hch) * var(--n7-card-k));
+    padding: 0 calc(2px * var(--n7-hcw) * var(--n7-card-k));
+    text-align: center;
+    font-size: calc(7px * var(--n7-hcw) * var(--n7-card-k));
+    line-height: 1;
+    border-radius: calc(999px * var(--n7-hcw) * var(--n7-card-k));
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .n7-hero .n7-activity-card__row {
+    gap: calc(var(--n7-activity-row-gap) * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-activity-card__icon {
+    width: calc(var(--n7-activity-icon-size) * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(var(--n7-activity-icon-size) * var(--n7-hcw) * var(--n7-card-k));
+    border-radius: calc(var(--n7-activity-icon-radius) * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-activity-card__icon svg {
+    width: calc(11px * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(11px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-activity-card__label {
+    font-size: calc(var(--n7-activity-meta-size) * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-activity-card__date {
+    font-size: calc(var(--n7-activity-date-size) * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-activity-card__amount {
+    font-size: calc(var(--n7-activity-amount-size) * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card {
+    left: auto;
+    right: calc(var(--n7-balance-card-offset-right) * var(--n7-hcw) * var(--n7-card-k));
+    top: 8%;
+    bottom: auto;
+    width: calc(var(--n7-balance-card-width) * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(var(--n7-balance-card-height) * var(--n7-hch) * var(--n7-card-k));
+    min-height: 0;
+    max-height: calc(var(--n7-balance-card-height) * var(--n7-hch) * var(--n7-card-k));
+    z-index: var(--n7-z-balance-card);
+    padding: calc(var(--n7-balance-shell-pad-y) * var(--n7-hcw) * var(--n7-card-k))
+      calc(var(--n7-balance-shell-pad-x) * var(--n7-hcw) * var(--n7-card-k));
+    border-radius: calc(var(--n7-balance-card-radius) * var(--n7-hcw) * var(--n7-card-k));
+    backdrop-filter: blur(calc(var(--n7-balance-glass-blur) * var(--n7-hcw) * var(--n7-card-k)));
+    -webkit-backdrop-filter: blur(calc(var(--n7-balance-glass-blur) * var(--n7-hcw) * var(--n7-card-k)));
+    box-shadow: 0 calc(8px * var(--n7-hcw) * var(--n7-card-k))
+      calc(32px * var(--n7-hcw) * var(--n7-card-k)) rgba(0, 0, 0, 0.12);
+  }
+
+  .n7-hero .n7-balance-card__panel {
+    height: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: calc(12px * var(--n7-hch) * var(--n7-card-k)) calc(14px * var(--n7-hcw) * var(--n7-card-k));
+    border-radius: calc(
+      (var(--n7-balance-card-radius) - var(--n7-balance-shell-pad-y)) * var(--n7-hcw) *
+        var(--n7-card-k)
+    );
+  }
+
+  .n7-hero .n7-balance-card__header {
+    gap: calc(8px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__user {
+    gap: calc(8px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__avatar {
+    width: calc(var(--n7-balance-avatar-size) * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(var(--n7-balance-avatar-size) * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__name {
+    font-size: calc(11px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__greet {
+    font-size: calc(9px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__notify svg {
+    width: calc(16px * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(16px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__label {
+    font-size: calc(10px * var(--n7-hcw) * var(--n7-card-k));
+    margin-bottom: calc(4px * var(--n7-hch) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__amount {
+    font-size: calc(var(--n7-balance-amount-size) * var(--n7-hcw) * var(--n7-card-k));
+    line-height: 1.1;
+  }
+
+  .n7-hero .n7-balance-card__amount-currency {
+    font-size: calc(12px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__body {
+    padding: calc(2px * var(--n7-hch) * var(--n7-card-k)) 0;
+  }
+
+  .n7-hero .n7-balance-card__divider {
+    margin: calc(4px * var(--n7-hch) * var(--n7-card-k)) calc(-1px * var(--n7-hcw) * var(--n7-card-k))
+      calc(6px * var(--n7-hch) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__actions {
+    gap: calc(4px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__action {
+    font-size: calc(8px * var(--n7-hcw) * var(--n7-card-k));
+    gap: calc(3px * var(--n7-hch) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__action-icon {
+    width: calc(28px * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(28px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-hero .n7-balance-card__action-svg {
+    width: calc(var(--n7-balance-action-icon-size) * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(var(--n7-balance-action-icon-size) * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  /* Trusted By — reset desktop absolute offsets (left/top were shifting this block) */
+  .n7-trusted {
+    position: relative;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    order: 3;
+    width: 100%;
+    max-width: min(var(--n7-trusted-width), 100%);
+    margin: clamp(40px, 10vw, 56px) auto 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-content: start;
+    row-gap: clamp(14px, 3.5vw, var(--n7-trusted-label-gap));
+    text-align: center;
+    z-index: 2;
+    clear: both;
+  }
+
+  .n7-trusted__label {
+    width: auto;
+    margin: 0;
+    font-size: clamp(14px, 3.6vw, var(--n7-trusted-label-size));
+    text-transform: lowercase;
+    opacity: 0.7;
+  }
+
+  .n7-trusted__logos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    gap: clamp(14px, 4vw, 20px) clamp(10px, 3vw, var(--n7-trusted-logo-gap));
+  }
+
+  .n7-trusted__logo {
+    display: block;
+    height: clamp(14px, 3.8vw, var(--n7-trusted-logo-height));
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+}
+
+/* ─── Mobile (≤767px) — stronger shrink, same laptop anchors ─── */
+@media (max-width: 767px) {
+  .n7-hero__photo-wrap {
+    --n7-card-k: 0.7;
+  }
+
+  .n7-hero .n7-hero__inner.container {
+    padding-top: clamp(88px, 22vw, 104px);
+    padding-bottom: 48px;
+  }
+
+  .n7-hero__title {
+    font-size: clamp(30px, 8.5vw, 40px);
+    line-height: 1.15;
+  }
+
+  .n7-hero__sub {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .n7-hero__actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .n7-hero__actions .n7-btn--outline {
+    margin-inline: auto;
+  }
+
+  .n7-hero__media {
+    max-width: min(360px, calc(100vw - 32px));
+    margin-top: 24px;
+    margin-bottom: 36px;
+  }
+
+  .n7-hero .n7-balance-card__amount {
+    font-size: calc(var(--n7-balance-amount-size) * var(--n7-hcw) * var(--n7-card-k) * 0.9);
+  }
+
+  .n7-hero .n7-balance-card__action-icon {
+    width: calc(24px * var(--n7-hcw) * var(--n7-card-k));
+    height: calc(24px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-trusted {
+    margin-top: clamp(48px, 12vw, 64px);
+    max-width: 100%;
+  }
+
+  .n7-trusted__logos {
+    max-width: min(320px, 100%);
+    gap: 16px 12px;
+  }
+
+  .n7-trusted__logo {
+    height: clamp(13px, 3.5vw, 17px);
+  }
+}
+
+/* ─── Small phones (≤479px) — iPhone SE etc. ─── */
+@media (max-width: 479px) {
+  .n7-hero__photo-wrap {
+    --n7-card-k: 0.64;
+  }
+
+  .n7-hero__media {
+    padding-inline: clamp(20px, 7.5vw, 32px);
+  }
+
+  .n7-hero .n7-activity-card {
+    left: calc(
+      var(--n7-activity-card-x) * var(--n7-hcw) * var(--n7-card-k) + 32px
+    );
+    width: calc(var(--n7-activity-card-width) * var(--n7-hcw) * var(--n7-card-k) * 0.94);
+  }
+
+  .n7-hero .n7-activity-card__tab {
+    height: calc(15.53px * var(--n7-hch) * var(--n7-card-k));
+    min-height: calc(15.53px * var(--n7-hch) * var(--n7-card-k));
+    font-size: calc(6.5px * var(--n7-hcw) * var(--n7-card-k));
+    padding: 0 1px;
+  }
+
+  .n7-hero .n7-hero__inner.container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 84px;
+    padding-bottom: 40px;
+  }
+
+  .n7-hero__title {
+    font-size: clamp(26px, 7.8vw, 32px);
+  }
+
+  .n7-hero__title br {
+    display: none;
+  }
+
+  .n7-hero__media {
+    max-width: calc(100vw - 32px);
+  }
+
+  .n7-hero__photo-wrap {
+    border-radius: 18px;
+  }
+
+  .n7-hero .n7-balance-card__amount {
+    font-size: calc(var(--n7-balance-amount-size) * var(--n7-hcw) * var(--n7-card-k) * 0.85);
+  }
+
+  .n7-hero .n7-balance-card__action {
+    font-size: calc(7px * var(--n7-hcw) * var(--n7-card-k));
+  }
+
+  .n7-trusted {
+    margin-top: 44px;
+  }
+
+  .n7-trusted__logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 280px;
+    gap: 14px 10px;
+  }
+
+  .n7-trusted__logo {
+    height: 13px;
+  }
+}
+
+/* Fallback when container queries are unavailable (keeps laptop-like anchors) */
+@supports not (width: 1cqw) {
+  @media (max-width: 991px) {
+    .n7-hero .n7-activity-card {
+      left: calc(-35.35% * var(--n7-card-k, 0.78) + 24px);
+      top: calc(49.88% * var(--n7-card-k, 0.78));
+      width: calc(70.04% * var(--n7-card-k, 0.78));
+      height: calc(38.91% * var(--n7-card-k, 0.78));
+    }
+
+    @media (max-width: 479px) {
+      .n7-hero .n7-activity-card {
+        left: calc(-35.35% * var(--n7-card-k, 0.64) + 32px);
+        width: calc(70.04% * var(--n7-card-k, 0.64));
+      }
+    }
+
+    .n7-hero .n7-balance-card {
+      right: calc(-15.45% * var(--n7-card-k, 0.78));
+      top: 8%;
+      width: calc(57.38% * var(--n7-card-k, 0.78));
+      height: calc(58.86% * var(--n7-card-k, 0.78));
+    }
+  }
+}
+
+@media (max-width: 991px) and (prefers-reduced-motion: reduce) {
+  .n7-hero__media-glow {
+    will-change: auto;
+  }
+}

@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Local env
+.env
+
+# Editor scratch
+styles/Untitled
+

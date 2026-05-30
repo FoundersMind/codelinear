@@ -1,0 +1,195 @@
+/*
+ * Solutions — tablet & mobile only (≥992px unchanged in solutions.css)
+ */
+
+@media (max-width: 991px) {
+  .n7-solutions {
+    height: auto;
+    min-height: 0;
+    padding: clamp(32px, 8vw, 48px) 0 clamp(48px, 10vw, 64px);
+    overflow-x: clip;
+    position: relative;
+    z-index: 2;
+    isolation: isolate;
+  }
+
+  .n7-solutions::after {
+    right: -40px;
+    top: 18%;
+    width: min(var(--n7-solutions-glow-size), 60vw);
+    height: min(var(--n7-solutions-glow-size), 60vw);
+    opacity: 0.85;
+  }
+
+  .n7-solutions .container {
+    padding-left: clamp(20px, 5vw, 32px);
+    padding-right: clamp(20px, 5vw, 32px);
+  }
+
+  .n7-solutions__layout {
+    position: relative;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(36px, 8vw, 48px);
+  }
+
+  /* Reset desktop absolute anchors (same issue as Trusted By) */
+  .n7-solutions__intro {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: min(var(--n7-solutions-intro-width), 100%);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 5vw, var(--n7-solutions-title-gap));
+  }
+
+  .n7-solutions__title {
+    margin: 0;
+    font-size: clamp(28px, 7.2vw, var(--n7-solutions-title-size));
+    line-height: 1.2;
+    letter-spacing: clamp(-0.35px, -0.01em, var(--n7-solutions-title-tracking));
+    max-width: 22ch;
+  }
+
+  .n7-solutions__cta {
+    font-size: var(--n7-hero-btn-font-size);
+  }
+
+  .n7-solutions__grid {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: clamp(32px, 7vw, 40px);
+    column-gap: 0;
+  }
+
+  .n7-solution-card {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .n7-solution-card__top {
+    margin-bottom: clamp(18px, 4vw, var(--n7-solutions-icon-gap));
+  }
+
+  .n7-solution-card__icon img {
+    max-height: clamp(32px, 8vw, var(--n7-solutions-icon-size));
+    width: auto;
+    height: auto;
+  }
+
+  .n7-solution-card__title {
+    margin-bottom: clamp(20px, 4.5vw, var(--n7-solutions-card-title-gap));
+    font-size: clamp(17px, 4.2vw, var(--n7-solutions-card-title-size));
+  }
+
+  .n7-solution-card__desc {
+    margin-bottom: clamp(14px, 3vw, var(--n7-solutions-desc-gap));
+    max-width: 100%;
+    font-size: clamp(14px, 3.6vw, var(--n7-solutions-desc-size));
+    line-height: var(--n7-solutions-desc-line);
+  }
+
+  .n7-solution-card__link {
+    margin-top: clamp(16px, 4vw, 26px);
+    font-size: clamp(12px, 3vw, var(--n7-solutions-link-size));
+  }
+}
+
+/* Tablet landscape — 2-column cards when space allows */
+@media (min-width: 600px) and (max-width: 991px) {
+  .n7-solutions__intro {
+    max-width: 520px;
+  }
+
+  .n7-solutions__title {
+    max-width: none;
+  }
+
+  .n7-solutions__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(24px, 5vw, var(--n7-solutions-grid-gap-x));
+    row-gap: clamp(36px, 6vw, var(--n7-solutions-grid-gap-y));
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .n7-solutions {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  .n7-solutions__layout {
+    gap: 32px;
+  }
+
+  .n7-solutions__title {
+    font-size: clamp(24px, 6.8vw, 30px);
+    max-width: none;
+  }
+
+  .n7-solutions__cta {
+    margin-inline: auto;
+  }
+
+  .n7-solutions__grid {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
+  .n7-solution-card__link {
+    min-height: 44px;
+    align-items: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 479px) {
+  .n7-solutions .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .n7-solutions {
+    padding-top: 28px;
+    padding-bottom: 36px;
+  }
+
+  .n7-solutions::after {
+    display: none;
+  }
+
+  .n7-solutions__title {
+    font-size: clamp(22px, 6.4vw, 26px);
+  }
+
+  .n7-solutions__grid {
+    row-gap: 32px;
+  }
+
+  .n7-solution-card__title {
+    font-size: 16px;
+  }
+
+  .n7-solution-card__desc {
+    font-size: 14px;
+  }
+}

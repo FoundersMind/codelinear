@@ -1,0 +1,1371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>N7 — Modern Banking</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Archivo:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/motion.css" />
+    <link rel="stylesheet" href="./styles/components/navbar.css" />
+    <link rel="stylesheet" href="./styles/responsive/navbar.css" />
+    <link rel="stylesheet" href="./styles/components/activity-card.css" />
+    <link rel="stylesheet" href="./styles/components/balance-card.css" />
+    <link rel="stylesheet" href="./styles/sections/hero.css" />
+    <link rel="stylesheet" href="./styles/responsive/hero.css" />
+    <link rel="stylesheet" href="./styles/sections/solutions.css" />
+    <link rel="stylesheet" href="./styles/responsive/solutions.css" />
+    <link rel="stylesheet" href="./styles/sections/core-banking.css" />
+    <link rel="stylesheet" href="./styles/responsive/core-banking.css" />
+    <link rel="stylesheet" href="./styles/sections/efficient-core.css" />
+    <link rel="stylesheet" href="./styles/responsive/efficient-core.css" />
+    <link rel="stylesheet" href="./styles/sections/paperless.css" />
+    <link rel="stylesheet" href="./styles/responsive/paperless.css" />
+    <link rel="stylesheet" href="./styles/sections/marquee.css" />
+    <link rel="stylesheet" href="./styles/sections/digital.css" />
+    <link rel="stylesheet" href="./styles/responsive/digital.css" />
+    <link rel="stylesheet" href="./styles/sections/insights.css" />
+    <link rel="stylesheet" href="./styles/responsive/insights.css" />
+    <link rel="stylesheet" href="./styles/sections/case-studies.css" />
+    <link rel="stylesheet" href="./styles/responsive/case-studies.css" />
+    <link rel="stylesheet" href="./styles/sections/paperless-cta.css" />
+    <link rel="stylesheet" href="./styles/responsive/paperless-cta.css" />
+    <link rel="stylesheet" href="./styles/sections/site-footer.css" />
+    <link rel="stylesheet" href="./styles/responsive/site-footer.css" />
+  </head>
+
+  <body class="n7-body">
+    <div class="n7-page">
+      <!-- Slice 1: Nav -->
+      <header class="n7-header">
+        <nav class="n7-nav" aria-label="Main">
+          <a class="n7-brand" href="./index.html" aria-label="N7 Home">
+            <span class="n7-brand__text">N7</span>
+          </a>
+
+          <button
+            class="n7-nav__toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            data-n7-nav-toggle
+          >
+            <span class="n7-nav__toggle-line"></span>
+            <span class="n7-nav__toggle-line"></span>
+            <span class="n7-nav__toggle-line"></span>
+          </button>
+
+          <div class="n7-nav__group" data-n7-nav-links>
+            <div class="n7-nav__links">
+              <a class="n7-nav__link" href="#">
+                <span class="n7-nav__label">Solutions</span>
+                <img
+                  class="n7-nav__chevron"
+                  src="./assets/images/downarrow.svg"
+                  alt=""
+                  width="13.73"
+                  height="13.73"
+                  aria-hidden="true"
+                />
+              </a>
+              <a class="n7-nav__link" href="#">
+                <span class="n7-nav__label">Resources</span>
+                <img
+                  class="n7-nav__chevron"
+                  src="./assets/images/downarrow.svg"
+                  alt=""
+                  width="13.73"
+                  height="13.73"
+                  aria-hidden="true"
+                />
+              </a>
+              <a class="n7-nav__link n7-nav__link--text-only" href="#">
+                <span class="n7-nav__label">About Us</span>
+              </a>
+            </div>
+
+            <div class="n7-nav__cta">
+              <a class="n7-btn n7-btn--ghost n7-btn--nav-cta" href="#">Request Demo</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Slice 2 + 3: Hero + Trusted -->
+        <section class="n7-hero">
+          <div class="container n7-hero__inner">
+            <div class="n7-hero__content">
+              <h1 class="n7-hero__title">
+                The new foundation<br />
+                of modern banking
+              </h1>
+              <p class="n7-hero__sub">
+                We drive innovation and growth, provide seamless customer experience and
+                operational excellence
+              </p>
+
+              <div class="n7-hero__actions">
+                <a class="n7-btn n7-btn--primary" href="#">Request demo</a>
+                <a class="n7-btn n7-btn--outline" href="#">Contact us</a>
+              </div>
+            </div>
+
+            <div class="n7-hero__media" aria-label="Product preview">
+              <div class="n7-hero__media-stage">
+              <div class="n7-hero__photo-wrap">
+                <div class="n7-hero__glow-orbit" aria-hidden="true">
+                  <div class="n7-hero__media-glow"></div>
+                </div>
+                <img
+                  class="n7-hero__photo"
+                  src="./assets/images/Pexels%20Photo%20by%20Andrea%20Piacquadio.svg"
+                  alt="Woman using phone and laptop"
+                />
+                <aside class="n7-activity-card" aria-label="Recent activity">
+                  <div class="n7-activity-card__panel">
+                    <p class="n7-activity-card__title">Recent activity</p>
+                    <div class="n7-activity-card__tabs" role="tablist" aria-label="Activity period">
+                      <span class="n7-activity-card__tab">This Day</span>
+                      <span class="n7-activity-card__tab is-active">This Week</span>
+                      <span class="n7-activity-card__tab">This Month</span>
+                      <span class="n7-activity-card__tab">6 Month</span>
+                    </div>
+                    <div class="n7-activity-card__row">
+                      <span class="n7-activity-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 12 12" fill="none">
+                          <path
+                            d="M3 9L9 3M9 3H5M9 3V7"
+                            stroke="currentColor"
+                            stroke-width="1.2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      <div class="n7-activity-card__meta">
+                        <p class="n7-activity-card__label">
+                          <strong>To Jin</strong>
+                          <span class="n7-activity-card__label-muted">• Work</span>
+                        </p>
+                        <small class="n7-activity-card__date">12 jun 2022</small>
+                      </div>
+                      <span class="n7-activity-card__amount">-$59</span>
+                    </div>
+                  </div>
+                </aside>
+
+                <aside class="n7-balance-card" aria-label="Account balance">
+                  <div class="n7-balance-card__panel">
+                    <div class="n7-balance-card__header">
+                      <div class="n7-balance-card__user">
+                        <img
+                          class="n7-balance-card__avatar"
+                          src="./assets/images/Rectangle%2011.svg"
+                          alt=""
+                        />
+                        <div class="n7-balance-card__user-text">
+                          <span class="n7-balance-card__name">Toni Kross</span>
+                          <span class="n7-balance-card__greet">Good Morning</span>
+                        </div>
+                      </div>
+                      <button class="n7-balance-card__notify" type="button" aria-label="Notifications">
+                        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                          <path
+                            d="M8 2a4 4 0 0 1 4 4v2.5c0 .6.2 1.2.6 1.6L13 11H3l.4-1.9c.4-.4.6-1 .6-1.6V6a4 4 0 0 1 4-4Z"
+                            stroke="currentColor"
+                            stroke-width="1.2"
+                            stroke-linejoin="round"
+                          />
+                          <path d="M6.5 11a1.5 1.5 0 0 0 3 0" stroke="currentColor" stroke-width="1.2" />
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="n7-balance-card__body">
+                      <p class="n7-balance-card__label">Total balance</p>
+                      <p class="n7-balance-card__amount">
+                        $42,295.00 <span class="n7-balance-card__amount-currency">USD</span>
+                      </p>
+                    </div>
+
+                    <div class="n7-balance-card__divider" aria-hidden="true"></div>
+
+                    <div class="n7-balance-card__actions">
+                      <span class="n7-balance-card__action">
+                        <span class="n7-balance-card__action-icon" aria-hidden="true">
+                          <img
+                            class="n7-balance-card__action-svg"
+                            src="./assets/images/transfer-money%201.svg"
+                            alt=""
+                          />
+                        </span>
+                        Fund Transfer
+                      </span>
+                      <span class="n7-balance-card__action">
+                        <span class="n7-balance-card__action-icon" aria-hidden="true">
+                          <img
+                            class="n7-balance-card__action-svg"
+                            src="./assets/images/dollar%201.svg"
+                            alt=""
+                          />
+                        </span>
+                        Add Money
+                      </span>
+                      <span class="n7-balance-card__action">
+                        <span class="n7-balance-card__action-icon" aria-hidden="true">
+                          <img
+                            class="n7-balance-card__action-svg"
+                            src="./assets/images/012-application%201.svg"
+                            alt=""
+                          />
+                        </span>
+                        More
+                      </span>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+              </div>
+            </div>
+
+            <div class="n7-trusted">
+              <p class="n7-trusted__label">Trusted By:</p>
+              <div class="n7-trusted__logos">
+                <img
+                  class="n7-trusted__logo"
+                  src="./assets/images/logo-shell.svg"
+                  alt="Shells"
+                  loading="lazy"
+                />
+                <img
+                  class="n7-trusted__logo"
+                  src="./assets/images/logo-smartfinder.svg"
+                  alt="SmartFinder"
+                  loading="lazy"
+                />
+                <img
+                  class="n7-trusted__logo"
+                  src="./assets/images/logo-zoomerr.svg"
+                  alt="Zoomerr"
+                  loading="lazy"
+                />
+                <img
+                  class="n7-trusted__logo"
+                  src="./assets/images/logo-artvenue.svg"
+                  alt="ArtVenue"
+                  loading="lazy"
+                />
+                <img
+                  class="n7-trusted__logo"
+                  src="./assets/images/logo-kontrastr.svg"
+                  alt="kontrastr"
+                  loading="lazy"
+                />
+                <img
+                  class="n7-trusted__logo"
+                  src="./assets/images/logo-wavesmarathon.svg"
+                  alt="WAVESMARATHON"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Solutions -->
+        <section class="n7-solutions" aria-labelledby="n7-solutions-title">
+          <div class="container">
+            <div class="n7-solutions__layout">
+              <div class="n7-solutions__intro">
+                <h2 class="n7-solutions__title" id="n7-solutions-title">
+                  All of our solutions are tailor-made to your needs
+                </h2>
+                <a class="n7-btn n7-btn--ghost n7-solutions__cta" href="#">Request demo</a>
+              </div>
+
+              <div class="n7-solutions__grid">
+                <article class="n7-solution-card">
+                  <div class="n7-solution-card__top">
+                    <div class="n7-solution-card__icon" aria-hidden="true">
+                      <img
+                        src="./assets/images/Vector-corebanking.svg"
+                        alt=""
+                        width="42"
+                        height="43"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="n7-solution-card__title">Core Banking CB7</h3>
+                  <p class="n7-solution-card__desc">
+                    CB7 helps your financial institution improve the client experience, automate
+                    and optimize procedures, simplify banking operations for your employees, improve
+                    risk management, increase productivity, and ensure full regulatory compliance.
+                  </p>
+                  <a class="n7-solution-card__link" href="#">
+                    <span class="n7-solution-card__link-text"><span class="n7-solution-card__link-word">LEARN</span> MORE</span>
+                    <svg
+                      class="n7-solution-card__link-arrow"
+                      width="13.57"
+                      height="14.5" 
+                      viewBox="0 0 13.57 14.5"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0.5 7.25H11.3"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M9.1 3.85L12.57 7.25L9.1 10.65"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </article>
+
+                <article class="n7-solution-card">
+                  <div class="n7-solution-card__top">
+                    <div class="n7-solution-card__icon" aria-hidden="true">
+                      <img
+                        src="./assets/images/Vector-digitalbanking.svg"
+                        alt=""
+                        width="38"
+                        height="38"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="n7-solution-card__title">Digital Banking N7</h3>
+                  <p class="n7-solution-card__desc">
+                    N7 brings full capabilities across strategy, human-centred design, operations,
+                    engineering and data science to create and deliver disruptive innovation. Our
+                    approach to building digital banks is specifically designed to help clients
+                  </p>
+                  <a class="n7-solution-card__link" href="#">
+                    <span class="n7-solution-card__link-text"><span class="n7-solution-card__link-word">LEARN</span> MORE</span>
+                    <svg
+                      class="n7-solution-card__link-arrow"
+                      width="13.57"
+                      height="14.5"
+                      viewBox="0 0 13.57 14.5"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0.5 7.25H11.3"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M9.1 3.85L12.57 7.25L9.1 10.65"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </article>
+
+                <article class="n7-solution-card">
+                  <div class="n7-solution-card__top">
+                    <div class="n7-solution-card__icon" aria-hidden="true">
+                      <img
+                        src="./assets/images/Vector-openbanking.svg"
+                        alt=""
+                        width="39"
+                        height="39"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <h3 class="n7-solution-card__title">Open Banking</h3>
+                  <p class="n7-solution-card__desc">
+                    Our API banking helps you to gain actionable insights, enable account
+                    aggregation, streamline customer onboarding, KYC, and payment initiation, offer
+                    predictive budgeting tools, and introduce enhanced credit scoring.
+                  </p>
+                  <a class="n7-solution-card__link" href="#">
+                    <span class="n7-solution-card__link-text"><span class="n7-solution-card__link-word">LEARN</span> MORE</span>
+                    <svg
+                      class="n7-solution-card__link-arrow"
+                      width="13.57"
+                      height="14.5"
+                      viewBox="0 0 13.57 14.5"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0.5 7.25H11.3"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M9.1 3.85L12.57 7.25L9.1 10.65"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </article>
+
+                <article class="n7-solution-card">
+                  <div class="n7-solution-card__top">
+                    <div class="n7-solution-card__icon" aria-hidden="true">
+                      <img
+                        src="./assets/images/Group-loanorigination.svg"
+                        alt=""
+                        width="39"
+                        height="39"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span class="n7-solution-card__badge">NBFC</span>
+                  </div>
+                  <h3 class="n7-solution-card__title">Loan Origination System</h3>
+                  <p class="n7-solution-card__desc">
+                    N7 brings full capabilities across strategy, human-centred design, operations,
+                    engineering and data science to create and deliver disruptive innovation. Our
+                    approach to building digital banks is specifically designed to help clients
+                  </p>
+                  <a class="n7-solution-card__link" href="#">
+                    <span class="n7-solution-card__link-text"><span class="n7-solution-card__link-word">LEARN</span> MORE</span>
+                    <svg
+                      class="n7-solution-card__link-arrow"
+                      width="13.57"
+                      height="14.5"
+                      viewBox="0 0 13.57 14.5"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0.5 7.25H11.3"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M9.1 3.85L12.57 7.25L9.1 10.65"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </article>
+
+                <article class="n7-solution-card">
+                  <div class="n7-solution-card__top">
+                    <div class="n7-solution-card__icon" aria-hidden="true">
+                      <img
+                        src="./assets/images/Vector-loanmanagement.svg"
+                        alt=""
+                        width="39"
+                        height="39"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span class="n7-solution-card__badge">NBFC</span>
+                  </div>
+                  <h3 class="n7-solution-card__title">Loan Management System</h3>
+                  <p class="n7-solution-card__desc">
+                    N7 brings full capabilities across strategy, human-centred design, operations,
+                    engineering and data science to create and deliver disruptive innovation. Our
+                    approach to building digital banks is specifically designed to help clients
+                  </p>
+                  <a class="n7-solution-card__link" href="#">
+                    <span class="n7-solution-card__link-text"><span class="n7-solution-card__link-word">LEARN</span> MORE</span>
+                    <svg
+                      class="n7-solution-card__link-arrow"
+                      width="13.57"
+                      height="14.5"
+                      viewBox="0 0 13.57 14.5"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0.5 7.25H11.3"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M9.1 3.85L12.57 7.25L9.1 10.65"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Core Banking (Figma node 24:3652) -->
+        <section class="n7-core-banking" aria-labelledby="n7-core-banking-title">
+          <div class="container">
+            <div class="n7-core-banking__layout">
+              <div class="n7-core-banking__marks" aria-hidden="true">
+                <span class="n7-core-banking__mark-part">B7</span>
+                <span class="n7-core-banking__mark-part n7-core-banking__mark-part--c">C</span>
+              </div>
+              <div class="n7-core-banking__content">
+                <h2 class="n7-core-banking__title" id="n7-core-banking-title">
+                  A complete cloud-based<br />
+                  core banking.
+                </h2>
+                <p class="n7-core-banking__sub">
+                  Faster time to market with our cloud-based core banking services
+                </p>
+                <div class="n7-core-banking__actions">
+                  <a class="n7-btn n7-btn--primary n7-core-banking__cta" href="#">Request demo</a>
+                  <a class="n7-core-banking__link" href="#">
+                    <span class="n7-core-banking__link-text"><span class="n7-core-banking__link-word">LEARN</span> MORE</span>
+                    <svg
+                      class="n7-core-banking__link-arrow"
+                      width="13.57"
+                      height="14.5"
+                      viewBox="0 0 13.57 14.5"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M0.5 7.25H11.3"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M9.1 3.85L12.57 7.25L9.1 10.65"
+                        stroke="currentColor"
+                        stroke-width="1.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="n7-core-banking__media">
+                <img
+                  src="./assets/images/amldashboard.svg"
+                  alt="CB7 AML dashboard on laptop"
+                  width="651.67"
+                  height="461.42"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Efficient core — graph dashboard + benefits -->
+        <section class="n7-efficient-core" aria-labelledby="n7-efficient-core-title">
+          <div class="container">
+            <div class="n7-efficient-core__layout">
+              <div class="n7-efficient-core__media">
+                <img
+                  src="./assets/images/graphdashboard.svg"
+                  alt="KYC dashboard on laptop"
+                  width="792"
+                  height="462"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="n7-efficient-core__content">
+                <h2 class="n7-efficient-core__title" id="n7-efficient-core-title">
+                  Run a more efficient, flexible, and digitally connected corebanking system
+                </h2>
+                <div class="n7-efficient-core__checklist">
+                  <p class="n7-efficient-core__subtitle">What you will get:</p>
+
+                  <div class="n7-efficient-core__lists">
+                  <ul class="n7-efficient-core__list n7-efficient-core__list--left">
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">Customer-On Boarding</span>
+                    </li>
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">Managing deposits and withdrawals</span>
+                    </li>
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">Transaction management</span>
+                    </li>
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">Interest Calculation</span>
+                    </li>
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">
+                        Payments processing (cash, cheques, mandates, NEFT, RTGS etc)
+                      </span>
+                    </li>
+                  </ul>
+
+                <ul class="n7-efficient-core__list n7-efficient-core__list--right">
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">CRM Activities</span>
+                    </li>
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">Configuring New Banking Products</span>
+                    </li>
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">Loan disbursal and Loan management</span>
+                    </li>
+                    <li class="n7-efficient-core__item">
+                      <span class="n7-efficient-core__check" aria-hidden="true">
+                        <span class="n7-efficient-core__check-circle"></span>
+                        <span class="n7-efficient-core__check-box">
+                          <span class="n7-efficient-core__check-tick"></span>
+                        </span>
+                      </span>
+                      <span class="n7-efficient-core__text">
+                        Establishing criteria for minimum balances, interest rates, number of
+                        withdrawals allowed and so on.
+                      </span>
+                    </li>
+                </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Paperless — own section after dashboard (NOT inside .n7-digital) -->
+        <section
+          class="n7-paperless n7-paperless--after-dashboard"
+          aria-labelledby="n7-paperless-title"
+        >
+          <div class="n7-paperless__canvas">
+            <div class="n7-paperless__row">
+              <!-- CB7 watermark (after dashboard — not N7) -->
+              <div class="n7-paperless__marks" aria-hidden="true">
+                <svg class="n7-paperless__marks-svg" viewBox="0 0 1141 687" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="n7-cb7-blue" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#00B4FD" />
+                      <stop offset="1" stop-color="#003ACE" />
+                    </linearGradient>
+                    <linearGradient id="n7-cb7-dark" x1="1" y1="1" x2="0" y2="0">
+                      <stop offset="0" stop-color="#02171F" />
+                      <stop offset="1" stop-color="#000000" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <text class="n7-paperless__marks-text" x="0" y="542" stroke="url(#n7-cb7-blue)">CB7</text>
+                  <text class="n7-paperless__marks-text" x="0" y="542" stroke="url(#n7-cb7-dark)">CB7</text>
+                </svg>
+              </div>
+
+              <div class="n7-paperless__content">
+                <h2 class="n7-paperless__title" id="n7-paperless-title">
+                  Take the full advantage of going paper-less now.
+                </h2>
+                <p class="n7-paperless__sub">
+                  CB7 helps your financial institution improve the client experience, automate
+                  and optimize procedures, simplify banking operations
+                </p>
+              </div>
+
+              <div class="n7-paperless__actions">
+                <a class="n7-btn n7-btn--outline n7-paperless__btn-contact" href="#">
+                  Contact us
+                </a>
+                <a class="n7-btn n7-btn--primary n7-paperless__btn-demo" href="#">
+                  Request demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Marquee — digital section starts after this -->
+        <section class="n7-marquee" aria-label="Say to the new way of banking">
+          <img
+            class="n7-marquee__img"
+            src="./assets/images/Property%201=Default.svg"
+            alt="N7 — Say to the new way of banking — CB7"
+            loading="lazy"
+          />
+        </section>
+
+        <!-- Digital banking — light section; paperless card at frame bottom only -->
+        <section class="n7-digital" aria-labelledby="n7-digital-title">
+          <div class="n7-digital__stage">
+            <!-- N7 #1 — digital section watermark (unchanged: N7.svg @ X277) -->
+            <img class="n7-digital__marks" src="./assets/images/N7.svg" alt="" aria-hidden="true" loading="lazy" />
+
+            <!-- Decorative swirl vector (Figma: -763.25,418.17 — pre-clipped to visible right portion) -->
+            <img
+              class="n7-digital__vector"
+              src="./assets/images/Vector.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+
+            <!-- Decorative "7" watermark (Figma: 886.92,957.28 · 861×1829, 20%) -->
+            <img
+              class="n7-digital__seven"
+              src="./assets/images/7.svg"
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+            />
+
+            <!-- Part 1 -->
+            <div class="n7-digital__intro">
+              <h2 class="n7-digital__title" id="n7-digital-title">
+                Digital banking<br />
+                out-of-the-box
+              </h2>
+              <p class="n7-digital__sub">
+                N7 helps your financial institution improve the client experience, automate and
+                optimize procedures
+              </p>
+              <div class="n7-digital__cta">
+                <a class="n7-btn n7-btn--primary n7-digital__request" href="#">Request demo</a>
+                <a class="n7-digital__learn" href="#" aria-label="Learn more">
+                  <img src="./assets/images/learn more.svg" alt="Learn more" loading="lazy" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone + content pairs: 3 boxes (542.9 each), 110px vertical gap -->
+            <div class="n7-digital__pairs">
+              <div class="n7-digital__pair n7-digital__pair--1">
+                <div class="n7-digital__phone-wrap">
+                  <img
+                    class="n7-digital__phone n7-digital__phone--home"
+                    src="./assets/images/Home.svg"
+                    alt="N7 mobile app — home screen"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="n7-digital__aside">
+                  <h3 class="n7-digital__aside-title">Fully compliant with regulatory requirement</h3>
+                  <p class="n7-digital__aside-text">
+                    The governance of risk management with regulations is achieved by our risk
+                    management framework that is fully integrated to work with digital bank's
+                    operational-risk protocols and procedures.
+                  </p>
+                  <ul class="n7-digital__checklist">
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Pre-integrated Security System
+                    </li>
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Fully Compliant With Regulatory Requirement
+                    </li>
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Digitally Connected Core
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="n7-digital__pair n7-digital__pair--2">
+                <div class="n7-digital__aside">
+                  <h3 class="n7-digital__aside-title">No legacy IT systems</h3>
+                  <p class="n7-digital__aside-text">
+                    Our Digital Banking solution and multilayered approach help financial institutions
+                    take advantage of digital transformation by ensuring customer trust and regulatory
+                    compliance.
+                  </p>
+                  <ul class="n7-digital__checklist">
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Adaptive &amp; Intelligent API monetization
+                    </li>
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Ambient User Experience
+                    </li>
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Cloud-native With lower TCO
+                    </li>
+                  </ul>
+                </div>
+                <div class="n7-digital__phone-wrap">
+                  <img
+                    class="n7-digital__phone n7-digital__phone--transaction"
+                    src="./assets/images/Transaction.svg"
+                    alt="N7 mobile app — transactions screen"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="n7-digital__pair n7-digital__pair--3">
+                <div class="n7-digital__phone-wrap">
+                  <img
+                    class="n7-digital__phone n7-digital__phone--profile"
+                    src="./assets/images/Profile.svg"
+                    alt="N7 mobile app — profile screen"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="n7-digital__aside">
+                  <h3 class="n7-digital__aside-title">No traditional branches</h3>
+                  <p class="n7-digital__aside-text">
+                    Our digital-first platform delivers banking without brick-and-mortar locations,
+                    reducing costs while expanding access for your customers.
+                  </p>
+                  <ul class="n7-digital__checklist">
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Branchless &amp; Paperless Banking
+                    </li>
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Digital Transformation Capability
+                    </li>
+                    <li class="n7-digital__check-item">
+                      <svg class="n7-digital__check-icon" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                        <circle cx="9" cy="9" r="9" fill="#003ACE" />
+                        <path d="M5 9.2l2.5 2.5L13 6.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      Optimized, Adoptable and Scalable
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paperless — Y 2104.43 from .n7-digital__stage top (Figma digital frame) -->
+            <div
+              class="n7-paperless n7-paperless--in-digital"
+              aria-labelledby="n7-paperless-digital-title"
+            >
+              <div class="n7-paperless__canvas">
+                <div class="n7-paperless__row">
+                  <div class="n7-paperless__marks" aria-hidden="true">
+                    <div class="n7-paperless__marks-inner">
+                      <svg
+                        class="n7-paperless__marks-svg"
+                        viewBox="0 0 744 687"
+                        preserveAspectRatio="xMinYMin meet"
+                      >
+                        <defs>
+                          <linearGradient id="n7-paperless-digital-blue" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#00B4FD" />
+                            <stop offset="1" stop-color="#003ACE" />
+                          </linearGradient>
+                          <linearGradient id="n7-paperless-digital-dark" x1="1" y1="1" x2="0" y2="0">
+                            <stop offset="0" stop-color="#02171F" />
+                            <stop offset="1" stop-color="#000000" stop-opacity="0" />
+                          </linearGradient>
+                        </defs>
+                        <text
+                          class="n7-paperless__marks-text n7-paperless__marks-text--top"
+                          x="0"
+                          y="162.72"
+                          font-size="572.63"
+                          stroke-width="1.59"
+                          stroke="url(#n7-paperless-digital-blue)"
+                        >N7</text>
+                        <text
+                          class="n7-paperless__marks-text n7-paperless__marks-text--top"
+                          x="0"
+                          y="162.72"
+                          font-size="572.63"
+                          stroke-width="1.59"
+                          stroke="url(#n7-paperless-digital-dark)"
+                        >N7</text>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="n7-paperless__content">
+                    <h2 class="n7-paperless__title" id="n7-paperless-digital-title">
+                      Take the full advantage of going paper-less now.
+                    </h2>
+                    <p class="n7-paperless__sub">
+                      N7 helps your financial institution improve the client experience, automate
+                      and optimize procedures, simplify banking operations
+                    </p>
+                  </div>
+
+                  <div class="n7-paperless__actions">
+                    <a class="n7-btn n7-btn--outline n7-paperless__btn-contact" href="#">
+                      Contact us
+                    </a>
+                    <a class="n7-btn n7-btn--primary n7-paperless__btn-demo" href="#">
+                      Request demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fintech Insights — Figma 1440×853 @ page Y 6732 -->
+        <section class="n7-insights" id="n7-insights" aria-labelledby="n7-insights-title">
+          <div class="n7-insights__stage">
+            <div class="n7-insights__glow-orbit" aria-hidden="true"></div>
+
+            <div class="container">
+              <div class="n7-insights__layout">
+                <div class="n7-insights__intro">
+                  <h2 class="n7-insights__title" id="n7-insights-title">
+                    Get yourself up-to-speed on all the things happening in fintech
+                  </h2>
+                  <a class="n7-btn n7-insights__cta" href="#">Insights</a>
+                </div>
+
+                <div class="n7-insights__cards">
+                  <article class="n7-insights__card n7-insights__card--featured">
+                    <div class="n7-insights__card-media">
+                      <img
+                        class="n7-insights__sitare"
+                        src="./assets/images/sitare.svg"
+                        width="295"
+                        height="267"
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div class="n7-insights__card-body">
+                      <p class="n7-insights__card-kicker">Getting started</p>
+                      <h3 class="n7-insights__card-title">
+                        How to transition from a traditional to a digital bank
+                      </h3>
+                      <p class="n7-insights__card-meta">David Grohl 17/08/24</p>
+                    </div>
+                    <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#">Read more</a>
+                  </article>
+
+                  <div class="n7-insights__pair">
+                    <article class="n7-insights__card n7-insights__card--compact">
+                      <div class="n7-insights__card-body">
+                        <p class="n7-insights__card-kicker">Getting started</p>
+                        <h3 class="n7-insights__card-title">
+                          How to transition from a traditional to a digital bank
+                        </h3>
+                        <p class="n7-insights__card-meta">David Grohl 17/08/24</p>
+                      </div>
+                      <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#">Read more</a>
+                    </article>
+
+                    <article class="n7-insights__card n7-insights__card--compact n7-insights__card--compact-2">
+                      <div class="n7-insights__card-body">
+                        <p class="n7-insights__card-kicker">Getting started</p>
+                        <h3 class="n7-insights__card-title">
+                          How to transition from a traditional to a digital bank
+                        </h3>
+                        <p class="n7-insights__card-meta">David Grohl 17/08/24</p>
+                      </div>
+                      <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#">Read more</a>
+                    </article>
+                  </div>
+                  <div class="n7-insights__footer">
+                    <a class="n7-insights__all-link" href="#">Read all insights →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Case studies — Figma 1440×872 -->
+        <section class="n7-cases" id="n7-case-studies" aria-labelledby="n7-cases-title">
+          <div class="n7-cases__stage">
+            <h2 class="n7-cases__title" id="n7-cases-title">Our Case Studies</h2>
+
+            <div class="n7-cases__carousel" data-n7-cases-carousel tabindex="0">
+              <div class="n7-cases__viewport">
+                <div class="n7-cases__track">
+                  <div class="n7-cases__slide n7-cases__slide--combined is-active">
+                    <div class="n7-cases__deck">
+                      <article class="n7-cases__card n7-cases__card--behind" aria-hidden="true">
+                        <div class="n7-cases__card-media">
+                          <img
+                            class="n7-cases__sitare"
+                            src="./assets/images/sitare.svg"
+                            width="434"
+                            height="392"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                          />
+                        </div>
+                      </article>
+
+                      <article class="n7-cases__card n7-cases__card--active">
+                        <div class="n7-cases__card-media">
+                          <img
+                            class="n7-cases__sitare"
+                            src="./assets/images/sitare.svg"
+                            width="434"
+                            height="392"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div class="n7-cases__card-body">
+                          <p class="n7-cases__card-kicker">Getting started</p>
+                          <h3 class="n7-cases__card-title">
+                            How we help brand reach out to more people
+                          </h3>
+                          <div class="n7-cases__brand">
+                            <img
+                              class="n7-cases__brand-logo"
+                              src="./assets/images/logo-zoomerr.svg"
+                              width="28"
+                              height="28"
+                              alt=""
+                              loading="lazy"
+                            />
+                            <span class="n7-cases__brand-name">Zoomerr</span>
+                          </div>
+                          <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#">Read more</a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+
+                  <div class="n7-cases__slide n7-cases__slide--split" aria-hidden="true">
+                    <div class="n7-cases__split">
+                      <div class="n7-cases__split-visual">
+                        <article class="n7-cases__visual-card n7-cases__visual-card--behind" aria-hidden="true">
+                          <img
+                            class="n7-cases__sitare"
+                            src="./assets/images/sitare.svg"
+                            width="434"
+                            height="392"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                          />
+                        </article>
+                        <article class="n7-cases__visual-card">
+                          <img
+                            class="n7-cases__sitare"
+                            src="./assets/images/sitare.svg"
+                            width="434"
+                            height="392"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                          />
+                        </article>
+                      </div>
+                      <div class="n7-cases__panel">
+                        <p class="n7-cases__card-kicker">Getting started</p>
+                        <h3 class="n7-cases__card-title">
+                          How we help brand reach out to more people
+                        </h3>
+                        <p class="n7-cases__card-copy">
+                          Our API banking helps you to gain actionable insights, enable account
+                          aggregation, streamline customer onboarding, KYC, and payment initiation,
+                          offer predictive budgeting tools, and introduce enhanced credit scoring.
+                          Our API banking helps you to gain actionable insights, enable account
+                          aggregation, streamline customer onboarding, KYC, and payment initiation,
+                          offer predictive budgeting tools, and introduce enhanced credit scoring.
+                        </p>
+                        <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="n7-cases__slide n7-cases__slide--split" aria-hidden="true">
+                    <div class="n7-cases__split">
+                      <div class="n7-cases__split-visual">
+                        <article class="n7-cases__visual-card n7-cases__visual-card--behind" aria-hidden="true">
+                          <img
+                            class="n7-cases__sitare"
+                            src="./assets/images/sitare.svg"
+                            width="434"
+                            height="392"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                          />
+                        </article>
+                        <article class="n7-cases__visual-card">
+                          <img
+                            class="n7-cases__sitare"
+                            src="./assets/images/sitare.svg"
+                            width="434"
+                            height="392"
+                            alt=""
+                            aria-hidden="true"
+                            loading="lazy"
+                          />
+                        </article>
+                      </div>
+                      <div class="n7-cases__panel">
+                        <p class="n7-cases__card-kicker">Getting started</p>
+                        <h3 class="n7-cases__card-title">
+                          How we help brand reach out to more people
+                        </h3>
+                        <p class="n7-cases__card-copy">
+                          Our API banking helps you to gain actionable insights, enable account
+                          aggregation, streamline customer onboarding, KYC, and payment initiation,
+                          offer predictive budgeting tools, and introduce enhanced credit scoring.
+                          Our API banking helps you to gain actionable insights, enable account
+                          aggregation, streamline customer onboarding, KYC, and payment initiation,
+                          offer predictive budgeting tools, and introduce enhanced credit scoring.
+                        </p>
+                        <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="n7-cases__footer">
+                <div class="n7-cases__nav" aria-label="Case study slides">
+                  <button class="n7-cases__arrow n7-cases__arrow--prev" type="button" aria-label="Previous case study">
+                    <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                      <path d="M9 3L5 7l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <div class="n7-cases__dots" role="tablist" aria-label="Slide pagination">
+                    <button class="n7-cases__dot n7-cases__dot--active" type="button" aria-label="Slide 1" aria-selected="true"></button>
+                    <button class="n7-cases__dot" type="button" aria-label="Slide 2"></button>
+                    <button class="n7-cases__dot" type="button" aria-label="Slide 3"></button>
+                  </div>
+                  <button class="n7-cases__arrow n7-cases__arrow--next" type="button" aria-label="Next case study">
+                    <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                      <path d="M5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <a class="n7-cases__view-all" href="#">View all →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Paperless CTA — Figma 1440×316 @ page Y 8457 -->
+        <section
+          class="n7-paperless-cta"
+          id="n7-paperless-cta"
+          aria-labelledby="n7-paperless-cta-title"
+        >
+          <div class="n7-paperless-cta__stage">
+            <div class="n7-paperless-cta__content">
+              <h2 class="n7-paperless-cta__title" id="n7-paperless-cta-title">
+                Take the full advantage of<br />
+                going paper-less now.
+              </h2>
+              <p class="n7-paperless-cta__sub">
+                CB7 helps your financial institution improve the client experience, automate
+                and optimize procedures, simplify banking operations
+              </p>
+            </div>
+            <div class="n7-paperless-cta__actions">
+              <a class="n7-btn n7-btn--outline n7-paperless-cta__btn-contact" href="#">Contact us</a>
+              <a class="n7-btn n7-btn--primary n7-paperless-cta__btn-demo" href="#">Request demo</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Site footer — Figma 1440×787 -->
+        <footer class="n7-site-footer" id="n7-footer" aria-label="Site footer">
+          <div class="n7-site-footer__glow-orbit" aria-hidden="true"></div>
+          <div class="n7-site-footer__stage">
+          <a class="n7-site-footer__brand" href="./index.html" aria-label="N7 home">
+            <img
+              class="n7-site-footer__logo"
+              src="./assets/images/Mask%20group.svg"
+              width="440"
+              height="233"
+              alt=""
+              loading="lazy"
+            />
+          </a>
+
+          <div class="n7-site-footer__grid">
+            <div class="n7-site-footer__col">
+              <h3 class="n7-site-footer__heading">London</h3>
+              <p class="n7-site-footer__address">
+                Linktia Infosystems Ltd – CB7, 26 Main Road Sundridge, TN14 6EP, England,
+                United Kingdom.
+              </p>
+            </div>
+            <div class="n7-site-footer__col">
+              <h3 class="n7-site-footer__heading">Dubai</h3>
+              <p class="n7-site-footer__address">
+                Linktia Infosystems Ltd – CB7, Jumeirah Business Center 5, Cluster W, Jumeirah
+                Lakes Towers, Dubai, United Arab Emirates
+              </p>
+            </div>
+            <div class="n7-site-footer__col">
+              <h3 class="n7-site-footer__heading">London</h3>
+              <p class="n7-site-footer__address">
+                Linktia Infosystems Ltd – CB7, Nirmal, Anand Nagar, Suncity Road, Pune,
+                Maharashtra, 411041, India
+              </p>
+            </div>
+
+            <div class="n7-site-footer__col n7-site-footer__col--nav n7-site-footer__col--solutions">
+              <h3 class="n7-site-footer__heading">Solutions</h3>
+              <ul class="n7-site-footer__links">
+                <li class="n7-site-footer__link-item--single">
+                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Core Banking CB7</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                </li>
+                <li class="n7-site-footer__link-item--single">
+                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Digital Banking N7</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                </li>
+                <li class="n7-site-footer__link-item--single">
+                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Open Banking</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                </li>
+                <li class="n7-site-footer__link-item--wrap">
+                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Loan Origination System</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                </li>
+                <li class="n7-site-footer__link-item--wrap">
+                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Loan Management System</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                </li>
+                <li class="n7-site-footer__link-item--wrap">
+                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Digital Transformation</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="n7-site-footer__col n7-site-footer__col--nav">
+              <h3 class="n7-site-footer__heading">N7 Banking</h3>
+              <ul class="n7-site-footer__links">
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">About Us</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Solutions</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Contact</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Company</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Careers</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Insights</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Core Team</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Brand Center</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+              </ul>
+            </div>
+            <div class="n7-site-footer__col n7-site-footer__col--nav">
+              <h3 class="n7-site-footer__heading">Our Socials</h3>
+              <ul class="n7-site-footer__links">
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">LinkedIn</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">X</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="n7-site-footer__copy">
+            Copyright © 2022 by Linktia Infosystems Limited — [CB7 and N7 as Commercial Brand]
+            — [Registered under the Companies Act 2006 in England and Wales | Number of
+            Incorporation 13100992]
+          </p>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/cases-carousel.js" defer></script>
+    <script src="./scripts/gsap-loader.js" defer></script>
+  </body>
+</html>
+

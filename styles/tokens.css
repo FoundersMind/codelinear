@@ -1,0 +1,768 @@
+:root {
+  /* Layout */
+  --n7-page-width: 1440px;
+  --n7-container-pad: 80px;
+
+  /* Z-index stack */
+  --n7-z-nav: 100;
+  --n7-z-balance-card: 60;
+  --n7-z-activity-card: 40;
+  --n7-z-hero-photo: 1;
+  --n7-z-hero-glow: 0;
+
+  /* Colors */
+  /* Figma palette */
+  --n7-ink-000D12: #000D12;
+  --n7-gray-0D0D0C: #0D0D0C;
+  --n7-gray-0B0B0B: #0B0B0B;
+  --n7-gray-0F0F0F: #0F0F0F;
+  --n7-gray-1D1D1D: #1D1D1D;
+  --n7-gray-1B1B1B: #1B1B1B;
+  --n7-blue-568EB4: #568EB4;
+  --n7-offwhite-FCFEF5: #FCFEF5;
+  --n7-offwhite-F5F5F5: #F5F5F5;
+  --n7-surface-F8F8F8: #F8F8F8;
+  --n7-gray-D9D9D9: #D9D9D9;
+  --n7-gray-E7E7E7: #E7E7E7;
+  --n7-white: #FFFFFF;
+  --n7-white-70: rgba(255, 255, 255, 0.7);
+  --n7-white-40: rgba(255, 255, 255, 0.4);
+  --n7-snow-FFFAFA: #FFFAFA;
+  --n7-snow-FFFAFA-20: rgba(255, 250, 250, 0.2);
+  --n7-navy-081E69: #081E69;
+  --n7-ice-E9F4F9: #E9F4F9;
+  --n7-blue-1738AD: #1738AD;
+  --n7-purple-9280FD: #9280FD;
+  --n7-blue-013ACF: #013ACF;
+  --n7-cyan-01B4FD: #01B4FD;
+  --n7-mint-74F1AE: #74F1AE;
+
+  /* Hero wash (linear gradients around hero) */
+  --n7-hero-wash-top: linear-gradient(180deg, color-mix(in srgb, var(--n7-blue-013ACF) 22%, transparent) 0%, transparent 70%);
+  --n7-hero-wash-left: linear-gradient(90deg, color-mix(in srgb, var(--n7-cyan-01B4FD) 18%, transparent) 0%, transparent 65%);
+  --n7-hero-wash-bottom: linear-gradient(0deg, color-mix(in srgb, var(--n7-mint-74F1AE) 10%, transparent) 0%, transparent 60%);
+
+  --n7-bg: var(--n7-ink-000D12);
+  --n7-text: #ffffff;
+  --n7-text-muted: rgba(255, 255, 255, 0.65);
+  --n7-gray-100: var(--n7-gray-0D0D0C);
+  --n7-nav-bg: rgba(47, 47, 47, 0.7);
+  --n7-nav-border-color:transparent;
+  --n7-nav-border-width: 1.5px;
+  --n7-nav-cta-border-color: rgba(255, 255, 255, 0.9);
+  --n7-nav-cta-border-width: 1.5px;
+  /* Primary blues (use Figma swatches) */
+  --n7-blue: var(--n7-blue-568EB4);
+  --n7-blue-dark: var(--n7-blue-1738AD);
+  --n7-glow: color-mix(in srgb, var(--n7-blue) 55%, transparent);
+
+  /* Typography — Chivo Mono Medium = weight 500 */
+  --n7-font: "Chivo Mono", ui-monospace, monospace;
+  --n7-font-chivo-mono: var(--n7-font);
+  --n7-font-medium: 500;
+  --n7-font-regular: 400;
+  --n7-nav-link-size: 12px;
+  --n7-nav-link-weight: var(--n7-font-regular); /* Chivo Mono Regular */
+  --n7-nav-link-line: 1.3; /* 130% */
+  --n7-nav-link-tracking: 0;
+  --n7-nav-brand-size: 24px;
+  --n7-nav-brand-line: 1.2; /* 120% */
+  --n7-nav-brand-weight: 500; /* Archivo Medium */
+  --n7-font-display: "Inter", system-ui, sans-serif;
+  --n7-font-archivo: "Archivo", "Inter", system-ui, sans-serif;
+  --n7-font-gilroy: "Gilroy", "Inter", system-ui, sans-serif;
+
+  /* Nav (Figma Frame 7) — at 1440 viewport, centered = 362.27px side margin */
+  --n7-nav-x: 362.27px;
+  --n7-nav-y: 31px;
+  --n7-nav-width: 715.46px;
+  --n7-nav-height: 47px;
+  --n7-nav-pad-left: 10px;
+  --n7-nav-pad-right: 10px; /* gap: Request Demo box → outer navbar edge */
+  --n7-nav-pad-y: 9px;
+  --n7-nav-gap: 160px; /* Figma Frame 7: gap between logo | nav group */
+  --n7-nav-group-gap: 80px; /* Figma Frame 19: About Us → Request Demo */
+  --n7-nav-cta-width: 161px;
+  --n7-nav-cta-height: 26px;
+  --n7-nav-cta-pad-x: 37.5px;
+  --n7-nav-cta-radius: 6px;
+  --n7-nav-links-gap: 20px; /* between nav items */
+  --n7-nav-label-chevron-gap: 4px; /* label ↔ chevron inside item */
+  --n7-nav-chevron-size: 13.73px;
+  --n7-nav-radius: 12px;
+
+  /* Buttons */
+  --n7-btn-radius: 999px;
+
+  /* Hero */
+  --n7-hero-title-size: 67px;
+  --n7-hero-title-tracking: -0.67px;
+  --n7-hero-title-color: #E9F4F9;
+  --n7-hero-sub-width: 356.169px;
+  --n7-hero-sub-size: 16px;
+  --n7-hero-sub-line: 1.3;
+  --n7-hero-sub-opacity: 0.8;
+  --n7-hero-sub-color: #E9F4F9;
+  --n7-hero-gap-text-to-cta: 52px;
+  /* Figma 1440 — gap between Contact us & Request demo */
+  --n7-cta-pair-gap: 20px;
+  --n7-hero-gap-cta: var(--n7-cta-pair-gap);
+  --n7-hero-btn-radius: 10px;
+  --n7-hero-btn-pad-y: 15px;
+  --n7-hero-btn-primary-pad-x: 51px;
+  --n7-hero-btn-outline-pad-x: 59px;
+  /* Figma 1440 — Contact us & Request demo label size */
+  --n7-cta-btn-font-size: 15px;
+  --n7-hero-btn-font-size: var(--n7-cta-btn-font-size);
+  /* Figma Request demo — 210×49 (label 108×19 centered via flex) */
+  --n7-request-demo-width: 210px;
+  --n7-request-demo-height: 49px;
+  /* Figma Contact us — 208×49 */
+  --n7-contact-us-width: 208px;
+  --n7-contact-us-height: 49px;
+  --n7-hero-btn-gradient: linear-gradient(141.821deg, #00B4FD 5.6799%, #003ACE 86.975%);
+  --n7-hero-btn-outline-border: #E9F4F9;
+  --n7-hero-glow-size: 520px;
+  /* Figma left block x=80 (container pad is zeroed on hero stage) */
+  --n7-hero-content-x: 80px;
+  --n7-hero-content-y: 211.96px;
+  --n7-hero-content-width: 607px;
+  --n7-hero-content-height: 319px;
+  --n7-hero-stage-height: 811px; /* Desktop - 1 — solutions starts at this Y */
+  --n7-hero-media-x: 818px;
+  --n7-hero-media-y: 255px;
+  --n7-hero-media-width: 562px;
+  --n7-hero-media-height: 301px;
+  /* Figma Ellipse — 398.87×398.87, 50% opacity (centered on hero photo in CSS) */
+  --n7-hero-glow-circle-size: 398.87px;
+  --n7-hero-glow-offset-x: 0px;
+  --n7-hero-glow-offset-y: 0px;
+  --n7-hero-glow-circle-opacity: 1;
+  --n7-hero-glow-rotation: 0deg;
+  --n7-hero-glow-layer-blur: 72px; /* Figma Layer blur — lower = tighter spread */
+  /* Ring matches photo footprint inside circle (362.64 / 398.87) */
+  --n7-hero-glow-ring-rx: 46%;
+  --n7-hero-glow-ring-ry: 38%;
+  --n7-hero-glow-ring-inner: 70%; /* transparent — inside photo */
+  --n7-hero-glow-ring-peak: 78%; /* brightest — at photo edge */
+  --n7-hero-glow-ring-outer: 90%; /* fade ends before circle edge */
+  /* Subtle L→R wash (dim right) on top of ring */
+  --n7-hero-glow-fill: linear-gradient(
+    90deg,
+    rgba(0, 180, 253, 0.6) 0%,
+    rgba(0, 58, 206, 0.38) 45%,
+    transparent 100%
+  );
+  --n7-trusted-x: 80px;
+  --n7-trusted-y: 655.0635px;
+  --n7-trusted-width: 621.3569px;
+  --n7-trusted-label-size: 16px;
+  --n7-trusted-label-gap: 12px;
+  --n7-trusted-logo-gap: 18px;
+  --n7-trusted-logo-height: 19px;
+  --n7-hero-photo-width: 362.64px;
+  --n7-hero-photo-height: 300.71px;
+  --n7-hero-photo-radius: 31px;
+
+  /* Glass cards (activity — left) */
+  --n7-glass-bg: rgba(255, 255, 255, 0.08);
+  --n7-glass-border: rgba(255, 255, 255, 0.14);
+  --n7-glass-blur: 18px;
+  --n7-activity-card-width: 254px;
+  --n7-activity-card-height: 117px;
+  --n7-activity-card-radius: 12px;
+  --n7-activity-card-x: -128px;
+  --n7-activity-card-y: 150px;
+  --n7-activity-card-pad: 8px 10px;
+  --n7-activity-title-size: 11px;
+  --n7-activity-title-color: var(--n7-gray-0D0D0C);
+  --n7-activity-tabs-gap: 6px;
+  --n7-activity-tab-size: 7.5px;
+  --n7-activity-tab-pad-x: 6px;
+  --n7-activity-tab-pad-y: 3px;
+  --n7-activity-tab-gap: 3px;
+  --n7-activity-tab-radius: 999px;
+  --n7-activity-tab-bg: var(--n7-white);
+  --n7-activity-tab-color: var(--n7-gray-0D0D0C);
+  --n7-activity-tab-active-bg: var(--n7-navy-081E69);
+  --n7-activity-tab-active-color: var(--n7-white);
+  --n7-activity-row-gap: 8px;
+  --n7-activity-icon-size: 26px;
+  --n7-activity-icon-radius: 8px;
+  --n7-activity-icon-bg: var(--n7-purple-9280FD);
+  --n7-activity-meta-size: 9px;
+  --n7-activity-label-muted-color: rgba(13, 13, 12, 0.55);
+  --n7-activity-date-size: 7px;
+  --n7-activity-date-color: rgba(13, 13, 12, 0.5);
+  --n7-activity-amount-size: 10px;
+  --n7-activity-amount-color: var(--n7-gray-0D0D0C);
+
+  /* Balance glass card (right) — Figma */
+  --n7-balance-card-offset-right: -56px;
+  --n7-balance-card-width: 208px;
+  --n7-balance-card-height: 177px;
+  --n7-balance-card-pad: 12px 14px;
+  --n7-balance-card-radius: 12px;
+  /* Outer glass shell padding (Figma): X 5px, Y 4.5px */
+  --n7-balance-shell-pad-x: 5px;
+  --n7-balance-shell-pad-y: 4.5px;
+  --n7-balance-shell-bg: rgba(255, 255, 255, 0.18);
+  --n7-balance-panel-bg: var(--n7-white-70);
+  --n7-balance-glass-blur: 20px;
+  --n7-balance-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --n7-balance-text: #1a1a1a;
+  --n7-balance-text-muted: rgba(26, 26, 26, 0.55);
+  --n7-balance-amount-color: var(--n7-navy-081E69);
+  --n7-balance-amount-size: 19.2px;
+  --n7-balance-avatar-size: 32px;
+  --n7-balance-action-icon-size: 13.84px;
+  --n7-balance-action-icon-color: #FFFAFA;
+  --n7-balance-divider-color: rgba(255, 250, 250, 0.55);
+
+  /* Solutions section (Figma node 24:4030) */
+  --n7-solutions-offset-top: var(--n7-hero-stage-height);
+  --n7-solutions-pad-top: 0;
+  --n7-solutions-pad-bottom: 0;
+  --n7-solutions-glow-size: 380px;
+  --n7-solutions-intro-width: 433px;
+  --n7-solutions-grid-x: 730px;
+  --n7-solutions-grid-y: 47.09px;
+  --n7-solutions-grid-width: 613.01px;
+  --n7-solutions-grid-gap-x: 76px;
+  --n7-solutions-grid-gap-y: 52px;
+  --n7-solutions-grid-height: 1085px;
+  --n7-solutions-card-width: calc(
+    (var(--n7-solutions-grid-width) - var(--n7-solutions-grid-gap-x)) / 2
+  );
+  --n7-solutions-title-size: 37px;
+  --n7-solutions-title-line: 1.12;
+  --n7-solutions-title-tracking: -0.48px;
+  --n7-solutions-title-gap: 36px;
+  --n7-solutions-cta-pad-x: 40px;
+  --n7-solutions-cta-pad-y: 14px;
+  --n7-solutions-cta-radius: 10px;
+  --n7-solutions-cta-size: 12px;
+  --n7-solutions-icon-size: 36px;
+  --n7-solutions-icon-gap: 26px;
+  --n7-solutions-card-title-size: 20px;
+  --n7-solutions-card-title-gap: 32px;
+  --n7-solutions-desc-size: 16px;
+  --n7-solutions-desc-line: 1.5;
+  --n7-solutions-desc-color: rgba(233, 244, 249, 0.68);
+  --n7-solutions-desc-gap: 18px;
+  --n7-solutions-link-size: 14px;
+  --n7-solutions-link-width: 102px;
+  --n7-solutions-link-height: 21px;
+  --n7-solutions-link-arrow-gap: 5px;
+  --n7-solutions-link-arrow-width: 13.57px;
+  --n7-solutions-link-arrow-height: 14.5px;
+  --n7-solutions-link-underline-width: 32.58px;
+  --n7-solutions-link-underline-gap: 8px;
+  --n7-solutions-badge-size: 12px;
+  --n7-solutions-badge-opacity: 0.6;
+  --n7-core-banking-offset-top: 1988px;
+  --n7-solutions-stage-height: calc(
+    var(--n7-core-banking-offset-top) - var(--n7-solutions-offset-top)
+  );
+  --n7-solutions-stage-min-height: calc(
+    var(--n7-solutions-grid-y) + var(--n7-solutions-grid-height)
+  );
+  --n7-core-banking-pad-top: 0;
+  --n7-core-banking-pad-bottom: 0;
+  --n7-core-banking-stage-height: 619px;
+  /* Core Banking — Frame 14 text block (607.83 × 308 @ y 156.88) */
+  --n7-core-banking-content-width: 607.83px;
+  --n7-core-banking-content-height: 308px;
+  --n7-core-banking-content-y: 156.88px;
+  --n7-core-banking-title-size: 53px;
+  --n7-core-banking-title-line: 1.15;
+  --n7-core-banking-title-tracking: -0.48px;
+  --n7-core-banking-title-gap: 16px;
+  --n7-core-banking-sub-size: 16px;
+  --n7-core-banking-sub-line: 1.45;
+  --n7-core-banking-sub-opacity: 0.8;
+  --n7-core-banking-sub-width: 327.19px;
+  --n7-core-banking-sub-height: 42px;
+  /* Frame 1 — actions @ y 222 inside content frame */
+  --n7-core-banking-actions-y: 222px;
+  --n7-core-banking-cta-gap: 16px;
+  --n7-core-banking-cta-width: var(--n7-request-demo-width);
+  --n7-core-banking-cta-height: var(--n7-request-demo-height);
+  --n7-core-banking-link-width: 102.57px;
+  --n7-core-banking-link-height: 18px;
+  --n7-core-banking-layout-gap: 10px;
+  --n7-core-banking-media-x: 810px;
+  --n7-core-banking-media-y: 80.17px;
+  --n7-core-banking-media-width: 651.67px;
+  --n7-core-banking-media-height: 461.42px;
+  --n7-core-banking-mark-size: 540px;
+  --n7-core-banking-mark-stroke: rgba(1, 180, 253, 0.18);
+  --n7-core-banking-mark-x: 44%;
+  --n7-core-banking-mark-c-shift: 24%;
+  --n7-core-banking-mark-bottom: calc(
+    var(--n7-core-banking-stage-height) - var(--n7-core-banking-media-y) -
+      var(--n7-core-banking-media-height)
+  );
+
+  /* Efficient core section (Figma y 2607, height 681) */
+  --n7-efficient-core-offset-top: 2607px;
+  --n7-efficient-core-pad-top: 0;
+  --n7-efficient-core-pad-bottom: 0;
+  --n7-efficient-core-stage-height: 681px;
+  --n7-efficient-core-media-x: -159px; /* page / 1440 frame left */
+  --n7-efficient-core-media-y: 110px;
+  --n7-efficient-core-media-width: 651.67px;
+  --n7-efficient-core-media-height: 461.42px;
+  --n7-efficient-core-media-native-width: 792px;
+  --n7-efficient-core-media-native-height: 462px;
+  --n7-efficient-core-media-scale-x: calc(
+    var(--n7-efficient-core-media-width) / var(--n7-efficient-core-media-native-width)
+  );
+  --n7-efficient-core-media-scale-y: calc(
+    var(--n7-efficient-core-media-height) / var(--n7-efficient-core-media-native-height)
+  );
+  --n7-efficient-core-content-gap: 277px;
+  --n7-efficient-core-media-layout-x: calc(
+    var(--n7-efficient-core-media-x) - var(--n7-container-pad)
+  );
+  --n7-efficient-core-content-layout-x: calc(
+    var(--n7-efficient-core-media-layout-x) + var(--n7-efficient-core-media-width) +
+      var(--n7-efficient-core-content-gap)
+  );
+  --n7-efficient-core-content-y: 168.68px;
+  --n7-efficient-core-content-width: 590px;
+  --n7-efficient-core-content-min-height: 350.41px;
+  --n7-efficient-core-checklist-height: 246.41px;
+  --n7-efficient-core-title-size: 27px;
+  --n7-efficient-core-title-line: 1.2;
+  --n7-efficient-core-title-tracking: -0.4px;
+  --n7-efficient-core-title-gap: 34px;
+  --n7-efficient-core-subtitle-size: 16px;
+  --n7-efficient-core-subtitle-gap: 24px;
+  --n7-efficient-core-checklist-y: calc(204.63px - var(--n7-efficient-core-content-y));
+  --n7-efficient-core-checklist-offset-top: var(--n7-efficient-core-title-gap);
+  --n7-efficient-core-list-size: 16px;
+  --n7-efficient-core-list-line: 21px;
+  --n7-efficient-core-list-text-height: 21px;
+  --n7-efficient-core-list-left-text-width: 261.02px;
+  --n7-efficient-core-list-right-text-width: calc(
+    var(--n7-efficient-core-list-right-width) - var(--n7-efficient-core-check-width) -
+      var(--n7-efficient-core-check-gap)
+  );
+  --n7-efficient-core-list-opacity: 0.8;
+  --n7-efficient-core-list-col-gap: 29px;
+  --n7-efficient-core-list-row-gap: 4px;
+  /* Checklist columns wrt content block */
+  --n7-efficient-core-list-left-width: 296px;
+  --n7-efficient-core-list-right-width: 265px;
+  --n7-efficient-core-list-item-height: 31.41px;
+  --n7-efficient-core-list-right-offset-y: 0px;
+  --n7-efficient-core-check-width: 29.98px;
+  --n7-efficient-core-check-height: 31.41px;
+  --n7-efficient-core-check-circle-x: 5.62px;
+  --n7-efficient-core-check-circle-y: 6.79px;
+  --n7-efficient-core-check-circle-size: 18.52px;
+  --n7-efficient-core-check-box-x: 8.32px;
+  --n7-efficient-core-check-box-y: 9.48px;
+  --n7-efficient-core-check-box-size: 13.14px;
+  --n7-efficient-core-check-tick-x: 2.1px;
+  --n7-efficient-core-check-tick-y: 3.29px;
+  --n7-efficient-core-check-tick-width: 9.17px;
+  --n7-efficient-core-check-tick-height: 6.88px;
+  --n7-efficient-core-check-gap: 5px;
+
+  /* Paperless — after dashboard only (not .n7-digital; 110 + 427 + 127 = 664) */
+  --n7-paperless-after-dashboard-bg: var(--n7-bg);
+  --n7-paperless-section-pad-top: 0px;
+  --n7-paperless-section-pad-bottom: 0px;
+  /* In-digital paperless — top Y from .n7-digital__stage top (Figma 1440 digital frame) */
+  --n7-paperless-card-y: 2104.43px;
+  --n7-paperless-canvas-width: var(--n7-page-width);
+  --n7-paperless-canvas-height: calc(
+    var(--n7-paperless-section-pad-top) + var(--n7-paperless-card-height) +
+      var(--n7-paperless-section-pad-bottom)
+  );
+  --n7-paperless-card-width: 1279px;
+  --n7-paperless-card-height: 427px;
+  --n7-paperless-card-x: 81px;
+  --n7-paperless-card-radius: 27px;
+  --n7-paperless-card-border: rgba(1, 180, 253, 0.5);
+  --n7-paperless-card-fill-start: #031E2A;
+  --n7-paperless-card-fill-end: var(--n7-ink-000D12);
+  --n7-paperless-card-fill-end-stop: 63%;
+  --n7-paperless-card-bg: linear-gradient(
+    180deg,
+    var(--n7-paperless-card-fill-start) 0%,
+    var(--n7-paperless-card-fill-end) var(--n7-paperless-card-fill-end-stop)
+  );
+  --n7-paperless-content-x: 65px;
+  --n7-paperless-content-y: 112.28px;
+  --n7-paperless-content-width: 607.83px;
+  --n7-paperless-content-height: 202px;
+  --n7-paperless-actions-width: calc(
+    var(--n7-contact-us-width) + var(--n7-cta-pair-gap) + var(--n7-request-demo-width)
+  );
+  --n7-paperless-actions-height: 49px;
+  --n7-paperless-actions-x: 757px; /* Figma: wrt inner card */
+  --n7-paperless-actions-y: calc(
+    (var(--n7-paperless-card-height) - var(--n7-paperless-actions-height)) / 2
+  ); /* 189px — matches Figma Y */
+  --n7-paperless-title-size: 53px;
+  --n7-paperless-title-width: 607.83px;
+  --n7-paperless-title-height: 128px;
+  --n7-paperless-title-line: 1.2;
+  --n7-paperless-title-tracking: -0.01em;
+  --n7-paperless-title-gap: 16px;
+  --n7-paperless-sub-size: 16px;
+  --n7-paperless-sub-width: 462.92px;
+  --n7-paperless-sub-height: 42px;
+  --n7-paperless-sub-line: 1.3;
+  --n7-paperless-sub-tracking: 0;
+  --n7-paperless-sub-opacity: 80%;
+  --n7-paperless-btn-gap: var(--n7-cta-pair-gap);
+  --n7-paperless-contact-width: var(--n7-contact-us-width);
+  --n7-paperless-demo-width: var(--n7-request-demo-width);
+  /* CB7 watermark — after-dashboard paperless only */
+  --n7-paperless-cb7-mark-width: 1141px;
+  --n7-paperless-cb7-mark-height: 687px;
+  --n7-paperless-cb7-mark-x: 223.56px;
+  --n7-paperless-cb7-mark-y: -160.72px;
+  /* N7 watermark — in-digital paperless only (outer + inner 744×687) */
+  --n7-paperless-marks-inner-width: 744px;
+  --n7-paperless-marks-inner-height: 687px;
+  --n7-paperless-marks-inner-x: 620.56px;
+  --n7-paperless-marks-inner-y: -162.72px; /* + text y 162.72 in frame → outline at card top */
+  --n7-paperless-marks-text-y: 162.72px;
+  --n7-paperless-mark-size: 572.63px;
+  --n7-paperless-mark-line: 1.2;
+  --n7-paperless-mark-tracking: 0;
+  --n7-paperless-mark-opacity: 50%;
+  --n7-paperless-mark-stroke-width: 1.59px;
+  --n7-paperless-mark-stroke: var(--n7-cyan-01B4FD);
+
+  /* Marquee banner (Figma Property 1=Default, 1440×116) */
+  --n7-marquee-bg: #ffffff;
+
+  /* Digital banking — stage incl. in-frame paperless @ Y 2104.43 */
+  --n7-digital-stage-height: calc(
+    var(--n7-paperless-card-y) + var(--n7-paperless-card-height) + 127px
+  );
+  /* 110px between pairs (flex gap) + 110px from pairs bottom to paperless card top */
+  --n7-digital-part-gap: 110px;
+  /* Pair row height: block-y + 3×row + 3×110 = paperless-card-y (2104.43) */
+  --n7-digital-pair-box-height: calc(
+    (
+      var(--n7-paperless-card-y) - var(--n7-digital-block-y) -
+        3 * var(--n7-digital-part-gap)
+    ) / 3
+  );
+  /* Flex column: 3 rows + 2 gaps (third 110px is pairs bottom → card, not flex gap) */
+  --n7-digital-pairs-stack-height: calc(
+    3 * var(--n7-digital-pair-box-height) + 2 * var(--n7-digital-part-gap)
+  );
+  --n7-digital-bg: #E9F4F9;
+  --n7-digital-body-color: #000D12;
+  --n7-digital-title-color: #000000;
+  --n7-digital-title-opacity: 0.95;
+  --n7-digital-learn-color: #003ACE;
+  /* Part 1 — left intro block (exact Figma) */
+  --n7-digital-left-x: 81px;
+  --n7-digital-left-y: 100px;
+  --n7-digital-left-width: 438.99px;
+  --n7-digital-left-height: 308px;
+  --n7-digital-title-size: 53px;
+  --n7-digital-sub-size: 16px;
+  --n7-digital-sub-width: 379.03px;
+  /* Part 1 — .n7-digital__pairs column (phones + asides live inside each pair box) */
+  --n7-digital-p1-phone-x: 622px;
+  /* Same section Y as left intro — pair innards use relative/absolute offsets inside the box */
+  --n7-digital-p1-phone-y: var(--n7-digital-left-y);
+  /* Figma phone frame (both pairs) — SVG exports may include extra canvas padding */
+  --n7-digital-phone-frame-width: 268.31px;
+  --n7-digital-phone-frame-height: 542.9px;
+  /* Home.svg native artboard (283×528 incl. shadow bounds) */
+  --n7-digital-p1-phone-width: 268.31px;
+  --n7-digital-p1-phone-height: 542.9px;
+  /* Part 1 aside — Figma 302×363.82 Hug; x/y relative to pair box */
+  --n7-digital-p1-aside-x: 348.31px; /* phone 268.31 + 80 gap */
+  --n7-digital-p1-aside-y: 89.54px;
+  --n7-digital-p1-aside-width: 302px;
+  --n7-digital-p1-phone-gap: 80px;
+  --n7-digital-aside-heading-gap: 24px;
+  --n7-digital-aside-title-size: 16px;
+  --n7-digital-aside-text-size: 16px;
+  /* N7 background watermark (Figma: X277 Y-66.74, 744×687, 50%) */
+  --n7-digital-mark-x: 277px;
+  /* Figma text FRAME top is -66.74, but N7.svg is the tight glyph (680×396).
+     The glyph sits ~146px below the frame top (ascender + 120% leading):
+     -66.74 + 146 = 79.26 → places the ink where Figma renders it. */
+  --n7-digital-mark-y: 79.26px;
+  --n7-digital-mark-width: 680px; /* N7.svg natural glyph width (50% opacity baked in) */
+  /* Decorative swirl vector (Figma: X-763.25 Y418.17, 1243.25×1245.21, 20%).
+     SVG is pre-clipped to the visible right 480px → right edge at x=480 → left:0 */
+  --n7-digital-vector-x: 0px;
+  --n7-digital-vector-y: 418.17px;
+  --n7-digital-vector-width: 480px;
+
+  /* Decorative "7" watermark (Figma frame 886.92×861 · 861×1829, 20%).
+     Figma Y 957.28 overlaps Part 2 phone (bottom ≈1259.8) — repositioned to
+     Part 2 pair bottom + 110px gap (= Part 3 / background area start). */
+  --n7-digital-seven-x: 886.92px;
+  /* Part 3 pair top = block + 2×(542.9 + 110) */
+  --n7-digital-seven-y: calc(
+    var(--n7-digital-block-y) + 2 *
+      (var(--n7-digital-pair-box-height) + var(--n7-digital-part-gap))
+  );
+  --n7-digital-seven-width: 861px;
+  --n7-digital-seven-height: 1829px;
+
+  /* Phone + content pairs — .n7-digital__pairs column: 3 boxes, 2×110px gaps. */
+  --n7-digital-block-x: var(--n7-digital-p1-phone-x); /* 622 */
+  --n7-digital-block-y: var(--n7-digital-p1-phone-y); /* 100 — aligned with intro */
+  --n7-digital-phone-gap: 76px;
+  --n7-digital-p1-pair-offset-x: 0.7px;
+  --n7-digital-p2-pair-offset-x: 19.2px;
+  --n7-digital-p2-pair-offset-y: calc(
+    var(--n7-digital-pair-box-height) + var(--n7-digital-part-gap)
+  );
+  --n7-digital-p2-aside-y: 110.54px; /* relative to pair box */
+  --n7-digital-p2-copy-width: 269px;
+  /* Part 3 — Profile.svg phone + right copy */
+  --n7-digital-p3-pair-offset-x: 0.7px;
+  --n7-digital-p3-aside-x: 348.31px;
+  --n7-digital-p3-aside-y: 115.84px; /* relative to pair box */
+  --n7-digital-p3-copy-width: 302px;
+
+  /* Fintech Insights — Figma 1440×853 @ page Y 6732 */
+  --n7-insights-page-y: 6732px;
+  --n7-insights-height: 853px;
+  --n7-insights-footer-link-height: 16px;
+  --n7-insights-stack-height: calc(
+    var(--n7-insights-cards-y) + var(--n7-insights-card-height) +
+      var(--n7-insights-row-gap) + var(--n7-insights-pair-height) +
+      var(--n7-insights-all-link-y) + var(--n7-insights-footer-link-height)
+  );
+  --n7-insights-bg: var(--n7-ink-000D12);
+  --n7-insights-circle-size: 556.77px;
+  --n7-insights-circle-x: 50.23px;
+  --n7-insights-circle-y: 160.23px;
+  --n7-insights-circle-gradient: linear-gradient(90deg, #00b4fd 0%, #003ace 100%);
+  --n7-insights-circle-layer-blur: 88px;
+  --n7-insights-circle-opacity: 0.1;
+  /* 0 + --n7-container-pad (80px) = 80px from page left */
+  --n7-insights-intro-x: 0px;
+  --n7-insights-intro-y: 80.17px;
+  --n7-insights-intro-width: 463.26px;
+  --n7-insights-title-size: 37px;
+  --n7-insights-title-line: 1.2;
+  --n7-insights-title-tracking: -0.01em;
+  --n7-insights-title-gap: 40px;
+  --n7-insights-cta-pad-y: 15px;
+  --n7-insights-cta-pad-x: 40px;
+  --n7-insights-cta-radius: 10px;
+  --n7-insights-cta-size: 15px;
+  --n7-insights-cards-x: 650px;
+  --n7-insights-cards-y: 80px;
+  --n7-insights-sitare-width: 295px;
+  --n7-insights-sitare-height: 267px;
+  --n7-insights-card-width: 670px;
+  --n7-insights-card-height: 318px;
+  --n7-insights-sitare-x: 24px;
+  --n7-insights-sitare-y: 25.5px;
+  --n7-insights-card-body-x: 351.88px;
+  --n7-insights-card-body-y: 39.91px;
+  --n7-insights-card-body-width: 289.13px;
+  --n7-insights-cards-width: var(--n7-insights-card-width);
+  --n7-insights-row-gap: 24px;
+  --n7-insights-pair-gap: 29px;
+  --n7-insights-compact-card-width: 320.5px;
+  --n7-insights-compact-card-height: 318px;
+  --n7-insights-pair-width: calc(
+    var(--n7-insights-compact-card-width) * 2 + var(--n7-insights-pair-gap)
+  );
+  --n7-insights-pair-height: var(--n7-insights-compact-card-height);
+  --n7-insights-compact-2-left: calc(
+    var(--n7-insights-compact-card-width) + var(--n7-insights-pair-gap)
+  );
+  --n7-insights-compact-body-x: 28px;
+  --n7-insights-compact-body-width: calc(
+    var(--n7-insights-compact-card-width) - 2 * var(--n7-insights-compact-body-x)
+  );
+  --n7-insights-compact-btn-x: 16.25px;
+  --n7-insights-compact-btn-y: 250px;
+  --n7-insights-card-radius: 20px;
+  --n7-insights-card-bg: #031e2a;
+  --n7-insights-card-text-gap: 11px;
+  --n7-insights-card-kicker-size: 12px;
+  --n7-insights-card-title-size: 27px;
+  --n7-insights-card-meta-size: 14px;
+  --n7-insights-card-meta-opacity: 0.65;
+  --n7-insights-card-btn-x: 351.88px;
+  --n7-insights-card-btn-y: 244px;
+  --n7-insights-card-btn-width: 287px;
+  --n7-insights-card-btn-height: 36px;
+  --n7-insights-card-btn-pad-x: 111px;
+  --n7-insights-card-btn-pad-y: 10px;
+  --n7-insights-card-btn-radius: 10px;
+  --n7-insights-card-btn-gap: 8px;
+  --n7-insights-card-btn-color: rgba(233, 244, 249, 0.5);
+  --n7-insights-card-btn-border: rgba(233, 244, 249, 0.5);
+  --n7-insights-all-link-y: 24px;
+  --n7-insights-all-link-line-width: 32.58px;
+
+  /* Case studies — Figma 1440×872 */
+  /* Case studies — Figma frame 1440×872 */
+  --n7-cases-width: var(--n7-page-width);
+  --n7-cases-height: 872px;
+  --n7-cases-bottom-gap: 0px;
+  --n7-cases-footer-block-height: 64px;
+  --n7-cases-title-carousel-gap: calc(
+    var(--n7-cases-carousel-y) - var(--n7-cases-title-y) - var(--n7-cases-title-height)
+  );
+  --n7-cases-bg: var(--n7-ink-000D12);
+  --n7-cases-title-x: 488.37px;
+  --n7-cases-title-y: 43.17px;
+  --n7-cases-title-width: 463.26px;
+  --n7-cases-title-height: 64px;
+  --n7-cases-title-size: 53px;
+  --n7-cases-title-line: 1.2;
+  --n7-cases-title-tracking: -0.01em;
+  --n7-cases-carousel-width: 1015px;
+  --n7-cases-carousel-height: 438px;
+  --n7-cases-carousel-x: calc(
+    (var(--n7-page-width) - var(--n7-cases-carousel-width)) / 2
+  );
+  --n7-cases-card-y: 179.17px;
+  --n7-cases-carousel-y: var(--n7-cases-card-y);
+  --n7-cases-card-radius: 20px;
+  --n7-cases-card-bg: #031e2a;
+  --n7-cases-card-behind-offset-x: -48px;
+  --n7-cases-card-behind-offset-y: 12px;
+  --n7-cases-card-behind-scale: 0.98;
+  --n7-cases-card-behind-opacity: 0.42;
+  --n7-cases-sitare-x: 24px;
+  --n7-cases-sitare-y: 25.5px;
+  --n7-cases-combined-sitare-x: 24px;
+  --n7-cases-combined-sitare-y: 25.5px;
+  --n7-cases-content-gap: 77px;
+  --n7-cases-sitare-slot-width: calc(
+    var(--n7-cases-carousel-width) - var(--n7-cases-sitare-x) -
+      var(--n7-cases-content-gap) - var(--n7-cases-card-body-width)
+  );
+  --n7-cases-sitare-width: 434px;
+  --n7-cases-sitare-height: 392px;
+  --n7-cases-card-body-x: calc(
+    var(--n7-cases-sitare-x) + var(--n7-cases-sitare-slot-width) +
+      var(--n7-cases-content-gap)
+  );
+  --n7-cases-card-body-y: 55.5px;
+  --n7-cases-card-body-width: 480px;
+  --n7-cases-card-body-min-height: 327.01px;
+  --n7-cases-card-kicker-size: 12px;
+  --n7-cases-card-title-size: 40px;
+  --n7-cases-card-text-gap: 11px;
+  --n7-cases-brand-btn-gap: 46px;
+  --n7-cases-card-btn-width: 431px;
+  --n7-cases-card-btn-height: 36px;
+  --n7-cases-card-btn-pad-x: 111px;
+  --n7-cases-card-btn-pad-y: 10px;
+  --n7-cases-card-btn-color: rgba(233, 244, 249, 0.5);
+  --n7-cases-card-btn-border: rgba(233, 244, 249, 0.5);
+  /* Prev/next + dots — x from inner carousel card left */
+  --n7-cases-nav-x: 475.34px;
+  --n7-cases-nav-gap: 24px;
+  --n7-cases-nav-y: 24px;
+  --n7-cases-view-all-line-width: 32.58px;
+  --n7-cases-split-visual-width: calc(
+    var(--n7-cases-carousel-width) - var(--n7-cases-content-gap) -
+      var(--n7-cases-card-body-width)
+  );
+  --n7-cases-card-copy-size: 16px;
+  --n7-cases-slide-duration: 0.45s;
+
+  /* Paperless CTA bar — Figma 1440×316 @ page Y 8457 (below case studies) */
+  --n7-paperless-cta-page-y: 8457px;
+  --n7-paperless-cta-height: 316px;
+  --n7-paperless-cta-bg: var(--n7-ink-000D12);
+  --n7-paperless-cta-title-size: 53px;
+  --n7-paperless-cta-title-width: 607.83px;
+  --n7-paperless-cta-title-height: 128px;
+  --n7-paperless-cta-title-sub-gap: 32px;
+  --n7-paperless-cta-content-x: 80px;
+  --n7-paperless-cta-content-y: 57px;
+  --n7-paperless-cta-content-width: 607.83px;
+  --n7-paperless-cta-content-height: calc(
+    var(--n7-paperless-cta-title-height) + var(--n7-paperless-cta-title-sub-gap) +
+      var(--n7-paperless-cta-sub-height)
+  );
+  --n7-paperless-cta-sub-width: 462.92px;
+  --n7-paperless-cta-sub-height: 42px;
+  --n7-paperless-cta-content-actions-gap: 214px;
+  --n7-paperless-cta-actions-x: 902px;
+  --n7-paperless-cta-actions-y: 133.5px;
+  --n7-paperless-cta-actions-width: calc(
+    var(--n7-contact-us-width) + var(--n7-cta-pair-gap) + var(--n7-request-demo-width)
+  );
+  --n7-paperless-cta-actions-height: 49px;
+
+  /* Site footer — Figma 1440×787 (below paperless CTA) */
+  --n7-footer-width: var(--n7-page-width);
+  --n7-footer-height: 787px;
+  --n7-footer-bg: var(--n7-ink-000D12);
+  --n7-footer-logo-grid-gap: calc(
+    var(--n7-footer-grid-x) - var(--n7-footer-logo-x) - var(--n7-footer-logo-width)
+  );
+  /* Footer blur ellipse — Figma 1440×556.77 @ 0,547.54 · linear · 5% · layer blur */
+  --n7-footer-glow-x: 0px;
+  --n7-footer-glow-y: 547.54px;
+  --n7-footer-glow-width: var(--n7-page-width);
+  --n7-footer-glow-height: 556.77px;
+  --n7-footer-glow-gradient: linear-gradient(90deg, #00b4fd 0%, #003ace 100%);
+  --n7-footer-glow-layer-blur: 64px;
+  --n7-footer-glow-opacity: 0.05;
+  --n7-footer-logo-x: 53px;
+  --n7-footer-logo-y: 130.17px;
+  --n7-footer-logo-width: 440px;
+  --n7-footer-logo-height: 233px;
+  --n7-footer-grid-x: 543.68px;
+  --n7-footer-grid-y: 130px;
+  --n7-footer-grid-width: 816.32px;
+  --n7-footer-grid-height: 509px;
+  --n7-footer-col-gap: 107px;
+  --n7-footer-col-width: calc(
+    (var(--n7-footer-grid-width) - 2 * var(--n7-footer-col-gap)) / 3
+  );
+  --n7-footer-row-gap: 126px;
+  --n7-footer-heading-size: 18px;
+  --n7-footer-heading-line: 1.3;
+  --n7-footer-heading-gap: 16px;
+  --n7-footer-body-size: 14px;
+  --n7-footer-body-line: 1.45;
+  --n7-footer-body-opacity: 75%;
+  --n7-footer-link-size: 16px;
+  --n7-footer-link-line: 1.3;
+  --n7-footer-link-opacity: 70%;
+  --n7-footer-link-label-width: 136.45px;
+  --n7-footer-link-label-height: 21px;
+  --n7-footer-link-label-height-wrap: 42px;
+  --n7-footer-link-gap: 14px;
+  --n7-footer-link-row-width: calc(
+    var(--n7-footer-link-label-width) + var(--n7-footer-link-gap) +
+      var(--n7-footer-arrow-width)
+  );
+  --n7-footer-links-list-gap: 10px;
+  --n7-footer-arrow-width: 14px;
+  --n7-footer-arrow-height: 15px;
+  --n7-footer-copy-x: 543.68px;
+  --n7-footer-copy-y: 718.96px;
+  --n7-footer-copy-width: 779.43px;
+  --n7-footer-copy-height: 36px;
+  --n7-footer-copy-size: 14px;
+  --n7-footer-copy-line: calc(var(--n7-footer-copy-height) / var(--n7-footer-copy-size));
+  --n7-footer-copy-opacity: 30%;
+}
+
+
+
+
+

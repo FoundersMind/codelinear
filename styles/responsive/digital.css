@@ -1,0 +1,384 @@
+/*
+ * Digital banking — tablet & mobile only (≥992px unchanged in digital.css)
+ * Full stacked flow: intro → 3 phone/features blocks → in-frame paperless card.
+ */
+
+@media (max-width: 991px) {
+  .n7-digital {
+    overflow-x: clip;
+  }
+
+  .n7-digital__stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(40px, 8vw, 56px);
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    height: auto;
+    padding: clamp(40px, 9vw, 56px) clamp(20px, 5vw, 32px)
+      clamp(48px, 10vw, 72px);
+  }
+
+  /* Decoratives — hidden on narrow viewports (avoid absolute offset bleed) */
+  .n7-digital__marks,
+  .n7-digital__vector,
+  .n7-digital__seven {
+    display: none;
+  }
+
+  /* ---- Intro ---- */
+  .n7-digital__intro {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  .n7-digital__title {
+    font-size: clamp(28px, 7vw, var(--n7-digital-title-size));
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .n7-digital__sub {
+    margin-top: clamp(12px, 3vw, 16px);
+    max-width: 36em;
+    font-size: clamp(14px, 3.5vw, var(--n7-digital-sub-size));
+    line-height: 1.4;
+  }
+
+  .n7-digital__cta {
+    margin-top: clamp(24px, 5vw, 36px);
+    width: 100%;
+    max-width: 100%;
+    gap: clamp(12px, 3vw, 16px);
+  }
+
+  .n7-digital__request {
+    margin-inline: auto;
+    font-size: var(--n7-hero-btn-font-size);
+  }
+
+  .n7-digital__learn img {
+    width: auto;
+    max-width: min(210px, 70vw);
+    height: auto;
+  }
+
+  /* ---- Feature pairs ---- */
+  .n7-digital__pairs {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    margin: 0;
+    gap: clamp(48px, 10vw, 64px);
+  }
+
+  .n7-digital__pair {
+    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    margin-left: 0;
+    gap: clamp(24px, 5vw, 32px);
+    padding-top: clamp(32px, 6vw, 40px);
+    border-top: 1px solid rgba(0, 13, 18, 0.08);
+  }
+
+  .n7-digital__pair:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .n7-digital__pair--1,
+  .n7-digital__pair--2,
+  .n7-digital__pair--3 {
+    margin-left: 0;
+  }
+
+  .n7-digital__phone-wrap {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: min(var(--n7-digital-phone-frame-width), 72vw, 300px);
+    height: auto;
+    min-height: 0;
+    margin: 0 auto;
+    overflow: visible;
+    flex-shrink: 0;
+  }
+
+  .n7-digital__pair--2 .n7-digital__phone-wrap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .n7-digital__phone {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .n7-digital__pair--1 .n7-digital__aside,
+  .n7-digital__pair--2 .n7-digital__aside,
+  .n7-digital__pair--3 .n7-digital__aside {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    flex-shrink: 1;
+  }
+
+  .n7-digital__aside-title {
+    font-size: clamp(15px, 3.8vw, var(--n7-digital-aside-title-size));
+    line-height: 1.35;
+  }
+
+  .n7-digital__aside-text {
+    margin-top: clamp(12px, 3vw, var(--n7-digital-aside-heading-gap));
+    font-size: clamp(14px, 3.5vw, var(--n7-digital-aside-text-size));
+    line-height: 1.4;
+  }
+
+  .n7-digital__checklist {
+    margin-top: clamp(20px, 5vw, 28px);
+    gap: clamp(12px, 3vw, 16px);
+  }
+
+  .n7-digital__check-item {
+    align-items: flex-start;
+    font-size: clamp(14px, 3.5vw, var(--n7-digital-aside-text-size));
+    line-height: 1.4;
+  }
+
+  .n7-digital__check-icon {
+    flex: 0 0 18px;
+    margin-top: 2px;
+  }
+
+  /* ---- In-frame paperless (end of section, document flow) ---- */
+  .n7-digital__stage > .n7-paperless--in-digital {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    margin: clamp(8px, 2vw, 16px) 0 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__canvas {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    aspect-ratio: auto;
+    min-height: 0;
+    height: auto;
+    padding: clamp(28px, 7vw, 40px) clamp(20px, 5vw, 32px);
+    gap: clamp(24px, 5vw, 32px);
+    border-radius: clamp(16px, 4vw, var(--n7-paperless-card-radius));
+    overflow: hidden;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__marks {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    right: auto;
+    bottom: -6%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 65%;
+    transform: translateX(-50%);
+    opacity: 0.16;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__marks-inner {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__content,
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__actions {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__title {
+    margin: 0 0 clamp(12px, 3vw, var(--n7-paperless-title-gap));
+    width: 100%;
+    min-height: 0;
+    font-size: clamp(22px, 5.5vw, 36px);
+    line-height: 1.2;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__sub {
+    width: 100%;
+    min-height: 0;
+    font-size: clamp(14px, 3.5vw, var(--n7-paperless-sub-size));
+    line-height: 1.35;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(12px, 3vw, var(--n7-paperless-btn-gap));
+    max-width: 100%;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact,
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo {
+    flex: 0 0 auto;
+    font-size: var(--n7-hero-btn-font-size);
+    border-radius: var(--n7-hero-btn-radius);
+  }
+}
+
+/* Tablet — side-by-side phone + copy when there is room */
+@media (min-width: 600px) and (max-width: 991px) {
+  .n7-digital__pair {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: clamp(20px, 4vw, 32px);
+    padding-top: clamp(36px, 6vw, 44px);
+  }
+
+  .n7-digital__phone-wrap {
+    flex: 0 0 min(38%, 220px);
+    max-width: min(220px, 38%);
+    margin: 0;
+  }
+
+  .n7-digital__pair--2 .n7-digital__phone-wrap {
+    margin-left: 0;
+    order: 2;
+  }
+
+  .n7-digital__pair--2 .n7-digital__aside {
+    order: 1;
+    flex: 1 1 52%;
+    min-width: min(260px, 52%);
+  }
+
+  .n7-digital__pair--1 .n7-digital__aside,
+  .n7-digital__pair--3 .n7-digital__aside {
+    flex: 1 1 52%;
+    min-width: min(260px, 52%);
+  }
+
+  .n7-digital__intro {
+    max-width: min(520px, 100%);
+  }
+
+}
+
+@media (max-width: 767px) {
+  .n7-digital__stage {
+    padding-top: 36px;
+    padding-bottom: 56px;
+    gap: 36px;
+  }
+
+  .n7-digital__title {
+    font-size: clamp(24px, 6.5vw, 32px);
+  }
+
+  .n7-digital__pairs {
+    gap: 40px;
+  }
+
+  .n7-digital__pair {
+    flex-direction: column;
+    padding-top: 28px;
+  }
+
+  .n7-digital__phone-wrap {
+    max-width: min(260px, 78vw);
+  }
+
+  .n7-digital__request {
+    margin-inline: auto;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-contact,
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__btn-demo {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .n7-digital__stage {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .n7-digital__title {
+    font-size: clamp(22px, 6.2vw, 26px);
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__marks {
+    opacity: 0.1;
+  }
+
+  .n7-digital__stage > .n7-paperless--in-digital .n7-paperless__title {
+    font-size: clamp(18px, 5.4vw, 22px);
+  }
+}

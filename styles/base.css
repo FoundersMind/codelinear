@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+*
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body.n7-body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--n7-bg);
+  color: var(--n7-text);
+  font-family: var(--n7-font-display);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+@media (max-width: 991px) {
+  body.n7-body.n7-nav-menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Sections stack flush — spacing lives inside each section layout only */
+main > section,
+main > .n7-site-footer {
+  margin-block: 0;
+  padding-block: 0;
+}
+
+/*
+ * Project canvas (all sections):
+ * max-width 1440px + width 100% ? pixel-perfect at 1440, fluid below
+ */
+.n7-page {
+  position: relative;
+  width: 100%;
+  max-width: var(--n7-page-width);
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.n7-page .container {
+  width: 100%;
+  max-width: var(--n7-page-width);
+  padding-left: var(--n7-container-pad);
+  padding-right: var(--n7-container-pad);
+}
+
+/*
+ * Bootstrap Reboot: img { max-width: 100%; height: auto; } shrinks Figma-positioned
+ * SVGs (laptops, phones, hero) and can push layout off-canvas. Scoped override only.
+ */
+.n7-hero__photo,
+.n7-core-banking__media img,
+.n7-efficient-core__media img,
+.n7-digital__phone,
+.n7-digital__marks,
+.n7-digital__vector,
+.n7-digital__seven,
+.n7-marquee__img {
+  max-width: none;
+}
+
+@media (max-width: 991px) {
+  .n7-core-banking__media img,
+  .n7-efficient-core__media img {
+    max-width: 100%;
+  }
+}
+
+.n7-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--n7-font);
+  font-weight: var(--n7-font-medium);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--n7-btn-radius);
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.n7-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.n7-btn--ghost {
+  color: var(--n7-text);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Nav Request Demo sets its own padding via .n7-btn--nav-cta */
+
+.n7-btn--outline {
+  padding: var(--n7-hero-btn-pad-y) var(--n7-hero-btn-outline-pad-x);
+  border-radius: var(--n7-hero-btn-radius);
+  font-size: var(--n7-hero-btn-font-size);
+  line-height: 1.3;
+  color: var(--n7-hero-title-color);
+  background: transparent;
+  border: 1px solid var(--n7-hero-btn-outline-border);
+}
+
+/* Contact us & Request demo — Figma 15px Chivo Mono Medium */
+.n7-hero__actions .n7-btn--primary,
+.n7-hero__actions .n7-btn--outline,
+.n7-paperless__btn-contact.n7-btn--outline,
+.n7-paperless__btn-demo.n7-btn--primary,
+.n7-paperless-cta__btn-contact.n7-btn--outline,
+.n7-paperless-cta__btn-demo.n7-btn--primary,
+.n7-btn--primary {
+  font-size: var(--n7-cta-btn-font-size);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+/* Contact us — Figma 208×49 (not used on Read more outline buttons) */
+.n7-hero__actions .n7-btn--outline,
+.n7-paperless__btn-contact.n7-btn--outline,
+.n7-paperless-cta__btn-contact.n7-btn--outline {
+  box-sizing: border-box;
+  width: var(--n7-contact-us-width);
+  height: var(--n7-contact-us-height);
+  min-width: var(--n7-contact-us-width);
+  min-height: var(--n7-contact-us-height);
+  padding: 0;
+  flex-shrink: 0;
+}
+
+/* Request demo (primary) — Figma 210×49 everywhere */
+.n7-btn--primary {
+  box-sizing: border-box;
+  width: var(--n7-request-demo-width);
+  height: var(--n7-request-demo-height);
+  min-width: var(--n7-request-demo-width);
+  min-height: var(--n7-request-demo-height);
+  padding: 0;
+  border-radius: var(--n7-hero-btn-radius);
+  color: #ffffff;
+  border: none;
+  background: var(--n7-hero-btn-gradient);
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1440px) {
+  .n7-hero__actions .n7-btn--primary,
+  .n7-hero__actions .n7-btn--outline,
+  .n7-paperless__btn-contact.n7-btn--outline,
+  .n7-paperless__btn-demo.n7-btn--primary,
+  .n7-paperless-cta__btn-contact.n7-btn--outline,
+  .n7-paperless-cta__btn-demo.n7-btn--primary,
+  .n7-btn--primary {
+    font-size: var(--n7-cta-btn-font-size);
+  }
+}
+
+

@@ -1,0 +1,167 @@
+/*
+ * Paperless (after dashboard) — tablet & mobile only
+ * ≥992px + min-width 1440 rules stay in paperless.css
+ */
+
+@media (max-width: 991px) {
+  section.n7-paperless--after-dashboard {
+    min-height: 0;
+    height: auto;
+    padding: clamp(32px, 7vw, 48px) clamp(16px, 4vw, 24px);
+    overflow-x: clip;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__canvas {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__row {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    aspect-ratio: auto;
+    min-height: 0;
+    height: auto;
+    padding: clamp(28px, 7vw, 40px) clamp(20px, 5vw, 32px);
+    gap: clamp(24px, 5vw, 32px);
+    border-radius: clamp(16px, 4vw, var(--n7-paperless-card-radius));
+    overflow: hidden;
+  }
+
+  /* CB7 watermark — background only */
+  section.n7-paperless--after-dashboard .n7-paperless__marks {
+    position: absolute;
+    top: auto;
+    left: 50%;
+    right: auto;
+    bottom: -8%;
+    width: 110%;
+    height: auto;
+    max-height: 70%;
+    transform: translateX(-50%);
+    opacity: 0.18;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__marks-svg {
+    width: 100%;
+    height: auto;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__content {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__title {
+    margin: 0 0 clamp(12px, 3vw, var(--n7-paperless-title-gap));
+    width: 100%;
+    min-height: 0;
+    font-size: clamp(22px, 5.5vw, 36px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__sub {
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    font-size: clamp(14px, 3.5vw, var(--n7-paperless-sub-size));
+    line-height: 1.35;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__actions {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(12px, 3vw, var(--n7-paperless-btn-gap));
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__btn-contact {
+    flex: 0 0 auto;
+    font-size: var(--n7-hero-btn-font-size);
+    border-radius: var(--n7-hero-btn-radius);
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__btn-demo {
+    flex: 0 0 auto;
+    font-size: var(--n7-hero-btn-font-size);
+    border-radius: var(--n7-hero-btn-radius);
+  }
+}
+
+@media (max-width: 767px) {
+  section.n7-paperless--after-dashboard {
+    padding-top: 28px;
+    padding-bottom: 36px;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__row {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__title {
+    font-size: clamp(20px, 5.8vw, 26px);
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__btn-contact,
+  section.n7-paperless--after-dashboard .n7-paperless__btn-demo {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  section.n7-paperless--after-dashboard {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__marks {
+    opacity: 0.12;
+    bottom: -12%;
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__title {
+    font-size: clamp(18px, 5.4vw, 22px);
+  }
+
+  section.n7-paperless--after-dashboard .n7-paperless__sub {
+    font-size: 14px;
+  }
+}

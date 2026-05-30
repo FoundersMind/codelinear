@@ -1,0 +1,14 @@
+/* Marquee banner — Figma Property 1=Default, 1440×116 (full SVG asset) */
+.n7-marquee {
+  position: relative;
+  width: 100%;
+  background: var(--n7-marquee-bg);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.n7-marquee__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
