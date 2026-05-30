@@ -1813,6 +1813,7 @@ section.n7-paperless--after-dashboard {
   padding: 0;
   margin: 0;
   transform-origin: 50% 85%;
+  background: var(--n7-digital-bg); /* WebP matte — section shows through alpha */
 }
 
 .n7-digital__phone {
