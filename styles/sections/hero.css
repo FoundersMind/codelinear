@@ -137,6 +137,7 @@
   flex-shrink: 0;
   overflow: visible;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  background: var(--n7-bg); /* WebP matte — hero dark shows through alpha */
 }
 
 .n7-hero__photo {

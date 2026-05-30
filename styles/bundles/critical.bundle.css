@@ -1894,6 +1894,7 @@ html.n7-motion-enabled .n7-site-footer__copy {
   flex-shrink: 0;
   overflow: visible;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  background: var(--n7-bg); /* WebP matte — hero dark shows through alpha */
 }
 
 .n7-hero__photo {
@@ -2042,6 +2043,7 @@ html.n7-motion-enabled .n7-site-footer__copy {
     overflow: visible;
     border-radius: clamp(20px, 5vw, var(--n7-hero-photo-radius));
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+    background: var(--n7-bg); /* WebP matte — hero dark shows through alpha */
     container-type: size;
     container-name: n7-hero-photo;
     --n7-hcw: calc(100cqw / var(--n7-hero-photo-width));
@@ -2052,6 +2054,8 @@ html.n7-motion-enabled .n7-site-footer__copy {
   .n7-hero__photo {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: clamp(20px, 5vw, var(--n7-hero-photo-radius));
   }
 
