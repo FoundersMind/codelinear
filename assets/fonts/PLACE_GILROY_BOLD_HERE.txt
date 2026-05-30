@@ -1,1 +1,0 @@
-Add the real Gilroy Bold font file here as: Gilroy-Bold.woff2\r\n(We can’t legally fetch Gilroy automatically.)\r\n

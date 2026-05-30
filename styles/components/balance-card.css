@@ -114,7 +114,7 @@
 
 .n7-balance-card__amount {
   margin: 0;
-  font-family: var(--n7-font-gilroy);
+  font-family: var(--n7-font-display);
   font-size: var(--n7-balance-amount-size);
   font-weight: 700;
   line-height: 1.15;

@@ -73,7 +73,6 @@
   --n7-nav-brand-weight: 500; /* Archivo Medium */
   --n7-font-display: "Inter", system-ui, sans-serif;
   --n7-font-archivo: "Archivo", "Inter", system-ui, sans-serif;
-  --n7-font-gilroy: "Gilroy", "Inter", system-ui, sans-serif;
 
   /* Nav (Figma Frame 7) — at 1440 viewport, centered = 362.27px side margin */
   --n7-nav-x: 362.27px;
@@ -766,14 +765,6 @@
 }
 
 /* ===== base.css ===== */
-@font-face {
-  font-family: "Gilroy";
-  src: url("../assets/fonts/Gilroy-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 *
 *::before,
 *::after {
@@ -1701,7 +1692,7 @@ html.n7-motion-enabled .n7-site-footer__copy {
 
 .n7-balance-card__amount {
   margin: 0;
-  font-family: var(--n7-font-gilroy);
+  font-family: var(--n7-font-display);
   font-size: var(--n7-balance-amount-size);
   font-weight: 700;
   line-height: 1.15;
