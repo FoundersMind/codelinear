@@ -1,6 +1,6 @@
 # N7 — Modern Banking Landing Page
 
-A pixel-accurate, responsive marketing site for **N7**, a digital banking platform. Built as a static frontend from the Figma design for the Codelinear assignment — no build framework, no SPA, no backend.
+A pixel-accurate, responsive marketing site for **N7**, a digital banking platform. Built as a static frontend from the Figma design no build framework, no SPA, no Backend.
 
 **Repository:** [github.com/FoundersMind/codelinear](https://github.com/FoundersMind/codelinear)
 
