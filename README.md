@@ -185,6 +185,14 @@ Responsive rules live in `styles/responsive/` and mirror their section counterpa
 - Keyboard support (Escape closes mobile nav; carousel is focusable)
 - `prefers-reduced-motion` respected — GSAP is skipped when reduced motion is requested
 
+## SEO
+
+- **Live URL:** [codelinear-tau.vercel.app](https://codelinear-tau.vercel.app/)
+- Meta description, canonical URL, Open Graph, and Twitter Card tags in `index.html`
+- JSON-LD structured data (`WebSite` + `Organization`)
+- `robots.txt` and `sitemap.xml` at project root
+- Section anchor IDs (`#n7-solutions`, `#n7-digital`, etc.) for internal navigation and crawlable links
+
 ---
 
 ## License

@@ -3,7 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>N7 — Modern Banking</title>
+    <title>N7 — Modern Digital Banking Platform | Core Banking &amp; Open Banking</title>
+    <meta
+      name="description"
+      content="N7 is a modern digital banking platform by Linktia Infosystems. Cloud-based core banking (CB7), digital banking, open banking APIs, and paperless operations for financial institutions."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://codelinear-tau.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="N7 — Modern Banking" />
+    <meta property="og:title" content="N7 — Modern Digital Banking Platform" />
+    <meta
+      property="og:description"
+      content="Drive innovation with N7 digital banking — core banking, open banking, and seamless customer experience for modern financial institutions."
+    />
+    <meta property="og:url" content="https://codelinear-tau.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://codelinear-tau.vercel.app/assets/images/Pexels%20Photo%20by%20Andrea%20Piacquadio.webp"
+    />
+    <meta property="og:image:alt" content="Woman using phone and laptop — N7 digital banking" />
+    <meta property="og:locale" content="en_GB" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="N7 — Modern Digital Banking Platform" />
+    <meta
+      name="twitter:description"
+      content="Cloud-based core banking, digital banking, and open banking solutions for financial institutions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://codelinear-tau.vercel.app/assets/images/Pexels%20Photo%20by%20Andrea%20Piacquadio.webp"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "N7 — Modern Banking",
+            "url": "https://codelinear-tau.vercel.app/",
+            "description": "Modern digital banking platform — core banking, open banking, and operational excellence for financial institutions.",
+            "inLanguage": "en-GB"
+          },
+          {
+            "@type": "Organization",
+            "name": "Linktia Infosystems Limited",
+            "alternateName": ["N7", "CB7"],
+            "url": "https://codelinear-tau.vercel.app/",
+            "logo": "https://codelinear-tau.vercel.app/assets/images/N7.svg",
+            "description": "Provider of N7 digital banking and CB7 cloud-based core banking solutions.",
+            "address": [
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "26 Main Road Sundridge",
+                "addressLocality": "Sundridge",
+                "postalCode": "TN14 6EP",
+                "addressCountry": "GB"
+              },
+              {
+                "@type": "PostalAddress",
+                "streetAddress": "Jumeirah Business Center 5, Cluster W, Jumeirah Lakes Towers",
+                "addressLocality": "Dubai",
+                "addressCountry": "AE"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -38,7 +108,7 @@
       <!-- Slice 1: Nav -->
       <header class="n7-header">
         <nav class="n7-nav" aria-label="Main">
-          <a class="n7-brand" href="./index.html" aria-label="N7 Home">
+          <a class="n7-brand" href="https://codelinear-tau.vercel.app/" aria-label="N7 Home">
             <span class="n7-brand__text">N7</span>
           </a>
 
@@ -56,7 +126,7 @@
 
           <div class="n7-nav__group" data-n7-nav-links>
             <div class="n7-nav__links">
-              <a class="n7-nav__link" href="#">
+              <a class="n7-nav__link" href="#n7-solutions">
                 <span class="n7-nav__label">Solutions</span>
                 <img
                   class="n7-nav__chevron"
@@ -67,7 +137,7 @@
                   aria-hidden="true"
                 />
               </a>
-              <a class="n7-nav__link" href="#">
+              <a class="n7-nav__link" href="#n7-insights">
                 <span class="n7-nav__label">Resources</span>
                 <img
                   class="n7-nav__chevron"
@@ -78,13 +148,13 @@
                   aria-hidden="true"
                 />
               </a>
-              <a class="n7-nav__link n7-nav__link--text-only" href="#">
+              <a class="n7-nav__link n7-nav__link--text-only" href="#n7-footer">
                 <span class="n7-nav__label">About Us</span>
               </a>
             </div>
 
             <div class="n7-nav__cta">
-              <a class="n7-btn n7-btn--ghost n7-btn--nav-cta" href="#">Request Demo</a>
+              <a class="n7-btn n7-btn--ghost n7-btn--nav-cta" href="#n7-paperless-cta">Request Demo</a>
             </div>
           </div>
         </nav>
@@ -92,7 +162,7 @@
 
       <main>
         <!-- Slice 2 + 3: Hero + Trusted -->
-        <section class="n7-hero">
+        <section class="n7-hero" id="n7-hero">
           <div class="container n7-hero__inner">
             <div class="n7-hero__content">
               <h1 class="n7-hero__title">
@@ -105,8 +175,8 @@
               </p>
 
               <div class="n7-hero__actions">
-                <a class="n7-btn n7-btn--primary" href="#">Request demo</a>
-                <a class="n7-btn n7-btn--outline" href="#">Contact us</a>
+                <a class="n7-btn n7-btn--primary" href="#n7-paperless-cta">Request demo</a>
+                <a class="n7-btn n7-btn--outline" href="#n7-footer">Contact us</a>
               </div>
             </div>
 
@@ -273,14 +343,14 @@
         </section>
 
         <!-- Solutions -->
-        <section class="n7-solutions" aria-labelledby="n7-solutions-title">
+        <section class="n7-solutions" id="n7-solutions" aria-labelledby="n7-solutions-title">
           <div class="container">
             <div class="n7-solutions__layout">
               <div class="n7-solutions__intro">
                 <h2 class="n7-solutions__title" id="n7-solutions-title">
                   All of our solutions are tailor-made to your needs
                 </h2>
-                <a class="n7-btn n7-btn--ghost n7-solutions__cta" href="#">Request demo</a>
+                <a class="n7-btn n7-btn--ghost n7-solutions__cta" href="#n7-paperless-cta">Request demo</a>
               </div>
 
               <div class="n7-solutions__grid">
@@ -302,7 +372,7 @@
                     and optimize procedures, simplify banking operations for your employees, improve
                     risk management, increase productivity, and ensure full regulatory compliance.
                   </p>
-                  <a class="n7-solution-card__link" href="#" aria-label="Learn more">
+                  <a class="n7-solution-card__link" href="#n7-core-banking" aria-label="Learn more about Core Banking CB7">
                     <img
                       src="./assets/images/learnmore2.svg"
                       alt=""
@@ -331,7 +401,7 @@
                     engineering and data science to create and deliver disruptive innovation. Our
                     approach to building digital banks is specifically designed to help clients
                   </p>
-                  <a class="n7-solution-card__link" href="#" aria-label="Learn more">
+                  <a class="n7-solution-card__link" href="#n7-digital" aria-label="Learn more about Digital Banking N7">
                     <img
                       src="./assets/images/learnmore2.svg"
                       alt=""
@@ -360,7 +430,7 @@
                     aggregation, streamline customer onboarding, KYC, and payment initiation, offer
                     predictive budgeting tools, and introduce enhanced credit scoring.
                   </p>
-                  <a class="n7-solution-card__link" href="#" aria-label="Learn more">
+                  <a class="n7-solution-card__link" href="#n7-solutions" aria-label="Learn more about Open Banking">
                     <img
                       src="./assets/images/learnmore2.svg"
                       alt=""
@@ -390,7 +460,7 @@
                     engineering and data science to create and deliver disruptive innovation. Our
                     approach to building digital banks is specifically designed to help clients
                   </p>
-                  <a class="n7-solution-card__link" href="#" aria-label="Learn more">
+                  <a class="n7-solution-card__link" href="#n7-solutions" aria-label="Learn more about Loan Origination System">
                     <img
                       src="./assets/images/learnmore2.svg"
                       alt=""
@@ -420,7 +490,7 @@
                     engineering and data science to create and deliver disruptive innovation. Our
                     approach to building digital banks is specifically designed to help clients
                   </p>
-                  <a class="n7-solution-card__link" href="#" aria-label="Learn more">
+                  <a class="n7-solution-card__link" href="#n7-solutions" aria-label="Learn more about Loan Management System">
                     <img
                       src="./assets/images/learnmore2.svg"
                       alt=""
@@ -436,7 +506,7 @@
         </section>
 
         <!-- Core Banking (Figma node 24:3652) -->
-        <section class="n7-core-banking" aria-labelledby="n7-core-banking-title">
+        <section class="n7-core-banking" id="n7-core-banking" aria-labelledby="n7-core-banking-title">
           <div class="container">
             <div class="n7-core-banking__layout">
               <div class="n7-core-banking__marks" aria-hidden="true">
@@ -452,8 +522,8 @@
                   Faster time to market with our cloud-based core banking services
                 </p>
                 <div class="n7-core-banking__actions">
-                  <a class="n7-btn n7-btn--primary n7-core-banking__cta" href="#">Request demo</a>
-                  <a class="n7-core-banking__link" href="#">
+                  <a class="n7-btn n7-btn--primary n7-core-banking__cta" href="#n7-paperless-cta">Request demo</a>
+                  <a class="n7-core-banking__link" href="#n7-core-banking">
                     <span class="n7-core-banking__link-text"><span class="n7-core-banking__link-word">LEARN</span> MORE</span>
                     <svg
                       class="n7-core-banking__link-arrow"
@@ -495,7 +565,7 @@
         </section>
 
         <!-- Efficient core — graph dashboard + benefits -->
-        <section class="n7-efficient-core" aria-labelledby="n7-efficient-core-title">
+        <section class="n7-efficient-core" id="n7-efficient-core" aria-labelledby="n7-efficient-core-title">
           <div class="container">
             <div class="n7-efficient-core__layout">
               <div class="n7-efficient-core__media">
@@ -617,6 +687,7 @@
         <!-- Paperless — own section after dashboard (NOT inside .n7-digital) -->
         <section
           class="n7-paperless n7-paperless--after-dashboard"
+          id="n7-paperless"
           aria-labelledby="n7-paperless-title"
         >
           <div class="n7-paperless__canvas">
@@ -657,10 +728,10 @@
               </div>
 
               <div class="n7-paperless__actions">
-                <a class="n7-btn n7-btn--outline n7-paperless__btn-contact" href="#">
+                <a class="n7-btn n7-btn--outline n7-paperless__btn-contact" href="#n7-footer">
                   Contact us
                 </a>
-                <a class="n7-btn n7-btn--primary n7-paperless__btn-demo" href="#">
+                <a class="n7-btn n7-btn--primary n7-paperless__btn-demo" href="#n7-paperless-cta">
                   Request demo
                 </a>
               </div>
@@ -669,7 +740,7 @@
         </section>
 
         <!-- Marquee — digital section starts after this -->
-        <section class="n7-marquee" aria-label="Say to the new way of banking">
+        <section class="n7-marquee" id="n7-marquee" aria-label="Say to the new way of banking">
           <img
             class="n7-marquee__img"
             src="./assets/images/Property%201=Default.svg"
@@ -679,7 +750,7 @@
         </section>
 
         <!-- Digital banking — light section; paperless card at frame bottom only -->
-        <section class="n7-digital" aria-labelledby="n7-digital-title">
+        <section class="n7-digital" id="n7-digital" aria-labelledby="n7-digital-title">
           <div class="n7-digital__stage">
             <!-- N7 #1 — digital section watermark (unchanged: N7.svg @ X277) -->
             <img class="n7-digital__marks" src="./assets/images/N7.svg" alt="" aria-hidden="true" loading="lazy" />
@@ -713,8 +784,8 @@
                 optimize procedures
               </p>
               <div class="n7-digital__cta">
-                <a class="n7-btn n7-btn--primary n7-digital__request" href="#">Request demo</a>
-                <a class="n7-digital__learn" href="#" aria-label="Learn more">
+                <a class="n7-btn n7-btn--primary n7-digital__request" href="#n7-paperless-cta">Request demo</a>
+                <a class="n7-digital__learn" href="#n7-digital" aria-label="Learn more about digital banking">
                   <img src="./assets/images/learnmore.svg" alt="Learn more" loading="lazy" />
                 </a>
               </div>
@@ -920,10 +991,10 @@
                   </div>
 
                   <div class="n7-paperless__actions">
-                    <a class="n7-btn n7-btn--outline n7-paperless__btn-contact" href="#">
+                    <a class="n7-btn n7-btn--outline n7-paperless__btn-contact" href="#n7-footer">
                       Contact us
                     </a>
-                    <a class="n7-btn n7-btn--primary n7-paperless__btn-demo" href="#">
+                    <a class="n7-btn n7-btn--primary n7-paperless__btn-demo" href="#n7-paperless-cta">
                       Request demo
                     </a>
                   </div>
@@ -944,7 +1015,7 @@
                   <h2 class="n7-insights__title" id="n7-insights-title">
                     Get yourself up-to-speed on all the things happening in fintech
                   </h2>
-                  <a class="n7-btn n7-insights__cta" href="#">Insights</a>
+                  <a class="n7-btn n7-insights__cta" href="#n7-insights">Insights</a>
                 </div>
 
                 <div class="n7-insights__cards">
@@ -967,7 +1038,7 @@
                       </h3>
                       <p class="n7-insights__card-meta">David Grohl 17/08/24</p>
                     </div>
-                    <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#">Read more</a>
+                    <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#n7-insights">Read more</a>
                   </article>
 
                   <div class="n7-insights__pair">
@@ -979,7 +1050,7 @@
                         </h3>
                         <p class="n7-insights__card-meta">David Grohl 17/08/24</p>
                       </div>
-                      <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#">Read more</a>
+                      <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#n7-insights">Read more</a>
                     </article>
 
                     <article class="n7-insights__card n7-insights__card--compact n7-insights__card--compact-2">
@@ -990,11 +1061,11 @@
                         </h3>
                         <p class="n7-insights__card-meta">David Grohl 17/08/24</p>
                       </div>
-                      <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#">Read more</a>
+                      <a class="n7-btn n7-btn--outline n7-insights__card-btn" href="#n7-insights">Read more</a>
                     </article>
                   </div>
                   <div class="n7-insights__footer">
-                    <a class="n7-insights__all-link" href="#">Read all insights →</a>
+                    <a class="n7-insights__all-link" href="#n7-insights">Read all insights →</a>
                   </div>
                 </div>
               </div>
@@ -1054,7 +1125,7 @@
                             />
                             <span class="n7-cases__brand-name">Zoomerr</span>
                           </div>
-                          <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#">Read more</a>
+                          <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#n7-case-studies">Read more</a>
                         </div>
                       </article>
                     </div>
@@ -1099,7 +1170,7 @@
                           aggregation, streamline customer onboarding, KYC, and payment initiation,
                           offer predictive budgeting tools, and introduce enhanced credit scoring.
                         </p>
-                        <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#">Read more</a>
+                        <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#n7-case-studies">Read more</a>
                       </div>
                     </div>
                   </div>
@@ -1143,7 +1214,7 @@
                           aggregation, streamline customer onboarding, KYC, and payment initiation,
                           offer predictive budgeting tools, and introduce enhanced credit scoring.
                         </p>
-                        <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#">Read more</a>
+                        <a class="n7-btn n7-btn--outline n7-cases__card-btn" href="#n7-case-studies">Read more</a>
                       </div>
                     </div>
                   </div>
@@ -1168,7 +1239,7 @@
                     </svg>
                   </button>
                 </div>
-                <a class="n7-cases__view-all" href="#">View all →</a>
+                <a class="n7-cases__view-all" href="#n7-case-studies">View all →</a>
               </div>
             </div>
           </div>
@@ -1192,8 +1263,8 @@
               </p>
             </div>
             <div class="n7-paperless-cta__actions">
-              <a class="n7-btn n7-btn--outline n7-paperless-cta__btn-contact" href="#">Contact us</a>
-              <a class="n7-btn n7-btn--primary n7-paperless-cta__btn-demo" href="#">Request demo</a>
+              <a class="n7-btn n7-btn--outline n7-paperless-cta__btn-contact" href="#n7-footer">Contact us</a>
+              <a class="n7-btn n7-btn--primary n7-paperless-cta__btn-demo" href="#n7-paperless-cta">Request demo</a>
             </div>
           </div>
         </section>
@@ -1202,7 +1273,7 @@
         <footer class="n7-site-footer" id="n7-footer" aria-label="Site footer">
           <div class="n7-site-footer__glow-orbit" aria-hidden="true"></div>
           <div class="n7-site-footer__stage">
-          <a class="n7-site-footer__brand" href="./index.html" aria-label="N7 home">
+          <a class="n7-site-footer__brand" href="https://codelinear-tau.vercel.app/" aria-label="N7 home">
             <img
               class="n7-site-footer__logo"
               src="./assets/images/Mask%20group.svg"
@@ -1240,43 +1311,43 @@
               <h3 class="n7-site-footer__heading">Solutions</h3>
               <ul class="n7-site-footer__links">
                 <li class="n7-site-footer__link-item--single">
-                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Core Banking CB7</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                  <a class="n7-site-footer__link" href="#n7-core-banking"><span class="n7-site-footer__link-label">Core Banking CB7</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
                 </li>
                 <li class="n7-site-footer__link-item--single">
-                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Digital Banking N7</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                  <a class="n7-site-footer__link" href="#n7-digital"><span class="n7-site-footer__link-label">Digital Banking N7</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
                 </li>
                 <li class="n7-site-footer__link-item--single">
-                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Open Banking</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                  <a class="n7-site-footer__link" href="#n7-solutions"><span class="n7-site-footer__link-label">Open Banking</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
                 </li>
                 <li class="n7-site-footer__link-item--wrap">
-                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Loan Origination System</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                  <a class="n7-site-footer__link" href="#n7-solutions"><span class="n7-site-footer__link-label">Loan Origination System</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
                 </li>
                 <li class="n7-site-footer__link-item--wrap">
-                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Loan Management System</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                  <a class="n7-site-footer__link" href="#n7-solutions"><span class="n7-site-footer__link-label">Loan Management System</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
                 </li>
                 <li class="n7-site-footer__link-item--wrap">
-                  <a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Digital Transformation</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
+                  <a class="n7-site-footer__link" href="#n7-efficient-core"><span class="n7-site-footer__link-label">Digital Transformation</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a>
                 </li>
               </ul>
             </div>
             <div class="n7-site-footer__col n7-site-footer__col--nav">
               <h3 class="n7-site-footer__heading">N7 Banking</h3>
               <ul class="n7-site-footer__links">
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">About Us</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Solutions</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Contact</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Company</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Careers</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Insights</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Core Team</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">Brand Center</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-footer"><span class="n7-site-footer__link-label">About Us</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-solutions"><span class="n7-site-footer__link-label">Solutions</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-footer"><span class="n7-site-footer__link-label">Contact</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-footer"><span class="n7-site-footer__link-label">Company</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-footer"><span class="n7-site-footer__link-label">Careers</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-insights"><span class="n7-site-footer__link-label">Insights</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-footer"><span class="n7-site-footer__link-label">Core Team</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-footer"><span class="n7-site-footer__link-label">Brand Center</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
               </ul>
             </div>
-            <div class="n7-site-footer__col n7-site-footer__col--nav">
+            <div class="n7-site-footer__col n7-site-footer__col--nav" id="n7-socials">
               <h3 class="n7-site-footer__heading">Our Socials</h3>
               <ul class="n7-site-footer__links">
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">LinkedIn</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
-                <li><a class="n7-site-footer__link" href="#"><span class="n7-site-footer__link-label">X</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-socials"><span class="n7-site-footer__link-label">LinkedIn</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
+                <li><a class="n7-site-footer__link" href="#n7-socials"><span class="n7-site-footer__link-label">X</span><img class="n7-site-footer__link-arrow" src="./assets/images/arrow.svg" width="14" height="15" alt="" aria-hidden="true" /></a></li>
               </ul>
             </div>
           </div>
