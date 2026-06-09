@@ -20,8 +20,17 @@
     />
 
     <!-- Bundled from styles/** — rebuild with: npm run build:css -->
+    <!-- Critical: blocks first paint (nav + hero). Main: non-blocking, applies when loaded. -->
     <link rel="stylesheet" href="./styles/bundles/critical.bundle.css" />
-    <link rel="stylesheet" href="./styles/bundles/main.bundle.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/bundles/main.bundle.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="./styles/bundles/main.bundle.css" />
+    </noscript>
   </head>
 
   <body class="n7-body">

@@ -46,7 +46,7 @@ This project implements a full-length landing page with eleven distinct sections
 ## Performance
 
 - **CSS bundling** — 28 source stylesheets are concatenated into two production bundles (`critical` + `main`) to cut HTTP requests from 27 to 2.
-- **Critical path** — Above-the-fold styles (tokens, base, navbar, hero) ship in `critical.bundle.css`.
+- **Critical path** — Above-the-fold styles (tokens, base, navbar, hero) ship in `critical.bundle.css` and block first paint. `main.bundle.css` loads non-blocking (`media="print"` + `onload`) so below-the-fold CSS does not delay the hero.
 - **Lazy GSAP** — Animation libraries load only when motion is allowed, keeping the initial JS payload small.
 - **WebP assets** — Hero photo and digital-section phone mockups use compressed WebP instead of large SVG exports.
 - **Lazy images** — Below-the-fold images use native `loading="lazy"`.
